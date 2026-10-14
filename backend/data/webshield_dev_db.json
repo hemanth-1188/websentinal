@@ -1,0 +1,1844 @@
+{
+  "users": [
+    {
+      "id": "ee81c917-c443-4bf5-91ba-9154308ee045",
+      "name": "System Administrator",
+      "email": "admin@webshield.io",
+      "password_hash": "$2a$10$7QEZ/W9cbx.GFWFCx6aP/eeo0Vx8LAJQUQmsLhHJ23.V7Y0yermxe",
+      "role": "ADMIN",
+      "created_at": "2026-10-04T16:28:59.823Z",
+      "updated_at": "2026-10-04T16:28:59.824Z"
+    },
+    {
+      "id": "390cb4f1-b6d5-454f-ac2c-a8f96a772473",
+      "name": "Security User",
+      "email": "user@webshield.io",
+      "password_hash": "$2a$10$sP.SSDKEdK3T68cO.9fqMuoMR9lar0NepRFe9OW/XnhWvbht5CuXO",
+      "role": "USER",
+      "created_at": "2026-10-04T16:28:59.825Z",
+      "updated_at": "2026-10-04T16:28:59.825Z"
+    },
+    {
+      "id": "267465a0-bb9e-4c3d-9b54-1e4202746858",
+      "name": "System Administrator",
+      "email": "admin@webshield.io",
+      "password_hash": "$2a$10$rnvahPQB5hIaZ42CBaEc8ucYNhyFdylc1ufzygU089OwwaOushRce",
+      "role": "ADMIN",
+      "created_at": "2026-10-04T16:38:28.089Z",
+      "updated_at": "2026-10-04T16:38:28.090Z"
+    },
+    {
+      "id": "d02e22ab-2a10-41f9-ba24-f728b4787d10",
+      "name": "Security User",
+      "email": "user@webshield.io",
+      "password_hash": "$2a$10$k8xBSDrf1t2/WVJFkuDBzeRnJXh0FyJLZAhhJnFhKQXcfxXW8isV2",
+      "role": "USER",
+      "created_at": "2026-10-04T16:38:28.091Z",
+      "updated_at": "2026-10-04T16:38:28.091Z"
+    },
+    {
+      "id": "48935e1e-38a1-4763-aabd-548c0c342c64",
+      "name": "ANALYST.GOOGLE",
+      "email": "analyst.google@webshield.io",
+      "password_hash": "$2a$10$gvNOYYgQcuVeOJ0C5DyA9OCqaJfwSHIJTGwZTIcr.r86VKqZVzDLW",
+      "role": "USER",
+      "created_at": "2026-10-04T16:39:13.946Z",
+      "updated_at": "2026-10-04T16:39:13.946Z"
+    },
+    {
+      "id": "c70b3d3e-5d34-45c7-9b8d-241080a899e2",
+      "name": "System Administrator",
+      "email": "admin@webshield.io",
+      "password_hash": "$2a$10$y8WABGcEiI7VST/xXbvajOgc0Xv3crbgAoEXB74g3dxQORVy1aHxy",
+      "role": "ADMIN",
+      "created_at": "2026-10-04T16:48:06.382Z",
+      "updated_at": "2026-10-04T16:48:06.383Z"
+    },
+    {
+      "id": "65c9b8e8-cfcb-4f8e-ae43-dc801717bf55",
+      "name": "Security User",
+      "email": "user@webshield.io",
+      "password_hash": "$2a$10$ungb0Zsfcpceu8soNSA8Jufn1kVNJJhzJ8ewPHcsRNma0j8lLN9hW",
+      "role": "USER",
+      "created_at": "2026-10-04T16:48:06.384Z",
+      "updated_at": "2026-10-04T16:48:06.384Z"
+    },
+    {
+      "id": "3b773c21-f20f-4e32-b299-9779a62b2ba3",
+      "name": "Hemanth",
+      "email": "1choclates2ice@gmail.com",
+      "password_hash": "$2a$10$GUQVIVTqyMsm5ubOG6bdseMGoba8XN0L5jZgDlfP2Z63zQXqUd/ay",
+      "role": "USER",
+      "created_at": "2026-10-04T16:55:09.088Z",
+      "updated_at": "2026-10-04T16:55:09.088Z"
+    },
+    {
+      "id": "58b0d823-4cd4-458a-9578-232c3ad7195f",
+      "name": "Hemanthkumar A",
+      "email": "hemanth4104@gmail.com",
+      "password_hash": "$2a$10$zqLc/ezyouOjKUyrGB3Nr.zB1BTxR.rkBQl0gh9O9I2WJa96w.Tdy",
+      "role": "USER",
+      "created_at": "2026-10-04T16:59:12.042Z",
+      "updated_at": "2026-10-04T16:59:12.042Z"
+    },
+    {
+      "id": "42fd33ce-25c9-4de2-93ee-cfcd84779372",
+      "name": "System Administrator",
+      "email": "admin@webshield.io",
+      "password_hash": "$2a$10$602lnZw4yp7H53XkmsO2i.1PYxYMlf9IA0kV0ettnQ0mlxaYyw1Vy",
+      "role": "ADMIN",
+      "created_at": "2026-10-05T03:31:03.139Z",
+      "updated_at": "2026-10-05T03:31:03.140Z"
+    },
+    {
+      "id": "7ea29743-ee0d-4ad6-b4bb-712309e5c041",
+      "name": "Security User",
+      "email": "user@webshield.io",
+      "password_hash": "$2a$10$g8U1dDj.08a9YGnC/Q29duQ7a049c0hX1N40tOm229/xurwxlGReC",
+      "role": "USER",
+      "created_at": "2026-10-05T03:31:03.141Z",
+      "updated_at": "2026-10-05T03:31:03.141Z"
+    },
+    {
+      "id": "66fc15a9-aae4-4de5-be33-d9b29b418f9e",
+      "name": "System Administrator",
+      "email": "admin@webshield.io",
+      "password_hash": "$2a$10$WnZeHMpNSdDE8O6Ak0sn5eEZXGovMfmzFeK.gbAp/S4QI8YlryjNe",
+      "role": "ADMIN",
+      "created_at": "2026-10-13T14:22:11.773Z",
+      "updated_at": "2026-10-13T14:22:11.775Z"
+    },
+    {
+      "id": "323b3680-ca21-48f5-a25d-4118d00df160",
+      "name": "Security User",
+      "email": "user@webshield.io",
+      "password_hash": "$2a$10$tCO2cloUuopFXuFjdzwFGehtnZ/dKfuuID0wzdC84ErpTzxP1mdGK",
+      "role": "USER",
+      "created_at": "2026-10-13T14:22:11.777Z",
+      "updated_at": "2026-10-13T14:22:11.777Z"
+    },
+    {
+      "id": "cd72f0aa-2daf-4aef-8bea-876d160cc907",
+      "name": "Hemanthkumar A",
+      "email": "hk1100411004@gmail.com",
+      "password_hash": "$2a$10$jVJYJYSFFkjRENcv3eA96uoHSFbgfAQy4tIdb5CzlnR1PLiM./o52",
+      "role": "USER",
+      "created_at": "2026-10-13T14:36:21.776Z",
+      "updated_at": "2026-10-13T14:36:21.777Z"
+    },
+    {
+      "id": "6aa98a85-c808-4535-b38b-2bf83d11e80c",
+      "name": "System Administrator",
+      "email": "admin@webshield.io",
+      "password_hash": "$2a$10$ArsYKcG2Qmc0F0oiwRz0VOmekx74./YUJuYhsiCtNTsUwqUzPWSui",
+      "role": "ADMIN",
+      "created_at": "2026-10-13T15:02:12.415Z",
+      "updated_at": "2026-10-13T15:02:12.416Z"
+    },
+    {
+      "id": "9d1acdc1-fd9d-4128-a748-8bdbf2f664c6",
+      "name": "Security User",
+      "email": "user@webshield.io",
+      "password_hash": "$2a$10$CIbQcPaL95KSsxBywCS9WePnnOMM0tCyjVwb8hMhRbUFCgaNHEsw2",
+      "role": "USER",
+      "created_at": "2026-10-13T15:02:12.417Z",
+      "updated_at": "2026-10-13T15:02:12.417Z"
+    },
+    {
+      "id": "31989b15-ab17-4cc3-8ca2-e38232b27716",
+      "name": "System Administrator",
+      "email": "admin@webshield.io",
+      "password_hash": "$2a$10$liK9GwoFg5eIjXFdL7T52ua7kDFyUMdI92g8p.svNt.EskGCCiq6.",
+      "role": "ADMIN",
+      "created_at": "2026-10-14T03:07:30.177Z",
+      "updated_at": "2026-10-14T03:07:30.180Z"
+    },
+    {
+      "id": "fca40d5b-3376-4822-a04f-12ea724d5e90",
+      "name": "Security User",
+      "email": "user@webshield.io",
+      "password_hash": "$2a$10$e9KCnxRwPB0illgaGX8MJuXCwBB36xMXVZa35w4KRzD4ZmbNrvTxi",
+      "role": "USER",
+      "created_at": "2026-10-14T03:07:30.183Z",
+      "updated_at": "2026-10-14T03:07:30.183Z"
+    },
+    {
+      "id": "069bfc2f-5c1e-491b-8dfc-a44a6168858b",
+      "name": "System Administrator",
+      "email": "admin@webshield.io",
+      "password_hash": "$2a$10$rlq5Uy2rNEaNLCJOaslATu.ZXmUWzVFTHsbTDfoRuJKWDHWKlbI8S",
+      "role": "ADMIN",
+      "created_at": "2026-10-14T03:18:51.918Z",
+      "updated_at": "2026-10-14T03:18:51.919Z"
+    },
+    {
+      "id": "36dc45fc-757f-4f94-8e0e-70489185648a",
+      "name": "Security User",
+      "email": "user@webshield.io",
+      "password_hash": "$2a$10$iecxXS9Rc49am/15UtM0DedMoYpbm42Uq3iRLjNtVUTGKtGaq6mMm",
+      "role": "USER",
+      "created_at": "2026-10-14T03:18:51.921Z",
+      "updated_at": "2026-10-14T03:18:51.921Z"
+    },
+    {
+      "id": "af35d262-d4fe-48fb-8b77-ce0c68317db0",
+      "name": "System Administrator",
+      "email": "admin@webshield.io",
+      "password_hash": "$2a$10$iM7wpJv/Qx99TRcnE3Hrjehre9NJUpvbVHy25xCKdWTKhGz3nqxYm",
+      "role": "ADMIN",
+      "created_at": "2026-10-14T03:19:06.615Z",
+      "updated_at": "2026-10-14T03:19:06.616Z"
+    },
+    {
+      "id": "1e32eeed-d24a-4a0c-9293-2a418fdef245",
+      "name": "Security User",
+      "email": "user@webshield.io",
+      "password_hash": "$2a$10$D8e3NzFc8b6R5DZDaR73C.G25ImDxUwuOVdMS1O1OBMJ7azQzYFl6",
+      "role": "USER",
+      "created_at": "2026-10-14T03:19:06.617Z",
+      "updated_at": "2026-10-14T03:19:06.617Z"
+    }
+  ],
+  "scans": [
+    {
+      "id": "a14505a6-c691-414f-8415-8c02f2bfaac7",
+      "user_id": "4d560032-397e-488f-9d0a-647d06b2d59f",
+      "target_url": "https://portfolio-hemanthkumara.netlify.app/",
+      "status": "COMPLETED",
+      "scan_type": "STANDARD",
+      "security_score": 69,
+      "started_at": "2026-10-04T16:29:41.137Z",
+      "completed_at": "2026-10-04T16:29:42.869Z",
+      "created_at": "2026-10-04T16:29:41.131Z"
+    },
+    {
+      "id": "71b84c2a-07f5-48f0-9db8-b35782a36c38",
+      "user_id": "4d560032-397e-488f-9d0a-647d06b2d59f",
+      "target_url": "https://portfolio-hemanthkumara.netlify.app/",
+      "status": "COMPLETED",
+      "scan_type": "DEEP",
+      "security_score": 69,
+      "started_at": "2026-10-04T16:32:50.108Z",
+      "completed_at": "2026-10-04T16:32:53.181Z",
+      "created_at": "2026-10-04T16:32:50.104Z"
+    },
+    {
+      "id": "7ddc9478-ddc4-4235-aa3f-fa576444e5df",
+      "user_id": "48935e1e-38a1-4763-aabd-548c0c342c64",
+      "target_url": "https://portfolio-hemanthkumara.netlify.app/",
+      "status": "COMPLETED",
+      "scan_type": "STANDARD",
+      "security_score": 69,
+      "started_at": "2026-10-04T16:39:36.950Z",
+      "completed_at": "2026-10-04T16:39:40.297Z",
+      "created_at": "2026-10-04T16:39:36.943Z"
+    },
+    {
+      "id": "4d52d4ca-4622-4d5f-aba8-9ffc62e0b902",
+      "user_id": "3b773c21-f20f-4e32-b299-9779a62b2ba3",
+      "target_url": "https://www.youtube.com/watch?v=DflEIAFhRfo",
+      "status": "COMPLETED",
+      "scan_type": "STANDARD",
+      "security_score": 89,
+      "started_at": "2026-10-04T16:55:29.327Z",
+      "completed_at": "2026-10-04T16:55:33.070Z",
+      "created_at": "2026-10-04T16:55:29.320Z"
+    },
+    {
+      "id": "ebf3923c-c509-4b50-9211-605f6e1f42be",
+      "user_id": "cd72f0aa-2daf-4aef-8bea-876d160cc907",
+      "target_url": "https://web.whatsapp.com/",
+      "status": "COMPLETED",
+      "scan_type": "STANDARD",
+      "security_score": 86,
+      "started_at": "2026-10-13T14:36:41.091Z",
+      "completed_at": "2026-10-13T14:36:48.147Z",
+      "created_at": "2026-10-13T14:36:41.083Z"
+    },
+    {
+      "id": "de0c3e6b-118f-4af9-aee4-0d631e21af44",
+      "user_id": "3b773c21-f20f-4e32-b299-9779a62b2ba3",
+      "target_url": "https://portfolio-hemanthkumara.netlify.app/",
+      "status": "COMPLETED",
+      "scan_type": "STANDARD",
+      "security_score": 66,
+      "started_at": "2026-10-14T04:11:05.873Z",
+      "completed_at": "2026-10-14T04:11:13.484Z",
+      "created_at": "2026-10-14T04:11:05.859Z"
+    },
+    {
+      "id": "47788015-83dd-42a4-8024-72e265f2cc4e",
+      "user_id": "3b773c21-f20f-4e32-b299-9779a62b2ba3",
+      "target_url": "https://www.angelone.in/login/?redirectUrl=portfolio/equity",
+      "status": "COMPLETED",
+      "scan_type": "QUICK",
+      "security_score": 81,
+      "started_at": "2026-10-14T04:13:09.008Z",
+      "completed_at": "2026-10-14T04:13:23.337Z",
+      "created_at": "2026-10-14T04:13:09.003Z"
+    }
+  ],
+  "findings": [
+    {
+      "id": "b811df8b-968a-41c5-9371-3e8020742cd5",
+      "scan_id": "a14505a6-c691-414f-8415-8c02f2bfaac7",
+      "title": "Missing Content-Security-Policy (CSP) Header",
+      "description": "Content Security Policy (CSP) is an added layer of security that helps detect and mitigate Cross-Site Scripting (XSS) and data injection attacks.",
+      "severity": "HIGH",
+      "confidence": "HIGH",
+      "status": "CONFIRMED",
+      "owasp_category": "A05",
+      "cwe": "CWE-693",
+      "affected_url": "https://portfolio-hemanthkumara.netlify.app/",
+      "evidence": "Content-Security-Policy HTTP response header was not present in target response.",
+      "impact": "Attacks like Cross-Site Scripting (XSS) and data injection can run malicious scripts in the victim browser context.",
+      "remediation": "Implement a strong Content-Security-Policy header, e.g., \"default-src 'self'; script-src 'self';\"",
+      "created_at": "2026-10-04T16:29:42.776Z"
+    },
+    {
+      "id": "737bedb6-af51-40db-b5d2-589e5544e611",
+      "scan_id": "a14505a6-c691-414f-8415-8c02f2bfaac7",
+      "title": "Missing X-Frame-Options (Clickjacking Protection)",
+      "description": "The X-Frame-Options header indicates whether a browser should be allowed to render a page in a frame, iframe, embed or object.",
+      "severity": "MEDIUM",
+      "confidence": "HIGH",
+      "status": "CONFIRMED",
+      "owasp_category": "A05",
+      "cwe": "CWE-1021",
+      "affected_url": "https://portfolio-hemanthkumara.netlify.app/",
+      "evidence": "Neither X-Frame-Options nor CSP frame-ancestors directive was detected.",
+      "impact": "Attackers can embed the application in an invisible iframe on a malicious website to perform Clickjacking attacks.",
+      "remediation": "Set X-Frame-Options header to DENY or SAMEORIGIN.",
+      "created_at": "2026-10-04T16:29:42.780Z"
+    },
+    {
+      "id": "d5da16d9-4221-478f-b0bf-98a4fd9eb9a7",
+      "scan_id": "a14505a6-c691-414f-8415-8c02f2bfaac7",
+      "title": "Missing or Misconfigured X-Content-Type-Options Header",
+      "description": "The X-Content-Type-Options header prevents browsers from MIME-sniffing a response away from the declared content-type.",
+      "severity": "LOW",
+      "confidence": "HIGH",
+      "status": "CONFIRMED",
+      "owasp_category": "A05",
+      "cwe": "CWE-79",
+      "affected_url": "https://portfolio-hemanthkumara.netlify.app/",
+      "evidence": "X-Content-Type-Options header value: \"NOT SET\"",
+      "impact": "Browsers may interpret non-executable MIME types as executable JavaScript, leading to XSS.",
+      "remediation": "Add header: \"X-Content-Type-Options: nosniff\"",
+      "created_at": "2026-10-04T16:29:42.783Z"
+    },
+    {
+      "id": "cb786b7a-df6a-41da-8489-d060bc04ee26",
+      "scan_id": "a14505a6-c691-414f-8415-8c02f2bfaac7",
+      "title": "Missing Referrer-Policy Header",
+      "description": "The Referrer-Policy HTTP header controls how much referrer information (sent via the Referer header) should be included with requests.",
+      "severity": "LOW",
+      "confidence": "HIGH",
+      "status": "CONFIRMED",
+      "owasp_category": "A05",
+      "cwe": "CWE-200",
+      "affected_url": "https://portfolio-hemanthkumara.netlify.app/",
+      "evidence": "Referrer-Policy header was omitted from response headers.",
+      "impact": "Sensitive URL parameters or session tokens may leak to external domains via the Referer header.",
+      "remediation": "Set Referrer-Policy to \"strict-origin-when-cross-origin\" or \"no-referrer\".",
+      "created_at": "2026-10-04T16:29:42.786Z"
+    },
+    {
+      "id": "a69ea36e-3363-4064-9d67-53acdf484f12",
+      "scan_id": "a14505a6-c691-414f-8415-8c02f2bfaac7",
+      "title": "Server Information Disclosure via HTTP Headers",
+      "description": "HTTP response headers expose specific server software version numbers and backend technologies.",
+      "severity": "INFORMATIONAL",
+      "confidence": "HIGH",
+      "status": "CONFIRMED",
+      "owasp_category": "A05",
+      "cwe": "CWE-200",
+      "affected_url": "https://portfolio-hemanthkumara.netlify.app/",
+      "evidence": "Server: Netlify",
+      "impact": "Attackers can use exposed technology versions to look up targeted software vulnerabilities (CVEs).",
+      "remediation": "Remove X-Powered-By header and suppress detailed Server software version banners.",
+      "created_at": "2026-10-04T16:29:42.790Z"
+    },
+    {
+      "id": "26e39db8-da26-4265-9136-71a19a535e3f",
+      "scan_id": "a14505a6-c691-414f-8415-8c02f2bfaac7",
+      "title": "Technology Stack Detected",
+      "description": "Fingerprinted active web software, frameworks, and client libraries.",
+      "severity": "INFORMATIONAL",
+      "confidence": "HIGH",
+      "status": "CONFIRMED",
+      "owasp_category": "A06",
+      "cwe": "CWE-200",
+      "affected_url": "https://portfolio-hemanthkumara.netlify.app/",
+      "evidence": "Discovered Technologies: Netlify (Web Server)",
+      "impact": "Identifying tech stack versions assists security teams in audit and patch management.",
+      "remediation": "Ensure all detected software libraries and server components are kept updated to latest security patches.",
+      "created_at": "2026-10-04T16:29:42.795Z"
+    },
+    {
+      "id": "438e40c9-c09c-4fce-abae-9ffb1d2fb5f5",
+      "scan_id": "71b84c2a-07f5-48f0-9db8-b35782a36c38",
+      "title": "Missing Content-Security-Policy (CSP) Header",
+      "description": "Content Security Policy (CSP) is an added layer of security that helps detect and mitigate Cross-Site Scripting (XSS) and data injection attacks.",
+      "severity": "HIGH",
+      "confidence": "HIGH",
+      "status": "CONFIRMED",
+      "owasp_category": "A05",
+      "cwe": "CWE-693",
+      "affected_url": "https://portfolio-hemanthkumara.netlify.app/",
+      "evidence": "Content-Security-Policy HTTP response header was not present in target response.",
+      "impact": "Attacks like Cross-Site Scripting (XSS) and data injection can run malicious scripts in the victim browser context.",
+      "remediation": "Implement a strong Content-Security-Policy header, e.g., \"default-src 'self'; script-src 'self';\"",
+      "created_at": "2026-10-04T16:32:53.077Z"
+    },
+    {
+      "id": "3781ad3c-c81c-4d0f-9813-2d891f83d583",
+      "scan_id": "71b84c2a-07f5-48f0-9db8-b35782a36c38",
+      "title": "Missing X-Frame-Options (Clickjacking Protection)",
+      "description": "The X-Frame-Options header indicates whether a browser should be allowed to render a page in a frame, iframe, embed or object.",
+      "severity": "MEDIUM",
+      "confidence": "HIGH",
+      "status": "CONFIRMED",
+      "owasp_category": "A05",
+      "cwe": "CWE-1021",
+      "affected_url": "https://portfolio-hemanthkumara.netlify.app/",
+      "evidence": "Neither X-Frame-Options nor CSP frame-ancestors directive was detected.",
+      "impact": "Attackers can embed the application in an invisible iframe on a malicious website to perform Clickjacking attacks.",
+      "remediation": "Set X-Frame-Options header to DENY or SAMEORIGIN.",
+      "created_at": "2026-10-04T16:32:53.081Z"
+    },
+    {
+      "id": "4886eaac-3b6d-448c-a27d-81b2363fefb4",
+      "scan_id": "71b84c2a-07f5-48f0-9db8-b35782a36c38",
+      "title": "Missing or Misconfigured X-Content-Type-Options Header",
+      "description": "The X-Content-Type-Options header prevents browsers from MIME-sniffing a response away from the declared content-type.",
+      "severity": "LOW",
+      "confidence": "HIGH",
+      "status": "CONFIRMED",
+      "owasp_category": "A05",
+      "cwe": "CWE-79",
+      "affected_url": "https://portfolio-hemanthkumara.netlify.app/",
+      "evidence": "X-Content-Type-Options header value: \"NOT SET\"",
+      "impact": "Browsers may interpret non-executable MIME types as executable JavaScript, leading to XSS.",
+      "remediation": "Add header: \"X-Content-Type-Options: nosniff\"",
+      "created_at": "2026-10-04T16:32:53.084Z"
+    },
+    {
+      "id": "aea7ac5c-107f-4210-bea5-357a49eb5fd9",
+      "scan_id": "71b84c2a-07f5-48f0-9db8-b35782a36c38",
+      "title": "Missing Referrer-Policy Header",
+      "description": "The Referrer-Policy HTTP header controls how much referrer information (sent via the Referer header) should be included with requests.",
+      "severity": "LOW",
+      "confidence": "HIGH",
+      "status": "CONFIRMED",
+      "owasp_category": "A05",
+      "cwe": "CWE-200",
+      "affected_url": "https://portfolio-hemanthkumara.netlify.app/",
+      "evidence": "Referrer-Policy header was omitted from response headers.",
+      "impact": "Sensitive URL parameters or session tokens may leak to external domains via the Referer header.",
+      "remediation": "Set Referrer-Policy to \"strict-origin-when-cross-origin\" or \"no-referrer\".",
+      "created_at": "2026-10-04T16:32:53.091Z"
+    },
+    {
+      "id": "e446e88e-3413-4847-a4c1-b9c915f7443c",
+      "scan_id": "71b84c2a-07f5-48f0-9db8-b35782a36c38",
+      "title": "Server Information Disclosure via HTTP Headers",
+      "description": "HTTP response headers expose specific server software version numbers and backend technologies.",
+      "severity": "INFORMATIONAL",
+      "confidence": "HIGH",
+      "status": "CONFIRMED",
+      "owasp_category": "A05",
+      "cwe": "CWE-200",
+      "affected_url": "https://portfolio-hemanthkumara.netlify.app/",
+      "evidence": "Server: Netlify",
+      "impact": "Attackers can use exposed technology versions to look up targeted software vulnerabilities (CVEs).",
+      "remediation": "Remove X-Powered-By header and suppress detailed Server software version banners.",
+      "created_at": "2026-10-04T16:32:53.095Z"
+    },
+    {
+      "id": "22e14d43-4cd3-43e1-9f6d-14c49cdf1d6a",
+      "scan_id": "71b84c2a-07f5-48f0-9db8-b35782a36c38",
+      "title": "Technology Stack Detected",
+      "description": "Fingerprinted active web software, frameworks, and client libraries.",
+      "severity": "INFORMATIONAL",
+      "confidence": "HIGH",
+      "status": "CONFIRMED",
+      "owasp_category": "A06",
+      "cwe": "CWE-200",
+      "affected_url": "https://portfolio-hemanthkumara.netlify.app/",
+      "evidence": "Discovered Technologies: Netlify (Web Server)",
+      "impact": "Identifying tech stack versions assists security teams in audit and patch management.",
+      "remediation": "Ensure all detected software libraries and server components are kept updated to latest security patches.",
+      "created_at": "2026-10-04T16:32:53.102Z"
+    },
+    {
+      "id": "0f5a3656-5a73-49c2-bece-8d4e2077c118",
+      "scan_id": "7ddc9478-ddc4-4235-aa3f-fa576444e5df",
+      "title": "Missing Content-Security-Policy (CSP) Header",
+      "description": "Content Security Policy (CSP) is an added layer of security that helps detect and mitigate Cross-Site Scripting (XSS) and data injection attacks.",
+      "severity": "HIGH",
+      "confidence": "HIGH",
+      "status": "CONFIRMED",
+      "owasp_category": "A05",
+      "cwe": "CWE-693",
+      "affected_url": "https://portfolio-hemanthkumara.netlify.app/",
+      "evidence": "Content-Security-Policy HTTP response header was not present in target response.",
+      "impact": "Attacks like Cross-Site Scripting (XSS) and data injection can run malicious scripts in the victim browser context.",
+      "remediation": "Implement a strong Content-Security-Policy header, e.g., \"default-src 'self'; script-src 'self';\"",
+      "created_at": "2026-10-04T16:39:40.202Z"
+    },
+    {
+      "id": "d8c14691-efb7-401f-80d3-8125450adbc6",
+      "scan_id": "7ddc9478-ddc4-4235-aa3f-fa576444e5df",
+      "title": "Missing X-Frame-Options (Clickjacking Protection)",
+      "description": "The X-Frame-Options header indicates whether a browser should be allowed to render a page in a frame, iframe, embed or object.",
+      "severity": "MEDIUM",
+      "confidence": "HIGH",
+      "status": "CONFIRMED",
+      "owasp_category": "A05",
+      "cwe": "CWE-1021",
+      "affected_url": "https://portfolio-hemanthkumara.netlify.app/",
+      "evidence": "Neither X-Frame-Options nor CSP frame-ancestors directive was detected.",
+      "impact": "Attackers can embed the application in an invisible iframe on a malicious website to perform Clickjacking attacks.",
+      "remediation": "Set X-Frame-Options header to DENY or SAMEORIGIN.",
+      "created_at": "2026-10-04T16:39:40.207Z"
+    },
+    {
+      "id": "6d2e6041-e167-4bba-bd0c-78d6b6f7bc8e",
+      "scan_id": "7ddc9478-ddc4-4235-aa3f-fa576444e5df",
+      "title": "Missing or Misconfigured X-Content-Type-Options Header",
+      "description": "The X-Content-Type-Options header prevents browsers from MIME-sniffing a response away from the declared content-type.",
+      "severity": "LOW",
+      "confidence": "HIGH",
+      "status": "CONFIRMED",
+      "owasp_category": "A05",
+      "cwe": "CWE-79",
+      "affected_url": "https://portfolio-hemanthkumara.netlify.app/",
+      "evidence": "X-Content-Type-Options header value: \"NOT SET\"",
+      "impact": "Browsers may interpret non-executable MIME types as executable JavaScript, leading to XSS.",
+      "remediation": "Add header: \"X-Content-Type-Options: nosniff\"",
+      "created_at": "2026-10-04T16:39:40.212Z"
+    },
+    {
+      "id": "009d4898-c5ba-4cae-b9f1-16c748779e83",
+      "scan_id": "7ddc9478-ddc4-4235-aa3f-fa576444e5df",
+      "title": "Missing Referrer-Policy Header",
+      "description": "The Referrer-Policy HTTP header controls how much referrer information (sent via the Referer header) should be included with requests.",
+      "severity": "LOW",
+      "confidence": "HIGH",
+      "status": "CONFIRMED",
+      "owasp_category": "A05",
+      "cwe": "CWE-200",
+      "affected_url": "https://portfolio-hemanthkumara.netlify.app/",
+      "evidence": "Referrer-Policy header was omitted from response headers.",
+      "impact": "Sensitive URL parameters or session tokens may leak to external domains via the Referer header.",
+      "remediation": "Set Referrer-Policy to \"strict-origin-when-cross-origin\" or \"no-referrer\".",
+      "created_at": "2026-10-04T16:39:40.217Z"
+    },
+    {
+      "id": "9747337f-fa31-4820-beff-7a5d30353c49",
+      "scan_id": "7ddc9478-ddc4-4235-aa3f-fa576444e5df",
+      "title": "Server Information Disclosure via HTTP Headers",
+      "description": "HTTP response headers expose specific server software version numbers and backend technologies.",
+      "severity": "INFORMATIONAL",
+      "confidence": "HIGH",
+      "status": "CONFIRMED",
+      "owasp_category": "A05",
+      "cwe": "CWE-200",
+      "affected_url": "https://portfolio-hemanthkumara.netlify.app/",
+      "evidence": "Server: Netlify",
+      "impact": "Attackers can use exposed technology versions to look up targeted software vulnerabilities (CVEs).",
+      "remediation": "Remove X-Powered-By header and suppress detailed Server software version banners.",
+      "created_at": "2026-10-04T16:39:40.225Z"
+    },
+    {
+      "id": "f856bf45-ff29-4dec-8233-aac871bc6dd8",
+      "scan_id": "7ddc9478-ddc4-4235-aa3f-fa576444e5df",
+      "title": "Technology Stack Detected",
+      "description": "Fingerprinted active web software, frameworks, and client libraries.",
+      "severity": "INFORMATIONAL",
+      "confidence": "HIGH",
+      "status": "CONFIRMED",
+      "owasp_category": "A06",
+      "cwe": "CWE-200",
+      "affected_url": "https://portfolio-hemanthkumara.netlify.app/",
+      "evidence": "Discovered Technologies: Netlify (Web Server)",
+      "impact": "Identifying tech stack versions assists security teams in audit and patch management.",
+      "remediation": "Ensure all detected software libraries and server components are kept updated to latest security patches.",
+      "created_at": "2026-10-04T16:39:40.229Z"
+    },
+    {
+      "id": "521680cb-c99e-4de9-9c92-71c9604facd0",
+      "scan_id": "4d52d4ca-4622-4d5f-aba8-9ffc62e0b902",
+      "title": "Missing Referrer-Policy Header",
+      "description": "The Referrer-Policy HTTP header controls how much referrer information (sent via the Referer header) should be included with requests.",
+      "severity": "LOW",
+      "confidence": "HIGH",
+      "status": "CONFIRMED",
+      "owasp_category": "A05",
+      "cwe": "CWE-200",
+      "affected_url": "https://www.youtube.com/watch?v=DflEIAFhRfo",
+      "evidence": "Referrer-Policy header was omitted from response headers.",
+      "impact": "Sensitive URL parameters or session tokens may leak to external domains via the Referer header.",
+      "remediation": "Set Referrer-Policy to \"strict-origin-when-cross-origin\" or \"no-referrer\".",
+      "created_at": "2026-10-04T16:55:33.009Z"
+    },
+    {
+      "id": "b321c948-ec63-477d-a7ab-98ba27c81381",
+      "scan_id": "4d52d4ca-4622-4d5f-aba8-9ffc62e0b902",
+      "title": "Server Information Disclosure via HTTP Headers",
+      "description": "HTTP response headers expose specific server software version numbers and backend technologies.",
+      "severity": "INFORMATIONAL",
+      "confidence": "HIGH",
+      "status": "CONFIRMED",
+      "owasp_category": "A05",
+      "cwe": "CWE-200",
+      "affected_url": "https://www.youtube.com/watch?v=DflEIAFhRfo",
+      "evidence": "Server: ESF",
+      "impact": "Attackers can use exposed technology versions to look up targeted software vulnerabilities (CVEs).",
+      "remediation": "Remove X-Powered-By header and suppress detailed Server software version banners.",
+      "created_at": "2026-10-04T16:55:33.015Z"
+    },
+    {
+      "id": "33f6881b-ca4a-4dd6-99ff-3b9438ac7ffb",
+      "scan_id": "4d52d4ca-4622-4d5f-aba8-9ffc62e0b902",
+      "title": "Insecure Cookie: Missing SameSite Attribute (GPS)",
+      "description": "The cookie \"GPS\" does not specify a SameSite attribute (Lax or Strict).",
+      "severity": "LOW",
+      "confidence": "HIGH",
+      "status": "CONFIRMED",
+      "owasp_category": "A05",
+      "cwe": "CWE-1275",
+      "affected_url": "https://www.youtube.com/watch?v=DflEIAFhRfo",
+      "evidence": "Set-Cookie: GPS=1; Domain=.youtube.com; Expires=Sun, 04-Oct-2026 17:25:30 GMT; Path=/; Secure; HttpOnly",
+      "impact": "Increases susceptibility to Cross-Site Request Forgery (CSRF) attacks.",
+      "remediation": "Set \"SameSite=Lax\" or \"SameSite=Strict\" on Set-Cookie attributes.",
+      "created_at": "2026-10-04T16:55:33.019Z"
+    },
+    {
+      "id": "97de6a4c-371f-409d-bed9-277be1710d13",
+      "scan_id": "4d52d4ca-4622-4d5f-aba8-9ffc62e0b902",
+      "title": "Technology Stack Detected",
+      "description": "Fingerprinted active web software, frameworks, and client libraries.",
+      "severity": "INFORMATIONAL",
+      "confidence": "HIGH",
+      "status": "CONFIRMED",
+      "owasp_category": "A06",
+      "cwe": "CWE-200",
+      "affected_url": "https://www.youtube.com/watch?v=DflEIAFhRfo",
+      "evidence": "Discovered Technologies: ESF (Web Server), React (UI Library), Bootstrap (CSS Framework)",
+      "impact": "Identifying tech stack versions assists security teams in audit and patch management.",
+      "remediation": "Ensure all detected software libraries and server components are kept updated to latest security patches.",
+      "created_at": "2026-10-04T16:55:33.022Z"
+    },
+    {
+      "id": "c4b00757-575d-487a-a2a4-e9944cd9c635",
+      "scan_id": "4d52d4ca-4622-4d5f-aba8-9ffc62e0b902",
+      "title": "Sensitive Path Disclosure via robots.txt",
+      "description": "The robots.txt file discloses hidden administrative or backup paths.",
+      "severity": "LOW",
+      "confidence": "HIGH",
+      "status": "CONFIRMED",
+      "owasp_category": "A01",
+      "cwe": "CWE-200",
+      "affected_url": "https://www.youtube.com/robots.txt",
+      "evidence": "Disallowed paths in robots.txt: /api/, /channel_picker, /comment, /feeds/videos.xml, /file_download",
+      "impact": "Search engine crawlers are instructed not to index these paths, but malicious scanners use robots.txt to discover hidden admin panels.",
+      "remediation": "Do not rely on robots.txt for access control. Implement real authentication and authorization on hidden paths.",
+      "created_at": "2026-10-04T16:55:33.026Z"
+    },
+    {
+      "id": "6b96a1a0-8885-46c9-8867-ae20d411f1b3",
+      "scan_id": "ebf3923c-c509-4b50-9211-605f6e1f42be",
+      "title": "Missing Referrer-Policy Header",
+      "description": "The Referrer-Policy HTTP header controls how much referrer information (sent via the Referer header) should be included with requests.",
+      "severity": "LOW",
+      "confidence": "HIGH",
+      "status": "CONFIRMED",
+      "owasp_category": "A05",
+      "cwe": "CWE-200",
+      "affected_url": "https://web.whatsapp.com/",
+      "evidence": "Referrer-Policy header was omitted from response headers.",
+      "impact": "Sensitive URL parameters or session tokens may leak to external domains via the Referer header.",
+      "remediation": "Set Referrer-Policy to \"strict-origin-when-cross-origin\" or \"no-referrer\".",
+      "created_at": "2026-10-13T14:36:47.986Z"
+    },
+    {
+      "id": "df9164f8-4b2b-4666-80ce-486f29040547",
+      "scan_id": "ebf3923c-c509-4b50-9211-605f6e1f42be",
+      "title": "TLS Certificate Near Expiration",
+      "description": "The SSL/TLS certificate for web.whatsapp.com will expire in 8 days.",
+      "severity": "MEDIUM",
+      "confidence": "HIGH",
+      "status": "CONFIRMED",
+      "owasp_category": "A02",
+      "cwe": "CWE-295",
+      "affected_url": "https://web.whatsapp.com/",
+      "evidence": "Certificate Valid To: Oct 20 23:59:59 2026 GMT. Days Remaining: 8",
+      "impact": "An expired SSL certificate causes browser security warnings and service outages.",
+      "remediation": "Renew the SSL/TLS certificate prior to expiration.",
+      "created_at": "2026-10-13T14:36:48.004Z"
+    },
+    {
+      "id": "5d188594-e139-4728-903a-d6f94ae6a8f8",
+      "scan_id": "ebf3923c-c509-4b50-9211-605f6e1f42be",
+      "title": "Sensitive Path Disclosure via robots.txt",
+      "description": "The robots.txt file discloses hidden administrative or backup paths.",
+      "severity": "LOW",
+      "confidence": "HIGH",
+      "status": "CONFIRMED",
+      "owasp_category": "A01",
+      "cwe": "CWE-200",
+      "affected_url": "https://web.whatsapp.com/robots.txt",
+      "evidence": "Disallowed paths in robots.txt: /",
+      "impact": "Search engine crawlers are instructed not to index these paths, but malicious scanners use robots.txt to discover hidden admin panels.",
+      "remediation": "Do not rely on robots.txt for access control. Implement real authentication and authorization on hidden paths.",
+      "created_at": "2026-10-13T14:36:48.026Z"
+    },
+    {
+      "id": "6e02955f-af4a-4a36-afd6-de1ba775ca59",
+      "created_at": "2026-10-14T04:11:13.382Z",
+      "first_seen_at": "2026-10-14T04:11:13.383Z",
+      "last_seen_at": "2026-10-14T04:11:13.383Z",
+      "resolved_at": null,
+      "owasp_version": "2025",
+      "scan_id": "de0c3e6b-118f-4af9-aee4-0d631e21af44",
+      "title": "SEC-HDR-CSP-MISSING",
+      "description": "Missing Content-Security-Policy (CSP) Header",
+      "severity": "Content-Security-Policy restricts resource loading origins, mitigating Cross-Site Scripting (XSS), clickjacking, and data injection vectors.",
+      "confidence": "HIGH",
+      "status": "HIGH",
+      "owasp_category": "CONFIRMED",
+      "cwe": "A02",
+      "affected_url": "2025",
+      "evidence": "CWE-693",
+      "impact": "https://portfolio-hemanthkumara.netlify.app/",
+      "remediation": "Response headers inspected; \"content-security-policy\" header was absent.",
+      "rule_id": "RULE-CONFIRMED"
+    },
+    {
+      "id": "8bd9b140-ef25-4899-bbd5-f19313298a14",
+      "created_at": "2026-10-14T04:11:13.389Z",
+      "first_seen_at": "2026-10-14T04:11:13.389Z",
+      "last_seen_at": "2026-10-14T04:11:13.389Z",
+      "resolved_at": null,
+      "owasp_version": "2025",
+      "scan_id": "de0c3e6b-118f-4af9-aee4-0d631e21af44",
+      "title": "SEC-HDR-XFO-MISSING",
+      "description": "Missing Clickjacking Defense (X-Frame-Options / frame-ancestors)",
+      "severity": "Neither X-Frame-Options nor CSP frame-ancestors directive was detected to restrict framing of the target page.",
+      "confidence": "MEDIUM",
+      "status": "HIGH",
+      "owasp_category": "CONFIRMED",
+      "cwe": "A02",
+      "affected_url": "2025",
+      "evidence": "CWE-1021",
+      "impact": "https://portfolio-hemanthkumara.netlify.app/",
+      "remediation": "Neither \"x-frame-options\" nor CSP \"frame-ancestors\" was present in HTTP response headers.",
+      "rule_id": "RULE-CONFIRMED"
+    },
+    {
+      "id": "10caecd0-a8d0-4343-805a-14dd7f6da0d9",
+      "created_at": "2026-10-14T04:11:13.393Z",
+      "first_seen_at": "2026-10-14T04:11:13.393Z",
+      "last_seen_at": "2026-10-14T04:11:13.393Z",
+      "resolved_at": null,
+      "owasp_version": "2025",
+      "scan_id": "de0c3e6b-118f-4af9-aee4-0d631e21af44",
+      "title": "SEC-HDR-XCTO-MISSING",
+      "description": "Missing or Improper X-Content-Type-Options Header",
+      "severity": "The X-Content-Type-Options header instructs browsers to strictly respect declared MIME types and disable MIME-sniffing.",
+      "confidence": "LOW",
+      "status": "HIGH",
+      "owasp_category": "CONFIRMED",
+      "cwe": "A02",
+      "affected_url": "2025",
+      "evidence": "CWE-79",
+      "impact": "https://portfolio-hemanthkumara.netlify.app/",
+      "remediation": "X-Content-Type-Options value: \"NOT_SET\"",
+      "rule_id": "RULE-CONFIRMED"
+    },
+    {
+      "id": "2ef9e1dc-9d7f-4e81-848a-91da07c65e43",
+      "created_at": "2026-10-14T04:11:13.397Z",
+      "first_seen_at": "2026-10-14T04:11:13.397Z",
+      "last_seen_at": "2026-10-14T04:11:13.397Z",
+      "resolved_at": null,
+      "owasp_version": "2025",
+      "scan_id": "de0c3e6b-118f-4af9-aee4-0d631e21af44",
+      "title": "SEC-HDR-RP-MISSING",
+      "description": "Missing Referrer-Policy Header",
+      "severity": "The Referrer-Policy HTTP header governs how much referrer metadata is transmitted with outgoing navigation and subresource requests.",
+      "confidence": "LOW",
+      "status": "HIGH",
+      "owasp_category": "CONFIRMED",
+      "cwe": "A02",
+      "affected_url": "2025",
+      "evidence": "CWE-200",
+      "impact": "https://portfolio-hemanthkumara.netlify.app/",
+      "remediation": "Referrer-Policy header was omitted from HTTP response headers.",
+      "rule_id": "RULE-CONFIRMED"
+    },
+    {
+      "id": "14af7420-c71f-461f-95dc-2bde433484d8",
+      "created_at": "2026-10-14T04:11:13.404Z",
+      "first_seen_at": "2026-10-14T04:11:13.404Z",
+      "last_seen_at": "2026-10-14T04:11:13.404Z",
+      "resolved_at": null,
+      "owasp_version": "2025",
+      "scan_id": "de0c3e6b-118f-4af9-aee4-0d631e21af44",
+      "title": "SEC-HDR-PERM-MISSING",
+      "description": "Missing Permissions-Policy Header",
+      "severity": "Permissions-Policy allows developers to explicitly restrict access to browser hardware features such as camera, microphone, geolocation, and payment APIs.",
+      "confidence": "INFORMATIONAL",
+      "status": "HIGH",
+      "owasp_category": "CONFIRMED",
+      "cwe": "A02",
+      "affected_url": "2025",
+      "evidence": "CWE-693",
+      "impact": "https://portfolio-hemanthkumara.netlify.app/",
+      "remediation": "Permissions-Policy header was absent from server response.",
+      "rule_id": "RULE-CONFIRMED"
+    },
+    {
+      "id": "122fa6b7-3b2b-4593-abec-c1d11fce2243",
+      "created_at": "2026-10-14T04:11:13.409Z",
+      "first_seen_at": "2026-10-14T04:11:13.409Z",
+      "last_seen_at": "2026-10-14T04:11:13.409Z",
+      "resolved_at": null,
+      "owasp_version": "2025",
+      "scan_id": "de0c3e6b-118f-4af9-aee4-0d631e21af44",
+      "title": "SEC-HDR-SERVER-LEAK",
+      "description": "Server Banner & Technology Version Disclosure",
+      "severity": "The server discloses internal software engine and version details via HTTP response headers.",
+      "confidence": "LOW",
+      "status": "HIGH",
+      "owasp_category": "CONFIRMED",
+      "cwe": "A02",
+      "affected_url": "2025",
+      "evidence": "CWE-200",
+      "impact": "https://portfolio-hemanthkumara.netlify.app/",
+      "remediation": "Disclosed Headers: Server: Netlify",
+      "rule_id": "RULE-CONFIRMED"
+    },
+    {
+      "id": "12d2cccb-e191-4652-9142-4ced5fdc9f11",
+      "created_at": "2026-10-14T04:11:13.418Z",
+      "first_seen_at": "2026-10-14T04:11:13.418Z",
+      "last_seen_at": "2026-10-14T04:11:13.418Z",
+      "resolved_at": null,
+      "owasp_version": "2025",
+      "scan_id": "de0c3e6b-118f-4af9-aee4-0d631e21af44",
+      "title": "SEC-TECH-FINGERPRINT",
+      "description": "Identified Component Stack (Supply Chain Inventory)",
+      "severity": "Fingerprinted active web software components, client libraries, and web server runtimes for patch management review.",
+      "confidence": "INFORMATIONAL",
+      "status": "HIGH",
+      "owasp_category": "CONFIRMED",
+      "cwe": "A03",
+      "affected_url": "2025",
+      "evidence": "CWE-200",
+      "impact": "https://portfolio-hemanthkumara.netlify.app/",
+      "remediation": "Identified technologies: Netlify (Web Server)",
+      "rule_id": "RULE-CONFIRMED"
+    },
+    {
+      "id": "b72e8422-c4b2-4d1f-bf45-9494635e45eb",
+      "created_at": "2026-10-14T04:13:23.297Z",
+      "first_seen_at": "2026-10-14T04:13:23.297Z",
+      "last_seen_at": "2026-10-14T04:13:23.297Z",
+      "resolved_at": null,
+      "owasp_version": "2025",
+      "scan_id": "47788015-83dd-42a4-8024-72e265f2cc4e",
+      "title": "SEC-HDR-CSP-WEAK",
+      "description": "Weak Content-Security-Policy Directives Detected",
+      "severity": "The Content-Security-Policy contains permissive keywords (unsafe-inline, unsafe-eval, or wildcards) that weaken script execution isolation.",
+      "confidence": "MEDIUM",
+      "status": "HIGH",
+      "owasp_category": "CONFIRMED",
+      "cwe": "A02",
+      "affected_url": "2025",
+      "evidence": "CWE-1021",
+      "impact": "https://www.angelone.in/login/?redirectUrl=portfolio/equity",
+      "remediation": "Observed Content-Security-Policy: \"frame-ancestors 'self' https://*.angelone.in;\"",
+      "rule_id": "RULE-CONFIRMED"
+    },
+    {
+      "id": "eaddf6ed-4545-4196-970e-d433d5310898",
+      "created_at": "2026-10-14T04:13:23.300Z",
+      "first_seen_at": "2026-10-14T04:13:23.300Z",
+      "last_seen_at": "2026-10-14T04:13:23.300Z",
+      "resolved_at": null,
+      "owasp_version": "2025",
+      "scan_id": "47788015-83dd-42a4-8024-72e265f2cc4e",
+      "title": "SEC-HDR-HSTS-SHORT",
+      "description": "Suboptimal HSTS max-age Duration",
+      "severity": "The Strict-Transport-Security max-age directive is set below the recommended 120 days (10,368,000 seconds).",
+      "confidence": "LOW",
+      "status": "HIGH",
+      "owasp_category": "CONFIRMED",
+      "cwe": "A04",
+      "affected_url": "2025",
+      "evidence": "CWE-523",
+      "impact": "https://www.angelone.in/login/?redirectUrl=portfolio/equity",
+      "remediation": "Observed Strict-Transport-Security: \"max-age=86400\"",
+      "rule_id": "RULE-CONFIRMED"
+    },
+    {
+      "id": "24956666-812b-4980-ad58-1b4248b501f9",
+      "created_at": "2026-10-14T04:13:23.302Z",
+      "first_seen_at": "2026-10-14T04:13:23.302Z",
+      "last_seen_at": "2026-10-14T04:13:23.302Z",
+      "resolved_at": null,
+      "owasp_version": "2025",
+      "scan_id": "47788015-83dd-42a4-8024-72e265f2cc4e",
+      "title": "SEC-HDR-RP-MISSING",
+      "description": "Missing Referrer-Policy Header",
+      "severity": "The Referrer-Policy HTTP header governs how much referrer metadata is transmitted with outgoing navigation and subresource requests.",
+      "confidence": "LOW",
+      "status": "HIGH",
+      "owasp_category": "CONFIRMED",
+      "cwe": "A02",
+      "affected_url": "2025",
+      "evidence": "CWE-200",
+      "impact": "https://www.angelone.in/login/?redirectUrl=portfolio/equity",
+      "remediation": "Referrer-Policy header was omitted from HTTP response headers.",
+      "rule_id": "RULE-CONFIRMED"
+    },
+    {
+      "id": "336e2954-0e5b-4b66-9ea5-a1e63198420f",
+      "created_at": "2026-10-14T04:13:23.305Z",
+      "first_seen_at": "2026-10-14T04:13:23.305Z",
+      "last_seen_at": "2026-10-14T04:13:23.305Z",
+      "resolved_at": null,
+      "owasp_version": "2025",
+      "scan_id": "47788015-83dd-42a4-8024-72e265f2cc4e",
+      "title": "SEC-HDR-PERM-MISSING",
+      "description": "Missing Permissions-Policy Header",
+      "severity": "Permissions-Policy allows developers to explicitly restrict access to browser hardware features such as camera, microphone, geolocation, and payment APIs.",
+      "confidence": "INFORMATIONAL",
+      "status": "HIGH",
+      "owasp_category": "CONFIRMED",
+      "cwe": "A02",
+      "affected_url": "2025",
+      "evidence": "CWE-693",
+      "impact": "https://www.angelone.in/login/?redirectUrl=portfolio/equity",
+      "remediation": "Permissions-Policy header was absent from server response.",
+      "rule_id": "RULE-CONFIRMED"
+    },
+    {
+      "id": "f754a2dd-4ee3-4430-ad49-b02341a27ce1",
+      "created_at": "2026-10-14T04:13:23.309Z",
+      "first_seen_at": "2026-10-14T04:13:23.309Z",
+      "last_seen_at": "2026-10-14T04:13:23.309Z",
+      "resolved_at": null,
+      "owasp_version": "2025",
+      "scan_id": "47788015-83dd-42a4-8024-72e265f2cc4e",
+      "title": "SEC-HDR-SERVER-LEAK",
+      "description": "Server Banner & Technology Version Disclosure",
+      "severity": "The server discloses internal software engine and version details via HTTP response headers.",
+      "confidence": "LOW",
+      "status": "HIGH",
+      "owasp_category": "CONFIRMED",
+      "cwe": "A02",
+      "affected_url": "2025",
+      "evidence": "CWE-200",
+      "impact": "https://www.angelone.in/login/?redirectUrl=portfolio/equity",
+      "remediation": "Disclosed Headers: Server: cloudflare",
+      "rule_id": "RULE-CONFIRMED"
+    },
+    {
+      "id": "0720b01a-f8ab-4197-a887-a56bcefc92d6",
+      "created_at": "2026-10-14T04:13:23.311Z",
+      "first_seen_at": "2026-10-14T04:13:23.311Z",
+      "last_seen_at": "2026-10-14T04:13:23.311Z",
+      "resolved_at": null,
+      "owasp_version": "2025",
+      "scan_id": "47788015-83dd-42a4-8024-72e265f2cc4e",
+      "title": "SEC-TECH-FINGERPRINT",
+      "description": "Identified Component Stack (Supply Chain Inventory)",
+      "severity": "Fingerprinted active web software components, client libraries, and web server runtimes for patch management review.",
+      "confidence": "INFORMATIONAL",
+      "status": "HIGH",
+      "owasp_category": "CONFIRMED",
+      "cwe": "A03",
+      "affected_url": "2025",
+      "evidence": "CWE-200",
+      "impact": "https://www.angelone.in/login/?redirectUrl=portfolio/equity",
+      "remediation": "Identified technologies: Cloudflare (CDN / Reverse Proxy)",
+      "rule_id": "RULE-CONFIRMED"
+    }
+  ],
+  "technologies": [
+    {
+      "id": "4cac1615-3ffc-4604-b5c0-826ce1328af5",
+      "scan_id": "a14505a6-c691-414f-8415-8c02f2bfaac7",
+      "name": "Netlify",
+      "version": null,
+      "category": "Web Server",
+      "confidence": "MEDIUM"
+    },
+    {
+      "id": "428cfee8-126c-423b-93d5-480faae8a781",
+      "scan_id": "71b84c2a-07f5-48f0-9db8-b35782a36c38",
+      "name": "Netlify",
+      "version": null,
+      "category": "Web Server",
+      "confidence": "MEDIUM"
+    },
+    {
+      "id": "9623b2a0-d0df-4262-a55a-0032c480709d",
+      "scan_id": "7ddc9478-ddc4-4235-aa3f-fa576444e5df",
+      "name": "Netlify",
+      "version": null,
+      "category": "Web Server",
+      "confidence": "MEDIUM"
+    },
+    {
+      "id": "12d2caff-8c22-4948-a3f8-f8cc720f4434",
+      "scan_id": "4d52d4ca-4622-4d5f-aba8-9ffc62e0b902",
+      "name": "ESF",
+      "version": null,
+      "category": "Web Server",
+      "confidence": "MEDIUM"
+    },
+    {
+      "id": "8b22c6d6-3b02-403e-9623-c8ed05476e3b",
+      "scan_id": "4d52d4ca-4622-4d5f-aba8-9ffc62e0b902",
+      "name": "React",
+      "version": null,
+      "category": "UI Library",
+      "confidence": "HIGH"
+    },
+    {
+      "id": "4b62d708-3212-4d6a-b6c4-6254833e3637",
+      "scan_id": "4d52d4ca-4622-4d5f-aba8-9ffc62e0b902",
+      "name": "Bootstrap",
+      "version": null,
+      "category": "CSS Framework",
+      "confidence": "HIGH"
+    },
+    {
+      "id": "9643297b-342d-471f-be0b-a14af556e10f",
+      "scan_id": "de0c3e6b-118f-4af9-aee4-0d631e21af44",
+      "name": "Netlify",
+      "version": null,
+      "category": "Web Server",
+      "confidence": "MEDIUM"
+    },
+    {
+      "id": "579d2b8d-270d-4087-98fc-c73f2b37b9fa",
+      "scan_id": "47788015-83dd-42a4-8024-72e265f2cc4e",
+      "name": "Cloudflare",
+      "version": null,
+      "category": "CDN / Reverse Proxy",
+      "confidence": "HIGH"
+    }
+  ],
+  "owasp_results": [
+    {
+      "id": "41464446-64e1-491c-9157-489e285e8e46",
+      "scan_id": "a14505a6-c691-414f-8415-8c02f2bfaac7",
+      "category": "A01",
+      "status": "PASS",
+      "score": 100,
+      "findings_count": 0
+    },
+    {
+      "id": "cbc0a911-085a-4c06-b022-e01c37ae6ea1",
+      "scan_id": "a14505a6-c691-414f-8415-8c02f2bfaac7",
+      "category": "A02",
+      "status": "PASS",
+      "score": 100,
+      "findings_count": 0
+    },
+    {
+      "id": "a736ca89-e821-430b-99ec-a29d5d239dea",
+      "scan_id": "a14505a6-c691-414f-8415-8c02f2bfaac7",
+      "category": "A03",
+      "status": "PASS",
+      "score": 100,
+      "findings_count": 0
+    },
+    {
+      "id": "54adae9d-880f-487d-a647-e6b64fc50ef6",
+      "scan_id": "a14505a6-c691-414f-8415-8c02f2bfaac7",
+      "category": "A04",
+      "status": "MANUAL_REVIEW_REQUIRED",
+      "score": 85,
+      "findings_count": 0
+    },
+    {
+      "id": "fc7273f1-92ed-4213-b1f5-d75d5b1d4ef5",
+      "scan_id": "a14505a6-c691-414f-8415-8c02f2bfaac7",
+      "category": "A05",
+      "status": "FAIL",
+      "score": 30,
+      "findings_count": 5
+    },
+    {
+      "id": "251cc854-5b18-4b2e-9dd8-79e7141913a2",
+      "scan_id": "a14505a6-c691-414f-8415-8c02f2bfaac7",
+      "category": "A06",
+      "status": "WARNING",
+      "score": 70,
+      "findings_count": 1
+    },
+    {
+      "id": "50bb25db-9a36-4346-852c-9735f69b0f1d",
+      "scan_id": "a14505a6-c691-414f-8415-8c02f2bfaac7",
+      "category": "A07",
+      "status": "PASS",
+      "score": 100,
+      "findings_count": 0
+    },
+    {
+      "id": "08f55249-d6ed-4226-9ed9-5ec68e592240",
+      "scan_id": "a14505a6-c691-414f-8415-8c02f2bfaac7",
+      "category": "A08",
+      "status": "PASS",
+      "score": 100,
+      "findings_count": 0
+    },
+    {
+      "id": "f6970149-5cd9-4fbb-aac7-0bf2354ca974",
+      "scan_id": "a14505a6-c691-414f-8415-8c02f2bfaac7",
+      "category": "A09",
+      "status": "MANUAL_REVIEW_REQUIRED",
+      "score": 85,
+      "findings_count": 0
+    },
+    {
+      "id": "ae739c79-2e59-444b-81f6-033c303eca59",
+      "scan_id": "a14505a6-c691-414f-8415-8c02f2bfaac7",
+      "category": "A10",
+      "status": "MANUAL_REVIEW_REQUIRED",
+      "score": 85,
+      "findings_count": 0
+    },
+    {
+      "id": "33d149f6-1f05-46ef-b9ce-412880755627",
+      "scan_id": "71b84c2a-07f5-48f0-9db8-b35782a36c38",
+      "category": "A01",
+      "status": "PASS",
+      "score": 100,
+      "findings_count": 0
+    },
+    {
+      "id": "cb96c466-c668-43ce-8ec8-ce53cefda853",
+      "scan_id": "71b84c2a-07f5-48f0-9db8-b35782a36c38",
+      "category": "A02",
+      "status": "PASS",
+      "score": 100,
+      "findings_count": 0
+    },
+    {
+      "id": "779edbfb-dca6-4eba-ade8-a9c22f7385e6",
+      "scan_id": "71b84c2a-07f5-48f0-9db8-b35782a36c38",
+      "category": "A03",
+      "status": "PASS",
+      "score": 100,
+      "findings_count": 0
+    },
+    {
+      "id": "87265755-3e93-475a-886e-c491a828fa43",
+      "scan_id": "71b84c2a-07f5-48f0-9db8-b35782a36c38",
+      "category": "A04",
+      "status": "MANUAL_REVIEW_REQUIRED",
+      "score": 85,
+      "findings_count": 0
+    },
+    {
+      "id": "e9f7553e-4caf-411d-a4d9-cd37ebd377db",
+      "scan_id": "71b84c2a-07f5-48f0-9db8-b35782a36c38",
+      "category": "A05",
+      "status": "FAIL",
+      "score": 30,
+      "findings_count": 5
+    },
+    {
+      "id": "4d21e84e-ab66-4939-9feb-9ff61c5cb3fa",
+      "scan_id": "71b84c2a-07f5-48f0-9db8-b35782a36c38",
+      "category": "A06",
+      "status": "WARNING",
+      "score": 70,
+      "findings_count": 1
+    },
+    {
+      "id": "45b425ee-4a0a-4ca6-ab84-567f065d87c4",
+      "scan_id": "71b84c2a-07f5-48f0-9db8-b35782a36c38",
+      "category": "A07",
+      "status": "PASS",
+      "score": 100,
+      "findings_count": 0
+    },
+    {
+      "id": "513cbfd7-4786-45fc-bcbd-1c205a73d800",
+      "scan_id": "71b84c2a-07f5-48f0-9db8-b35782a36c38",
+      "category": "A08",
+      "status": "PASS",
+      "score": 100,
+      "findings_count": 0
+    },
+    {
+      "id": "e7076780-298e-4af3-a018-116e3270eec6",
+      "scan_id": "71b84c2a-07f5-48f0-9db8-b35782a36c38",
+      "category": "A09",
+      "status": "MANUAL_REVIEW_REQUIRED",
+      "score": 85,
+      "findings_count": 0
+    },
+    {
+      "id": "941aeff3-51c9-45f8-9319-30b4a83ed183",
+      "scan_id": "71b84c2a-07f5-48f0-9db8-b35782a36c38",
+      "category": "A10",
+      "status": "MANUAL_REVIEW_REQUIRED",
+      "score": 85,
+      "findings_count": 0
+    },
+    {
+      "id": "e4197114-4022-4dcf-a0dc-cb3c4d9a2524",
+      "scan_id": "7ddc9478-ddc4-4235-aa3f-fa576444e5df",
+      "category": "A01",
+      "status": "PASS",
+      "score": 100,
+      "findings_count": 0
+    },
+    {
+      "id": "3d7dfb79-3a4f-4815-ab89-759bcdbb23e1",
+      "scan_id": "7ddc9478-ddc4-4235-aa3f-fa576444e5df",
+      "category": "A02",
+      "status": "PASS",
+      "score": 100,
+      "findings_count": 0
+    },
+    {
+      "id": "27ab4b5a-481e-4585-8559-5d49d1f02f93",
+      "scan_id": "7ddc9478-ddc4-4235-aa3f-fa576444e5df",
+      "category": "A03",
+      "status": "PASS",
+      "score": 100,
+      "findings_count": 0
+    },
+    {
+      "id": "9b95402a-0ddf-469f-944e-99f800675ea8",
+      "scan_id": "7ddc9478-ddc4-4235-aa3f-fa576444e5df",
+      "category": "A04",
+      "status": "MANUAL_REVIEW_REQUIRED",
+      "score": 85,
+      "findings_count": 0
+    },
+    {
+      "id": "6a8f3df2-b988-4dfc-b49f-5f10f8b757d3",
+      "scan_id": "7ddc9478-ddc4-4235-aa3f-fa576444e5df",
+      "category": "A05",
+      "status": "FAIL",
+      "score": 30,
+      "findings_count": 5
+    },
+    {
+      "id": "0d720134-4323-4480-b829-e37d5a0e1952",
+      "scan_id": "7ddc9478-ddc4-4235-aa3f-fa576444e5df",
+      "category": "A06",
+      "status": "WARNING",
+      "score": 70,
+      "findings_count": 1
+    },
+    {
+      "id": "e395346b-f83b-464e-bf46-621d4b44cb84",
+      "scan_id": "7ddc9478-ddc4-4235-aa3f-fa576444e5df",
+      "category": "A07",
+      "status": "PASS",
+      "score": 100,
+      "findings_count": 0
+    },
+    {
+      "id": "2c00578f-23e9-4d7e-946d-815d19c90842",
+      "scan_id": "7ddc9478-ddc4-4235-aa3f-fa576444e5df",
+      "category": "A08",
+      "status": "PASS",
+      "score": 100,
+      "findings_count": 0
+    },
+    {
+      "id": "935bd3c4-3390-4565-aec5-90ca6f9a871b",
+      "scan_id": "7ddc9478-ddc4-4235-aa3f-fa576444e5df",
+      "category": "A09",
+      "status": "MANUAL_REVIEW_REQUIRED",
+      "score": 85,
+      "findings_count": 0
+    },
+    {
+      "id": "541df954-6642-4080-a694-21651c20133a",
+      "scan_id": "7ddc9478-ddc4-4235-aa3f-fa576444e5df",
+      "category": "A10",
+      "status": "MANUAL_REVIEW_REQUIRED",
+      "score": 85,
+      "findings_count": 0
+    },
+    {
+      "id": "982ebbe9-88db-43d5-8d21-505fae828ea4",
+      "scan_id": "4d52d4ca-4622-4d5f-aba8-9ffc62e0b902",
+      "category": "A01",
+      "status": "WARNING",
+      "score": 70,
+      "findings_count": 1
+    },
+    {
+      "id": "3011ca45-63b8-4341-a988-9533f99ef91d",
+      "scan_id": "4d52d4ca-4622-4d5f-aba8-9ffc62e0b902",
+      "category": "A02",
+      "status": "PASS",
+      "score": 100,
+      "findings_count": 0
+    },
+    {
+      "id": "2904b523-7e0a-485d-8383-f7473b6a574b",
+      "scan_id": "4d52d4ca-4622-4d5f-aba8-9ffc62e0b902",
+      "category": "A03",
+      "status": "PASS",
+      "score": 100,
+      "findings_count": 0
+    },
+    {
+      "id": "6a395e54-d845-4f2a-a275-fbb2da676c2a",
+      "scan_id": "4d52d4ca-4622-4d5f-aba8-9ffc62e0b902",
+      "category": "A04",
+      "status": "MANUAL_REVIEW_REQUIRED",
+      "score": 85,
+      "findings_count": 0
+    },
+    {
+      "id": "30c3ef38-a823-426b-b4db-d3d1c56966c3",
+      "scan_id": "4d52d4ca-4622-4d5f-aba8-9ffc62e0b902",
+      "category": "A05",
+      "status": "WARNING",
+      "score": 70,
+      "findings_count": 3
+    },
+    {
+      "id": "c904c82e-5ca9-4388-a5f0-2dfc943c2f4f",
+      "scan_id": "4d52d4ca-4622-4d5f-aba8-9ffc62e0b902",
+      "category": "A06",
+      "status": "WARNING",
+      "score": 70,
+      "findings_count": 1
+    },
+    {
+      "id": "1c8123fb-e4c4-4c71-a512-2e640944cb3e",
+      "scan_id": "4d52d4ca-4622-4d5f-aba8-9ffc62e0b902",
+      "category": "A07",
+      "status": "PASS",
+      "score": 100,
+      "findings_count": 0
+    },
+    {
+      "id": "065e4b8d-8162-480b-a3ab-ed3c73e4a160",
+      "scan_id": "4d52d4ca-4622-4d5f-aba8-9ffc62e0b902",
+      "category": "A08",
+      "status": "PASS",
+      "score": 100,
+      "findings_count": 0
+    },
+    {
+      "id": "0e5dd12f-6087-49d1-b1b2-4b8208bb3e3e",
+      "scan_id": "4d52d4ca-4622-4d5f-aba8-9ffc62e0b902",
+      "category": "A09",
+      "status": "MANUAL_REVIEW_REQUIRED",
+      "score": 85,
+      "findings_count": 0
+    },
+    {
+      "id": "e54d22ed-bd0a-4227-a1a5-939db0c2c7a1",
+      "scan_id": "4d52d4ca-4622-4d5f-aba8-9ffc62e0b902",
+      "category": "A10",
+      "status": "MANUAL_REVIEW_REQUIRED",
+      "score": 85,
+      "findings_count": 0
+    },
+    {
+      "id": "3607818f-7dda-4416-9add-91d1bdcf4654",
+      "scan_id": "ebf3923c-c509-4b50-9211-605f6e1f42be",
+      "category": "A01",
+      "status": "WARNING",
+      "score": 70,
+      "findings_count": 1
+    },
+    {
+      "id": "341b1def-ce3c-4640-a6d8-3d5be2009ffb",
+      "scan_id": "ebf3923c-c509-4b50-9211-605f6e1f42be",
+      "category": "A02",
+      "status": "WARNING",
+      "score": 70,
+      "findings_count": 1
+    },
+    {
+      "id": "83d91967-79bd-4897-b8fc-2bc4411eb7f0",
+      "scan_id": "ebf3923c-c509-4b50-9211-605f6e1f42be",
+      "category": "A03",
+      "status": "PASS",
+      "score": 100,
+      "findings_count": 0
+    },
+    {
+      "id": "785d69ad-cedf-46ff-9f6b-ba8db6fc6c3e",
+      "scan_id": "ebf3923c-c509-4b50-9211-605f6e1f42be",
+      "category": "A04",
+      "status": "MANUAL_REVIEW_REQUIRED",
+      "score": 85,
+      "findings_count": 0
+    },
+    {
+      "id": "8d45dae7-c9ed-4e68-a3b9-a38604ebf002",
+      "scan_id": "ebf3923c-c509-4b50-9211-605f6e1f42be",
+      "category": "A05",
+      "status": "WARNING",
+      "score": 70,
+      "findings_count": 1
+    },
+    {
+      "id": "0ae6ca16-3104-4da2-b08e-2276f4f55bca",
+      "scan_id": "ebf3923c-c509-4b50-9211-605f6e1f42be",
+      "category": "A06",
+      "status": "PASS",
+      "score": 100,
+      "findings_count": 0
+    },
+    {
+      "id": "ec93233b-3542-4ad2-92cc-088e7f118012",
+      "scan_id": "ebf3923c-c509-4b50-9211-605f6e1f42be",
+      "category": "A07",
+      "status": "PASS",
+      "score": 100,
+      "findings_count": 0
+    },
+    {
+      "id": "f9231678-8ef4-431a-bfa8-9b008190612b",
+      "scan_id": "ebf3923c-c509-4b50-9211-605f6e1f42be",
+      "category": "A08",
+      "status": "PASS",
+      "score": 100,
+      "findings_count": 0
+    },
+    {
+      "id": "5d335b32-7827-4fa6-9eb1-c06a25ece46e",
+      "scan_id": "ebf3923c-c509-4b50-9211-605f6e1f42be",
+      "category": "A09",
+      "status": "MANUAL_REVIEW_REQUIRED",
+      "score": 85,
+      "findings_count": 0
+    },
+    {
+      "id": "7d415ee7-e6e0-4c20-a060-9fa68f9e0cd6",
+      "scan_id": "ebf3923c-c509-4b50-9211-605f6e1f42be",
+      "category": "A10",
+      "status": "MANUAL_REVIEW_REQUIRED",
+      "score": 85,
+      "findings_count": 0
+    },
+    {
+      "id": "fc5859e2-03f5-4c65-8081-3ea19d9ef02f",
+      "scan_id": "de0c3e6b-118f-4af9-aee4-0d631e21af44",
+      "category": "A01",
+      "status": "PASS",
+      "score": 100,
+      "findings_count": 0
+    },
+    {
+      "id": "60094ba3-34f7-4872-aca8-e01548d458f4",
+      "scan_id": "de0c3e6b-118f-4af9-aee4-0d631e21af44",
+      "category": "A02",
+      "status": "FINDING",
+      "score": 45,
+      "findings_count": 6
+    },
+    {
+      "id": "a53f938d-6cf6-4066-a8ff-4bbcf777c097",
+      "scan_id": "de0c3e6b-118f-4af9-aee4-0d631e21af44",
+      "category": "A03",
+      "status": "FINDING",
+      "score": 85,
+      "findings_count": 1
+    },
+    {
+      "id": "b84cda3d-53de-4e01-825c-988b3a30c1dd",
+      "scan_id": "de0c3e6b-118f-4af9-aee4-0d631e21af44",
+      "category": "A04",
+      "status": "PASS",
+      "score": 100,
+      "findings_count": 0
+    },
+    {
+      "id": "4db3a961-1fd8-4e2e-b775-82486ed8c5d6",
+      "scan_id": "de0c3e6b-118f-4af9-aee4-0d631e21af44",
+      "category": "A05",
+      "status": "PASS",
+      "score": 100,
+      "findings_count": 0
+    },
+    {
+      "id": "a55054ac-1388-4e10-8255-a1c403c3964f",
+      "scan_id": "de0c3e6b-118f-4af9-aee4-0d631e21af44",
+      "category": "A06",
+      "status": "NOT_TESTED",
+      "score": 100,
+      "findings_count": 0
+    },
+    {
+      "id": "b0c1d2bf-a752-402a-a533-bd19925bec41",
+      "scan_id": "de0c3e6b-118f-4af9-aee4-0d631e21af44",
+      "category": "A07",
+      "status": "PASS",
+      "score": 100,
+      "findings_count": 0
+    },
+    {
+      "id": "8c19b716-4959-4081-b722-2202b4e6c6b8",
+      "scan_id": "de0c3e6b-118f-4af9-aee4-0d631e21af44",
+      "category": "A08",
+      "status": "PASS",
+      "score": 100,
+      "findings_count": 0
+    },
+    {
+      "id": "776ca90b-92ef-40dc-b3b7-6379c2d21966",
+      "scan_id": "de0c3e6b-118f-4af9-aee4-0d631e21af44",
+      "category": "A09",
+      "status": "NOT_TESTED",
+      "score": 100,
+      "findings_count": 0
+    },
+    {
+      "id": "1c8d2730-85fa-41b4-98ce-55214963ad58",
+      "scan_id": "de0c3e6b-118f-4af9-aee4-0d631e21af44",
+      "category": "A10",
+      "status": "PASS",
+      "score": 100,
+      "findings_count": 0
+    },
+    {
+      "id": "b20ced0e-14d6-4246-ae57-e85aae973cf6",
+      "scan_id": "47788015-83dd-42a4-8024-72e265f2cc4e",
+      "category": "A01",
+      "status": "PASS",
+      "score": 100,
+      "findings_count": 0
+    },
+    {
+      "id": "751e14ba-23d4-48c5-98b9-caf11c8e8a09",
+      "scan_id": "47788015-83dd-42a4-8024-72e265f2cc4e",
+      "category": "A02",
+      "status": "FINDING",
+      "score": 70,
+      "findings_count": 4
+    },
+    {
+      "id": "81dc0801-a19e-4ed7-8db7-40698fec87fd",
+      "scan_id": "47788015-83dd-42a4-8024-72e265f2cc4e",
+      "category": "A03",
+      "status": "FINDING",
+      "score": 85,
+      "findings_count": 1
+    },
+    {
+      "id": "be65dfd0-3722-42e2-8fe6-f265833fd0dc",
+      "scan_id": "47788015-83dd-42a4-8024-72e265f2cc4e",
+      "category": "A04",
+      "status": "FINDING",
+      "score": 85,
+      "findings_count": 1
+    },
+    {
+      "id": "e2fd0e82-e867-4cf8-b978-82ce7f54d848",
+      "scan_id": "47788015-83dd-42a4-8024-72e265f2cc4e",
+      "category": "A05",
+      "status": "PASS",
+      "score": 100,
+      "findings_count": 0
+    },
+    {
+      "id": "9390605c-cfaf-4016-ae9d-60bcae199820",
+      "scan_id": "47788015-83dd-42a4-8024-72e265f2cc4e",
+      "category": "A06",
+      "status": "NOT_TESTED",
+      "score": 100,
+      "findings_count": 0
+    },
+    {
+      "id": "e6365e91-e416-4fa5-95a3-a31f275ef999",
+      "scan_id": "47788015-83dd-42a4-8024-72e265f2cc4e",
+      "category": "A07",
+      "status": "PASS",
+      "score": 100,
+      "findings_count": 0
+    },
+    {
+      "id": "cf0fefec-2aca-44b8-88f3-5f2ff47b6a59",
+      "scan_id": "47788015-83dd-42a4-8024-72e265f2cc4e",
+      "category": "A08",
+      "status": "PASS",
+      "score": 100,
+      "findings_count": 0
+    },
+    {
+      "id": "96944ab0-e90f-47c1-b57b-104df823d8ee",
+      "scan_id": "47788015-83dd-42a4-8024-72e265f2cc4e",
+      "category": "A09",
+      "status": "NOT_TESTED",
+      "score": 100,
+      "findings_count": 0
+    },
+    {
+      "id": "1f701dfd-39b1-4206-9433-e404e0d7d9dd",
+      "scan_id": "47788015-83dd-42a4-8024-72e265f2cc4e",
+      "category": "A10",
+      "status": "PASS",
+      "score": 100,
+      "findings_count": 0
+    }
+  ],
+  "reports": [
+    {
+      "id": "39f06a11-52aa-4c64-8964-d8571b1a105d",
+      "scan_id": "a14505a6-c691-414f-8415-8c02f2bfaac7",
+      "file_path": "C:\\Users\\heman\\Documents\\VS Projects\\webshield\\backend\\temp_reports\\WebShield_Report_a14505a6-c691-414f-8415-8c02f2bfaac7.pdf",
+      "created_at": "2026-10-04T16:30:28.996Z"
+    },
+    {
+      "id": "d55e0470-533f-4019-a095-e34a2c18a9d0",
+      "scan_id": "a14505a6-c691-414f-8415-8c02f2bfaac7",
+      "file_path": "C:\\Users\\heman\\Documents\\VS Projects\\webshield\\backend\\temp_reports\\WebShield_Report_a14505a6-c691-414f-8415-8c02f2bfaac7.pdf",
+      "created_at": "2026-10-04T16:31:06.294Z"
+    }
+  ],
+  "audit_logs": [
+    {
+      "id": "95b79350-9516-48ef-826b-6e7648c05d91",
+      "user_id": "4d560032-397e-488f-9d0a-647d06b2d59f",
+      "action": "CREATE_SCAN",
+      "metadata": {
+        "scanId": "a14505a6-c691-414f-8415-8c02f2bfaac7",
+        "targetUrl": "https://portfolio-hemanthkumara.netlify.app/"
+      },
+      "created_at": "2026-10-04T16:29:41.133Z"
+    },
+    {
+      "id": "0491b06f-0a3c-4fb8-82e9-ef8e3a0288d5",
+      "user_id": "4d560032-397e-488f-9d0a-647d06b2d59f",
+      "action": "SCAN_COMPLETED",
+      "metadata": {
+        "scanId": "a14505a6-c691-414f-8415-8c02f2bfaac7",
+        "targetUrl": "https://portfolio-hemanthkumara.netlify.app/",
+        "score": 69
+      },
+      "created_at": "2026-10-04T16:29:42.873Z"
+    },
+    {
+      "id": "ed2ad99d-09fd-40fd-82b1-01555118d97c",
+      "user_id": "4d560032-397e-488f-9d0a-647d06b2d59f",
+      "action": "CREATE_SCAN",
+      "metadata": {
+        "scanId": "71b84c2a-07f5-48f0-9db8-b35782a36c38",
+        "targetUrl": "https://portfolio-hemanthkumara.netlify.app/"
+      },
+      "created_at": "2026-10-04T16:32:50.106Z"
+    },
+    {
+      "id": "03556f06-7e58-462d-b9da-9c35f76d01f4",
+      "user_id": "4d560032-397e-488f-9d0a-647d06b2d59f",
+      "action": "SCAN_COMPLETED",
+      "metadata": {
+        "scanId": "71b84c2a-07f5-48f0-9db8-b35782a36c38",
+        "targetUrl": "https://portfolio-hemanthkumara.netlify.app/",
+        "score": 69
+      },
+      "created_at": "2026-10-04T16:32:53.184Z"
+    },
+    {
+      "id": "97fd9e66-6af0-429c-8439-f1a8af6178c4",
+      "user_id": "48935e1e-38a1-4763-aabd-548c0c342c64",
+      "action": "GOOGLE_REGISTER",
+      "metadata": {
+        "email": "analyst.google@webshield.io",
+        "ip": "::1"
+      },
+      "created_at": "2026-10-04T16:39:13.948Z"
+    },
+    {
+      "id": "6e56b531-3d63-41aa-bae0-b8f766d58bdf",
+      "user_id": "48935e1e-38a1-4763-aabd-548c0c342c64",
+      "action": "GOOGLE_LOGIN",
+      "metadata": {
+        "email": "analyst.google@webshield.io",
+        "ip": "::1"
+      },
+      "created_at": "2026-10-04T16:39:25.264Z"
+    },
+    {
+      "id": "2a484f70-39fb-4025-b513-94dcce9bb605",
+      "user_id": "48935e1e-38a1-4763-aabd-548c0c342c64",
+      "action": "CREATE_SCAN",
+      "metadata": {
+        "scanId": "7ddc9478-ddc4-4235-aa3f-fa576444e5df",
+        "targetUrl": "https://portfolio-hemanthkumara.netlify.app/"
+      },
+      "created_at": "2026-10-04T16:39:36.946Z"
+    },
+    {
+      "id": "5ea815b7-9cda-4ba4-8446-b4d98ecdfeb3",
+      "user_id": "48935e1e-38a1-4763-aabd-548c0c342c64",
+      "action": "SCAN_COMPLETED",
+      "metadata": {
+        "scanId": "7ddc9478-ddc4-4235-aa3f-fa576444e5df",
+        "targetUrl": "https://portfolio-hemanthkumara.netlify.app/",
+        "score": 69
+      },
+      "created_at": "2026-10-04T16:39:40.306Z"
+    },
+    {
+      "id": "6b222997-250c-45a3-bba2-db1403f17c2c",
+      "user_id": "3b773c21-f20f-4e32-b299-9779a62b2ba3",
+      "action": "FIREBASE_REGISTER",
+      "metadata": {
+        "email": "1choclates2ice@gmail.com",
+        "ip": "::1"
+      },
+      "created_at": "2026-10-04T16:55:09.092Z"
+    },
+    {
+      "id": "72df8dd5-c448-4843-854f-b74de136472c",
+      "user_id": "3b773c21-f20f-4e32-b299-9779a62b2ba3",
+      "action": "CREATE_SCAN",
+      "metadata": {
+        "scanId": "4d52d4ca-4622-4d5f-aba8-9ffc62e0b902",
+        "targetUrl": "https://www.youtube.com/watch?v=DflEIAFhRfo"
+      },
+      "created_at": "2026-10-04T16:55:29.323Z"
+    },
+    {
+      "id": "791c338a-505e-40a2-9bc2-0fc6eac537dd",
+      "user_id": "3b773c21-f20f-4e32-b299-9779a62b2ba3",
+      "action": "SCAN_COMPLETED",
+      "metadata": {
+        "scanId": "4d52d4ca-4622-4d5f-aba8-9ffc62e0b902",
+        "targetUrl": "https://www.youtube.com/watch?v=DflEIAFhRfo",
+        "score": 89
+      },
+      "created_at": "2026-10-04T16:55:33.073Z"
+    },
+    {
+      "id": "11c3584d-e461-43dd-a4dd-52560d1015ba",
+      "user_id": "58b0d823-4cd4-458a-9578-232c3ad7195f",
+      "action": "FIREBASE_REGISTER",
+      "metadata": {
+        "email": "hemanth4104@gmail.com",
+        "ip": "::1"
+      },
+      "created_at": "2026-10-04T16:59:12.045Z"
+    },
+    {
+      "id": "cf2647ff-9087-4c87-a310-463bc1fbdc39",
+      "user_id": "ee81c917-c443-4bf5-91ba-9154308ee045",
+      "action": "USER_LOGIN",
+      "metadata": {
+        "ip": "::1"
+      },
+      "created_at": "2026-10-13T14:26:21.683Z"
+    },
+    {
+      "id": "f62e2f27-73a7-4ae2-95d2-2fe55d23f2f9",
+      "user_id": "cd72f0aa-2daf-4aef-8bea-876d160cc907",
+      "action": "FIREBASE_REGISTER",
+      "metadata": {
+        "email": "hk1100411004@gmail.com",
+        "ip": "::1"
+      },
+      "created_at": "2026-10-13T14:36:21.779Z"
+    },
+    {
+      "id": "45fc0bf4-cdd1-40b2-afea-76c337c0e962",
+      "user_id": "cd72f0aa-2daf-4aef-8bea-876d160cc907",
+      "action": "CREATE_SCAN",
+      "metadata": {
+        "scanId": "ebf3923c-c509-4b50-9211-605f6e1f42be",
+        "targetUrl": "https://web.whatsapp.com/"
+      },
+      "created_at": "2026-10-13T14:36:41.086Z"
+    },
+    {
+      "id": "d76741e4-a96f-4778-b3d3-b3a8a20e727e",
+      "user_id": "cd72f0aa-2daf-4aef-8bea-876d160cc907",
+      "action": "SCAN_COMPLETED",
+      "metadata": {
+        "scanId": "ebf3923c-c509-4b50-9211-605f6e1f42be",
+        "targetUrl": "https://web.whatsapp.com/",
+        "score": 86
+      },
+      "created_at": "2026-10-13T14:36:48.150Z"
+    },
+    {
+      "id": "d1b08698-06fc-4006-be0f-170807fe42f2",
+      "user_id": "cd72f0aa-2daf-4aef-8bea-876d160cc907",
+      "action": "FIREBASE_LOGIN",
+      "metadata": {
+        "email": "hk1100411004@gmail.com",
+        "ip": "::1"
+      },
+      "created_at": "2026-10-14T03:11:31.446Z"
+    },
+    {
+      "id": "383681a2-3830-4cb9-b496-69c683aa0812",
+      "user_id": "3b773c21-f20f-4e32-b299-9779a62b2ba3",
+      "action": "FIREBASE_LOGIN",
+      "metadata": {
+        "email": "1choclates2ice@gmail.com",
+        "ip": "::1"
+      },
+      "created_at": "2026-10-14T04:09:38.110Z"
+    },
+    {
+      "id": "f9a3998a-c5f3-4269-ae30-10684d0ed521",
+      "user_id": "3b773c21-f20f-4e32-b299-9779a62b2ba3",
+      "action": "CREATE_SCAN",
+      "metadata": {
+        "scanId": "de0c3e6b-118f-4af9-aee4-0d631e21af44",
+        "targetUrl": "https://portfolio-hemanthkumara.netlify.app/"
+      },
+      "created_at": "2026-10-14T04:11:05.865Z"
+    },
+    {
+      "id": "51ccec9c-2b7e-48b0-8a2b-8fb055974dc7",
+      "user_id": "3b773c21-f20f-4e32-b299-9779a62b2ba3",
+      "action": "SCAN_COMPLETED",
+      "metadata": {
+        "scanId": "de0c3e6b-118f-4af9-aee4-0d631e21af44",
+        "targetUrl": "https://portfolio-hemanthkumara.netlify.app/",
+        "score": 66,
+        "coverage": 100
+      },
+      "created_at": "2026-10-14T04:11:13.488Z"
+    },
+    {
+      "id": "f6b458fe-c1f4-4a75-9e6d-e0879fcbd7f8",
+      "user_id": "3b773c21-f20f-4e32-b299-9779a62b2ba3",
+      "action": "CREATE_SCAN",
+      "metadata": {
+        "scanId": "47788015-83dd-42a4-8024-72e265f2cc4e",
+        "targetUrl": "https://www.angelone.in/login/?redirectUrl=portfolio/equity"
+      },
+      "created_at": "2026-10-14T04:13:09.005Z"
+    },
+    {
+      "id": "9a7835ac-7df5-452e-b642-452fe139655c",
+      "user_id": "3b773c21-f20f-4e32-b299-9779a62b2ba3",
+      "action": "SCAN_COMPLETED",
+      "metadata": {
+        "scanId": "47788015-83dd-42a4-8024-72e265f2cc4e",
+        "targetUrl": "https://www.angelone.in/login/?redirectUrl=portfolio/equity",
+        "score": 81,
+        "coverage": 100
+      },
+      "created_at": "2026-10-14T04:13:23.340Z"
+    }
+  ]
+}

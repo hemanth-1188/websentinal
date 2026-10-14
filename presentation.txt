@@ -1,0 +1,959 @@
+================================================================================
+                    WEBSENTINEL — SECURITY ASSESSMENT PLATFORM
+               COMPREHENSIVE POWERPOINT PRESENTATION BLUEPRINT & SCRIPT
+================================================================================
+
+PROJECT NAME:      WebSentinel (Automated Web Security Assessment Platform)
+TARGET AUDIENCE:   Technical Evaluators, Academic Panels, Security Teams, DevOps
+PRESENTATION TYPE: Slide-by-Slide PPT Guide, Technical Stack & Complete Workflow
+FILE FORMAT:       Plain Text (.txt) - Ready for Slide Generation & Speaker Notes
+
+================================================================================
+                           TABLE OF CONTENTS
+================================================================================
+  1. Executive Summary & Presentation Strategy
+  2. Slide-by-Slide Presentation Structure (Slides 1 to 16)
+     - Slide 1: Title & Introduction
+     - Slide 2: Problem Statement & Motivation
+     - Slide 3: WebShield Solution & Core Value Proposition
+     - Slide 4: System Architecture Overview (High-Level)
+     - Slide 5: Complete Technology Stack (Front-to-Back Breakdown)
+     - Slide 6: Multi-Layered SSRF Guardian & Defensive Security Model
+     - Slide 7: The Modular Security Scanner Engine
+     - Slide 8: OWASP Top 10 Mapping & Mathematical Risk Scoring
+     - Slide 9: Data Layer & Database Architecture (PostgreSQL Schema)
+     - Slide 10: In-Memory Caching & Distributed Job Queue (Redis + BullMQ)
+     - Slide 11: End-to-End System Workflow (Step-by-Step Lifecycle)
+     - Slide 12: Finding Lifecycle Tracking & Historical Diffing
+     - Slide 13: Report Generation Engine (Executive PDF Reports)
+     - Slide 14: Interactive Demonstration (Vulnerable vs Remediated Target)
+     - Slide 15: Security Limitations, Responsible Disclosure & Ethics
+     - Slide 16: Summary, Future Roadmap & Conclusion
+  3. Master Technology Stack Reference Matrix
+  4. Comprehensive Data Storage Architecture & Entity Reference
+  5. Step-by-Step End-to-End Workflow Blueprint
+  6. Panel Q&A / Defense Preparation Guide
+
+================================================================================
+1. EXECUTIVE SUMMARY & PRESENTATION STRATEGY
+================================================================================
+
+ELEVATOR PITCH:
+WebShield is an automated, defensive, non-destructive web vulnerability assessment 
+platform tailored specifically for small organizations, agile engineering teams, 
+and dev-security workflows. It bridges the critical divide between prohibitively 
+expensive commercial penetration tests and overly complex enterprise security tools. 
+With automated security header validation, TLS cipher inspection, cookie attribute 
+analysis, non-destructive injection probes, OWASP Top 10 compliance mapping, 
+and real-time score diffing, WebShield transforms raw vulnerabilities into 
+actionable, evidence-backed code remediation.
+
+KEY TALKING POINTS FOR THE SPEAKER:
+1. "Security is inaccessible to small teams": 43% of cyberattacks target small 
+   businesses, yet enterprise scanners require dedicated SecOps personnel.
+2. "Defensive and safe by design": Built strictly with non-destructive probes, 
+   DNS-resolved SSRF protection, and explicit user authorization barriers.
+3. "Complete lifecycle approach": Scans are not one-off reports; WebShield tracks 
+   vulnerabilities across consecutive runs (First Seen, Last Seen, Resolved).
+4. "Modern, production-ready stack": Microservice architecture orchestrated via 
+   Docker Compose, powered by React 18, Node.js/TypeScript, PostgreSQL 16, 
+   Redis 7, and BullMQ.
+
+================================================================================
+2. SLIDE-BY-SLIDE PRESENTATION STRUCTURE
+================================================================================
+
+--------------------------------------------------------------------------------
+SLIDE 1: TITLE & INTRODUCTION
+--------------------------------------------------------------------------------
+[Slide Title]:    WEBSHIELD
+[Slide Subtitle]: Automated Web Security Assessment Platform for Small Organizations
+[Presenter]:      [Your Name / Team Name]
+[Visual Layout]:  Dark cyber aesthetic background. WebShield logo on left; 
+                  bullet points and presenter details on right.
+
+[Slide Content - Bullet Points]:
+* Next-Generation Automated Web Vulnerability Scanner
+* Non-Destructive Active & Passive Security Probes
+* Instant OWASP Top 10 Alignment & Evidence-Based Reporting
+* Built-in Verification Pipeline with Before/After Remediation Tracking
+* Production-Grade Stack: React 18, TypeScript, Node.js, PostgreSQL, Redis, Docker
+
+[Speaker Script / Talking Points]:
+"Good morning/afternoon, esteemed members of the panel. Today, I am proud to present 
+WebShield—an automated web security assessment platform engineered specifically to 
+democratize vulnerability management for modern web applications. WebShield provides 
+comprehensive, non-destructive security auditing, maps every discovery to the OWASP 
+Top 10 standard, and equips engineering teams with exact code snippets and evidence 
+to remediate flaws before attackers exploit them. Let us delve into the challenges 
+that prompted this project."
+
+--------------------------------------------------------------------------------
+SLIDE 2: THE PROBLEM STATEMENT & INDUSTRY CHALLENGE
+--------------------------------------------------------------------------------
+[Slide Title]:    The Problem: The Cybersecurity Blind Spot for Growing Teams
+[Visual Layout]:  2-column comparison card layout:
+                  Column A: "Enterprise Security (Current State)"
+                  Column B: "The Reality for Small Organizations"
+
+[Slide Content - Bullet Points]:
+* Prohibitive Cost of Security Testing:
+  - Professional manual penetration testing costs $10,000–$50,000 per assessment.
+  - Frequency is typically annual or bi-annual, leaving months of unmonitored code changes.
+* Complexity of Traditional Open-Source Tools:
+  - Tools like OWASP ZAP or Nessus require deep security domain knowledge to configure.
+  - High false-positive rates overwhelm small engineering teams.
+  - Lack of clear, contextual remediation advice for developers.
+* Dangerous Security Misconfigurations:
+  - Missing Content-Security-Policy (CSP) and HSTS.
+  - Exposed environment configurations (.env.example, .git folders).
+  - Weak cookie protection (missing HttpOnly, Secure, SameSite flags).
+  - Inadvertent server version disclosures (X-Powered-By banners).
+
+[Speaker Script / Talking Points]:
+"Web applications today are deployed faster than ever through CI/CD pipelines. 
+However, security testing remains a major bottleneck. Small to mid-sized teams 
+simply cannot afford dedicated security teams or frequent penetration tests. 
+When they try using enterprise scanners, they are bombarded with hundreds of raw 
+alerts without context or code-level remediation steps. Consequently, basic 
+misconfigurations—like missing security headers, exposed sensitive files, and 
+leaky cookies—slip into production and become open invitations for attackers."
+
+--------------------------------------------------------------------------------
+SLIDE 3: THE WEBSHIELD SOLUTION
+--------------------------------------------------------------------------------
+[Slide Title]:    The Solution: Automated, Evidence-Backed Security Auditing
+[Visual Layout]:  4 feature boxes arranged in a 2x2 grid with iconography.
+
+[Slide Content - Bullet Points]:
+1. Automated Non-Destructive Scanning:
+   - Safe, non-intrusive HTTP/TLS inspection designed for live environments.
+2. Evidence-Backed Findings:
+   - Raw HTTP response header captures and URI proofs accompany every finding.
+   - Zero guessing: developers see exactly what the scanner observed.
+3. OWASP Top 10 Categorization:
+   - Dynamic classification into A01 (Access Control) through A10 (SSRF).
+   - Clear grading: PASS, FINDING, WARNING, or NOT_TESTED.
+4. Historical Tracking & Remediation Verification:
+   - Tracks finding lifecycle: First Seen, Last Seen, Resolved.
+   - Side-by-side scan comparisons with diff highlights and score jumps.
+5. Executive & Engineering Reports:
+   - Instant vector PDF generation with executive summaries and CWE references.
+
+[Speaker Script / Talking Points]:
+"WebShield solves this dilemma by turning security auditing into an intuitive, 
+developer-friendly workflow. Instead of generating confusing logs, WebShield 
+produces evidence-backed reports. Every single finding contains the exact HTTP 
+header response or DOM snippet, the Common Weakness Enumeration (CWE) identifier, 
+the OWASP category, and copy-pasteable remediation code for frameworks like 
+Express, Nginx, and Apache. Most importantly, it verifies fixes through automated 
+before-and-after scan comparisons."
+
+--------------------------------------------------------------------------------
+SLIDE 4: SYSTEM ARCHITECTURE OVERVIEW
+--------------------------------------------------------------------------------
+[Slide Title]:    High-Level Microservice Architecture
+[Visual Layout]:  Full-width architectural diagram showing 5 distinct layers:
+                  Frontend -> Backend API -> Job Queue -> Scanner Core -> Storage
+
+[Slide Content - Architecture Diagram]:
+
+  +-----------------------------------------------------------------------+
+  |              FRONTEND CLIENT (React 18 + TypeScript + Vite)           |
+  |  SaaS Dashboard | New Scan Form | Live Progress Tracker | Compare View|
+  +-----------------------------------------------------------------------+
+                                     |
+                         HTTPS / REST API Requests
+                                     v
+  +-----------------------------------------------------------------------+
+  |               BACKEND API LAYER (Node.js + Express + Zod)             |
+  |  JWT / Firebase Auth | Rate Limiter | SSRF Guardian | Audit Logger    |
+  +-----------------------------------------------------------------------+
+                                     |
+                           Dispatches Async Job
+                                     v
+  +-----------------------------------------------------------------------+
+  |             DISTRIBUTED JOB QUEUE (BullMQ + Redis 7 Engine)           |
+  |    Concurrency Control | Redis Pub/Sub | Progress Cache (TTL 3600s)   |
+  +-----------------------------------------------------------------------+
+                                     |
+                          Worker Executes Probes
+                                     v
+  +-----------------------------------------------------------------------+
+  |                   SCANNER ENGINE (TypeScript Core)                    |
+  | Headers | TLS/SSL | Cookies | Tech Stack | Disclosures | Injections   |
+  |                OWASP 2025 Mapper | Risk Calculator                    |
+  +-----------------------------------------------------------------------+
+                         |                           |
+             Target Probes                       Persist Data
+                         v                           v
+  +------------------------------+   +------------------------------------+
+  |  TARGET WEB APPLICATIONS     |   |          DATA STORAGE LAYER        |
+  |  Authorized Web Endpoints &  |   |  PostgreSQL 16 (Relational DB)     |
+  |  Local Training Target :8080 |   |  Redis 7 (Cache, Progress, Queue)  |
+  +------------------------------+   +------------------------------------+
+
+[Speaker Script / Talking Points]:
+"This diagram represents WebShield's resilient, decoupled architecture. 
+The client is a responsive Single Page Application built with React 18 and Vite. 
+It communicates via a REST API with the Node.js backend. 
+When a scan is ordered, the request is not processed synchronously—which would 
+block the server. Instead, it passes through an SSRF Guardian, gets validated, 
+and is enqueued into a Redis-backed BullMQ queue. Dedicated background worker 
+processes execute the scan modules, stream real-time progress back through Redis, 
+and persist structured records directly into PostgreSQL."
+
+--------------------------------------------------------------------------------
+SLIDE 5: COMPLETE TECHNOLOGY STACK
+--------------------------------------------------------------------------------
+[Slide Title]:    Technology Stack: Modern, Typed & Production-Ready
+[Visual Layout]:  4 columns or categorized cards displaying technologies & libraries.
+
+[Slide Content - Categorized Stack Breakdown]:
+* FRONTEND LAYER:
+  - Framework: React 18 (Concurrent features, functional components, hooks)
+  - Language: TypeScript 5 (Strict type safety, shared interfaces)
+  - Build Tool: Vite 5 (Lightning-fast HMR and optimized production bundles)
+  - Routing: React Router DOM v6 (Protected routes, role-based navigation)
+  - Styling: Custom Vanilla CSS Cyber Design System (Glassmorphism, dark palette)
+  - Icons & UI: Lucide React (Cybersecurity iconography)
+  - HTTP Client: Axios (Interceptors, automatic JWT bearer attachment)
+  - Authentication: Firebase Auth v12 (Email/Password, Google OAuth, native fallback)
+
+* BACKEND & API LAYER:
+  - Runtime: Node.js 20 LTS (Asynchronous I/O, event-driven architecture)
+  - Framework: Express.js 4 (Robust routing, modular middleware architecture)
+  - Language: TypeScript 5 (Transpiled via ts-node-dev in dev, tsc for prod)
+  - Security Middleware: Helmet (HTTP header hardening), CORS, Cookie-Parser
+  - Data Validation: Zod (Strict schema runtime typing)
+  - Auth & Cryptography: JSON Web Tokens (JWT), Bcrypt.js (Password hashing)
+  - HTML/DOM Parser: Cheerio (Server-side HTML analysis for tech detection)
+  - Document Engine: PDFKit (Vector PDF security audit reports)
+
+* DATA STORAGE & MESSAGING:
+  - Primary Database: PostgreSQL 16 (Relational, ACID, UUIDs via pgcrypto)
+  - Client Library: 'pg' (Connection pooling: 10 connections, auto-reconnect)
+  - In-Memory & Caching: Redis 7 Alpine (Key-value store, TTL management)
+  - Job Queue System: BullMQ + ioredis (Distributed queue, concurrency: 5)
+  - Dev Fallback: Local JSON persistence store ('data/webshield_dev_db.json')
+
+* DEVOPS & INFRASTRUCTURE:
+  - Containerization: Docker (Multi-stage builds, Alpine base images)
+  - Orchestration: Docker Compose v3.8 (5 microservices, automated health checks)
+  - Target Lab: Local Security Training Target container (Port 8080)
+
+[Speaker Script / Talking Points]:
+"Every technology chosen in WebShield has a deliberate architectural purpose. 
+TypeScript is utilized across both the frontend and backend, enabling unified 
+data models and compile-time validation. For the presentation layer, React 18 
+delivers high responsiveness without bulky UI component libraries. 
+On the backend, Node.js paired with Express provides lightweight, high-throughput 
+API execution. For the data tier, PostgreSQL guarantees relational integrity, 
+while Redis and BullMQ handle asynchronous task distribution with built-in 
+concurrency controls."
+
+--------------------------------------------------------------------------------
+SLIDE 6: DEFENSIVE SECURITY & THE SSRF GUARDIAN
+--------------------------------------------------------------------------------
+[Slide Title]:    Defensive Design: Multi-Layered SSRF Protection
+[Visual Layout]:  Step-by-step visual security filter pipeline with barrier icons.
+
+[Slide Content - Bullet Points]:
+* The Threat: Server-Side Request Forgery (SSRF)
+  - Attackers could abuse a scanner to probe internal cloud metadata or private networks.
+* Layer 1: Protocol Enforcement
+  - Restricts URI schemes strictly to 'http://' and 'https://'.
+  - Blocks dangerous schemes ('file://', 'gopher://', 'ftp://', 'ldap://').
+* Layer 2: Deep DNS Resolution & IP CIDR Blocklist
+  - Resolves target hostnames to IPv4/IPv6 addresses BEFORE socket connection.
+  - Blocks Loopback addresses: 127.0.0.0/8, ::1/128
+  - Blocks Private IP subnets (RFC 1918): 10.0.0.0/8, 172.16.0.0/12, 192.168.0.0/16
+  - Blocks Cloud Metadata services: 169.254.169.254 (AWS, GCP, Azure metadata)
+  - Blocks Carrier-Grade NAT & Testnets: 100.64.0.0/10, 198.18.0.0/15
+* Layer 3: DNS Rebinding Protection
+  - Re-verifies resolved IP addresses at socket establishment time.
+* Layer 4: Explicit Authorization Declaration
+  - Mandatory legal consent declaration enforced on both UI and API schemas.
+
+[Speaker Script / Talking Points]:
+"A security scanner must never become a weapon. When building WebShield, SSRF 
+prevention was our top priority. We engineered the 'SSRF Guardian'. 
+Before any scan is dispatched, the target hostname is resolved using asynchronous 
+DNS. The resolved IP address is verified against strict CIDR blocklists, immediately 
+rejecting loopback addresses, local private networks, and cloud metadata endpoints 
+such as 169.254.169.254. In addition, users must affirmatively confirm their 
+authorization to scan the target endpoint, satisfying ethical security protocols."
+
+--------------------------------------------------------------------------------
+SLIDE 7: THE MODULAR SCANNER ENGINE
+--------------------------------------------------------------------------------
+[Slide Title]:    The Scanner Engine: 7 Specialized Audit Modules
+[Visual Layout]:  Table or 7-card layout showing module name, scope, and technique.
+
+[Slide Content - Module Breakdown]:
+1. HeadersScanner:
+   - Evaluates Content-Security-Policy (CSP), HSTS, X-Frame-Options,
+     X-Content-Type-Options, Referrer-Policy, Permissions-Policy.
+   - Detects information-leaking headers: Server, X-Powered-By.
+2. TLSScanner:
+   - Analyzes HTTPS enforcement, TLS certificate validity, expiration dates,
+     issuer authority, subject alternative names, and cipher protocols.
+3. CookieScanner:
+   - Parses Set-Cookie response headers.
+   - Audits critical flags: HttpOnly (XSS defense), Secure (TLS transit), 
+     SameSite (Strict/Lax/None for CSRF mitigation).
+4. TechnologyScanner:
+   - Discovers frameworks, servers, CMS, and libraries (React, Express, Apache, 
+     Nginx, WordPress, PHP) via header fingerprints and DOM meta tag inspection.
+5. InformationDisclosureScanner:
+   - Probes safe paths for exposed artifacts: '.env.example', 'robots.txt', 
+     '.git/config', backup files, and debug stack traces.
+6. InjectionScanner:
+   - Non-destructive query parameter reflection and HTML entity escaping tests.
+   - Detects verbose database error disclosures without harming data.
+7. AccessControlScanner:
+   - Probes unauthenticated administrative routes (/admin, /config.json).
+
+[Speaker Script / Talking Points]:
+"The Scanner Engine operates as a pipeline of 7 specialized, non-destructive 
+modules. Each module evaluates a distinct surface of the target. 
+HeadersScanner verifies defense-in-depth headers; TLSScanner inspects cryptographic 
+certificates; CookieScanner verifies session storage security; TechnologyScanner 
+fingerprints third-party dependencies; and DisclosureScanner identifies sensitive 
+files left exposed. All checks are completely non-destructive, meaning they safely 
+audit production systems without triggering denial-of-service or corrupting records."
+
+--------------------------------------------------------------------------------
+SLIDE 8: OWASP TOP 10 MAPPING & RISK SCORING ALGORITHM
+--------------------------------------------------------------------------------
+[Slide Title]:    OWASP Top 10 Mapping & Mathematical Risk Scoring
+[Visual Layout]:  Split slide: Left side displays OWASP mapping table; 
+                  Right side shows the mathematical scoring formula.
+
+[Slide Content - Algorithms & Standards]:
+* OWASP Top 10 Category Alignment:
+  - A01: Broken Access Control (Unprotected endpoints, robots leaks)
+  - A02: Cryptographic Failures (Missing HSTS, invalid SSL certificates)
+  - A03: Injection (Reflected parameter testing, SQL syntax leakage)
+  - A04: Insecure Design (Evaluated via architectural posture)
+  - A05: Security Misconfiguration (Missing CSP, XFO, verbose banners)
+  - A06: Vulnerable & Outdated Components (Identified outdated frameworks)
+  - A07: Identification & Authentication Failures (Missing HttpOnly cookies)
+  - A08: Software & Data Integrity Failures (External script integrity)
+  - A09: Security Logging & Monitoring Failures (System audit logging)
+  - A10: Server-Side Request Forgery (SSRF validation adherence)
+
+* Mathematical Risk Scoring Formula:
+  Score = 100 - SUM( SeverityBaseDeduction * ConfidenceMultiplier )
+  - Severity Deductions:
+    * CRITICAL:      -25 points
+    * HIGH:          -15 points
+    * MEDIUM:        -8 points
+    * LOW:           -3 points
+    * INFORMATIONAL: -1 point
+  - Confidence Multipliers:
+    * HIGH Confidence:   1.0
+    * MEDIUM Confidence: 0.8
+    * LOW Confidence:    0.5
+  - Risk Ratings:
+    * 90–100: Excellent (Low Risk)
+    * 75–89:  Good (Moderate Risk)
+    * 60–74:  Moderate (Elevated Risk)
+    * 40–59:  Poor (High Risk)
+    * 0–39:   Critical Attention Required
+
+[Speaker Script / Talking Points]:
+"A raw vulnerability count is meaningless to executives without an objective 
+benchmark. WebShield implements a normalized 0-to-100 scoring model. 
+A target starts with a perfect score of 100. For every confirmed issue, weighted 
+deductions are applied based on severity—from 25 points for Critical down to 
+1 point for Informational. To prevent false-alarm distortion, each deduction 
+is multiplied by a confidence factor. The final score is mapped directly into 
+an executive risk grade, while each finding is categorized under the standard 
+OWASP Top 10 framework."
+
+--------------------------------------------------------------------------------
+SLIDE 9: DATA STORAGE & DATABASE ARCHITECTURE
+--------------------------------------------------------------------------------
+[Slide Title]:    Data Layer: PostgreSQL 16 Relational Schema
+[Visual Layout]:  Entity Relationship Diagram (ERD) with primary & foreign key indicators.
+
+[Slide Content - Relational Entities]:
+* 'users' TABLE:
+  - id (UUID, PK), name, email (UNIQUE), password_hash (bcrypt), role ('USER'|'ADMIN')
+* 'scans' TABLE:
+  - id (UUID, PK), user_id (FK -> users.id CASCADE), target_url, status, 
+    scan_type, security_score, coverage_score, started_at, completed_at
+* 'findings' TABLE:
+  - id (UUID, PK), scan_id (FK -> scans.id CASCADE), rule_id, title, severity, 
+    confidence, owasp_category, cwe, affected_url, evidence (TEXT), impact, 
+    remediation, first_seen_at, last_seen_at, resolved_at
+* 'technologies' TABLE:
+  - id (UUID, PK), scan_id (FK -> scans.id CASCADE), name, version, category
+* 'owasp_results' TABLE:
+  - id (UUID, PK), scan_id (FK -> scans.id CASCADE), category, status, score
+* 'reports' TABLE:
+  - id (UUID, PK), scan_id (FK -> scans.id CASCADE), file_path, created_at
+* 'audit_logs' TABLE:
+  - id (UUID, PK), user_id (FK -> users.id SET NULL), action, metadata (JSONB)
+* Database Optimizations:
+  - Indexed foreign keys: idx_findings_scan_id, idx_findings_rule_id, idx_scans_user_id
+  - Automatic JSON persistence fallback for rapid local environments
+
+[Speaker Script / Talking Points]:
+"WebShield's primary data layer is built on PostgreSQL 16, ensuring ACID guarantees 
+and strict relational integrity. Scans belong to users, while findings, technology 
+fingerprints, and OWASP scores belong to individual scans via cascading foreign 
+keys. Notice the 'findings' schema: it includes 'rule_id', 'first_seen_at', 
+and 'last_seen_at'. This enables WebShield to track vulnerabilities across scans 
+over time. For administrative compliance, all sensitive actions are recorded in an 
+audit log table using JSONB metadata."
+
+--------------------------------------------------------------------------------
+SLIDE 10: IN-MEMORY CACHING & DISTRIBUTED JOB QUEUE
+--------------------------------------------------------------------------------
+[Slide Title]:    Queueing & Cache Tier: Redis 7 & BullMQ
+[Visual Layout]:  Flow chart showing Redis handling Job Queues, Caching, and Pub/Sub.
+
+[Slide Content - Redis Responsibilities]:
+* Redis 7 Alpine In-Memory Store:
+  1. Distributed Job Queue (BullMQ):
+     - Queue Name: 'webshield-scan-queue'
+     - Worker Concurrency: 5 simultaneous scans per instance
+     - Graceful retries, exponential backoff, and job lifecycle management
+  2. Live Progress Tracking Cache:
+     - Key Pattern: 'scan:progress:<scanId>'
+     - Payload: JSON { step: string, percent: number, timestamp: ISO }
+     - Time-To-Live (TTL): 3600 seconds (auto-eviction)
+  3. Interactive Scan Cancellation:
+     - Key Pattern: 'scan:cancel:<scanId>'
+     - Workers check cancellation flags between execution modules
+  4. API Rate Limiting Store:
+     - Protects authentication and scanning endpoints from brute force abuse
+  5. Resilient Local Fallback:
+     - If Redis is unavailable in standalone dev mode, backend automatically 
+       switches to an internal Node.js EventEmitter queue without crashing
+
+[Speaker Script / Talking Points]:
+"Security scanning is I/O-intensive and involves network latency. To keep our 
+REST API responsive, we offload all scan workloads to Redis 7 and BullMQ. 
+When a scan is created, the API immediately returns a 201 Created response 
+with a scan ID. In the background, BullMQ workers process scans with controlled 
+concurrency. Progress is updated after each scanning module into Redis with a 
+1-hour TTL. The frontend polls this lightweight key every 1.5 seconds, providing 
+users with a real-time progress bar without hammering PostgreSQL."
+
+--------------------------------------------------------------------------------
+SLIDE 11: END-TO-END WORKFLOW
+--------------------------------------------------------------------------------
+[Slide Title]:    End-to-End System Workflow: From Click to Report
+[Visual Layout]:  Horizontal timeline / sequential flowchart with 6 primary phases.
+
+[Slide Content - Step-by-Step Flow]:
+* Phase 1: Authentication & Target Authorization
+  - User logs in via JWT or Firebase OAuth.
+  - Submits Target URL, selects scan type, and checks mandatory authorization box.
+* Phase 2: SSRF Guardian Validation
+  - Scheme validation -> DNS resolution -> IP range blacklist check.
+* Phase 3: Enqueue & Progress Initialization
+  - Initial scan record inserted in PostgreSQL ('PENDING').
+  - Job enqueued in BullMQ; progress set to 10% in Redis.
+* Phase 4: Scanner Execution (Worker Phase)
+  - Fetch HTTP response -> Header audit (40%) -> TLS socket inspect (50%) ->
+    Cookie audit (60%) -> Tech fingerprint (70%) -> Safe probes (80%).
+* Phase 5: Aggregation, OWASP Mapping & Scoring
+  - OWASP A01-A10 categorization -> Security score deduction formula (90%).
+* Phase 6: Persistence & Real-Time Notification
+  - Scan marked 'COMPLETED' in PostgreSQL (100%).
+  - Findings, technologies, and OWASP results batch-inserted.
+  - Audit log recorded; PDF report ready for on-demand generation.
+
+[Speaker Script / Talking Points]:
+"Here is the complete end-to-end operational lifecycle. It begins when an 
+authenticated user submits a target URL. The backend immediately executes our 
+SSRF Guardian checks. If valid, the scan is assigned a UUID, registered in 
+PostgreSQL, and enqueued in BullMQ. The worker executes our 7 scan modules 
+sequentially, updating Redis progress milestones along the way. Upon completion, 
+the OWASP engine maps the findings, the risk calculator determines the overall 
+score, and all results are committed to PostgreSQL, ready for immediate dashboard 
+review and PDF export."
+
+--------------------------------------------------------------------------------
+SLIDE 12: FINDING LIFECYCLE TRACKING & HISTORICAL DIFFING
+--------------------------------------------------------------------------------
+[Slide Title]:    Finding Lifecycle & Before/After Comparison
+[Visual Layout]:  Split view: Left shows finding state transitions; 
+                  Right shows the scan comparison interface mockup.
+
+[Slide Content - Diffing & Lifecycle]:
+* Problem with Traditional Scanners:
+  - Treat every scan as an isolated event; cannot tell what was fixed or newly introduced.
+* WebShield's State Tracking Engine:
+  - Queries historical scans for the same target and user:
+    * New Finding: Generated during scan -> Marked 'first_seen_at = NOW'
+    * Persistent Finding: Matches previous rule_id and affected_url -> 
+      Preserves original 'first_seen_at', updates 'last_seen_at = NOW'
+    * Resolved Finding: Present in Scan A, but absent in Scan B -> 
+      Marked 'resolved_at = NOW'
+* Side-by-Side Scan Compare Dashboard:
+  - Compare any two scans of the same host.
+  - Visual delta indicators: Score difference (+42 points), fixed vulnerabilities, 
+    and regression alerts.
+
+[Speaker Script / Talking Points]:
+"A major innovation in WebShield is its vulnerability lifecycle tracking. 
+Rather than generating disposable snapshots, WebShield cross-references new 
+findings with previous scans of the same target. When a flaw is detected, 
+we preserve its 'first seen' timestamp. If a developer fixes an issue and 
+rescans, WebShield recognizes the resolution, displays a green 'Resolved' badge, 
+and highlights the positive score difference in our Compare Scans view. 
+This provides teams with tangible proof of their security improvements."
+
+--------------------------------------------------------------------------------
+SLIDE 13: THE REPORT GENERATION ENGINE
+--------------------------------------------------------------------------------
+[Slide Title]:    Actionable Security Reports: Vector PDF Generation
+[Visual Layout]:  Mockup of the generated PDF report highlighting executive summary, 
+                  color-coded risk badges, and code remediation snippets.
+
+[Slide Content - PDF Report Structure]:
+* Built with Node.js PDFKit Engine:
+  - Fast, server-side vector document generation (no headless browser overhead).
+* Section 1: Executive Posture & Score Card
+  - Target URL, Scan ID, timestamp, check coverage (%), and Security Score (0-100).
+  - Risk categorization banner (e.g., 'Excellent', 'Moderate', 'Critical Risk').
+* Section 2: OWASP Top 10 Compliance Breakdown
+  - Tabular breakdown of A01 to A10 categories with Pass/Fail status.
+* Section 3: Technical Findings & Evidence
+  - Severity level, confidence rating, affected URL, and OWASP category.
+  - Evidence capture (exact HTTP response headers or DOM snippet).
+  - Impact statement: Explains business risk in clear terms.
+* Section 4: Contextual Code Remediation Guidance
+  - Actionable copy-pasteable configuration code (Apache, Nginx, Express.js).
+* Built-in Evidence Redactor:
+  - Redacts sensitive credentials, authorization tokens, and API keys before printing.
+
+[Speaker Script / Talking Points]:
+"Security reports are frequently shared with non-technical stakeholders, clients, 
+and auditors. WebShield includes a built-in PDF generator powered by PDFKit. 
+In less than a second, it compiles an audit report featuring an executive 
+scorecard, OWASP compliance matrices, evidence logs, and copy-paste code snippets 
+for Apache, Nginx, and Express. To prevent accidental leakage, an Evidence Redactor 
+automatically sanitizes sensitive tokens and passwords before printing."
+
+--------------------------------------------------------------------------------
+SLIDE 14: INTERACTIVE DEMONSTRATION & TRAINING TARGET
+--------------------------------------------------------------------------------
+[Slide Title]:    Live Verification: The Local Security Training Target
+[Visual Layout]:  Before-and-after comparison cards showing the demo target 
+                  running on port 8080 and scan score jump from 48% to 92%.
+
+[Slide Content - Demo Flow]:
+* 'webshield-demo-target' Microservice (Port 8080):
+  - A controlled, realistic e-commerce application built into the Docker network.
+  - Features an interactive toggle switch: [VULNERABLE MODE] <-> [REMEDIATED MODE].
+* Initial Scan in VULNERABLE MODE:
+  - Score: ~48 / 100 (High Risk)
+  - Findings: Missing Content-Security-Policy, Missing HSTS, Insecure Session Cookies 
+    (no HttpOnly, no Secure flag), Leaked .env.example, Exposed Server Banners.
+* One-Click Remediation Switch:
+  - Target application dynamically activates defensive middleware.
+* Rescan in REMEDIATED MODE:
+  - Score Jumps: ~92+ / 100 (Excellent)
+  - Zero critical or high vulnerabilities; verified resolution of all findings.
+
+[Speaker Script / Talking Points]:
+"To prove WebShield's efficacy during evaluations, we built a dedicated 
+training target container running on port 8080. When scanned initially in 
+Vulnerable Mode, WebShield flags missing headers, insecure session cookies, 
+and exposed configuration files, producing a score of 48 out of 100. 
+We then toggle the target into Remediated Mode and trigger a rescan. 
+WebShield immediately reflects the score jump to over 90, confirming that 
+every single flaw has been successfully eliminated."
+
+--------------------------------------------------------------------------------
+SLIDE 15: SECURITY LIMITATIONS & RESPONSIBLE USE POLICY
+--------------------------------------------------------------------------------
+[Slide Title]:    Product Limitations & Ethical Security Guidelines
+[Visual Layout]:  2-column layout: Left = "Scope & Limitations", Right = "Ethical Use"
+
+[Slide Content - Bullet Points]:
+* What WebShield IS Designed For:
+  - Automated first-line external vulnerability assessment.
+  - Detecting configuration drift, SSL/TLS flaws, header omissions, and leaks.
+  - Continuous regression testing across deployments.
+* What Automated Black-Box Scanners CANNOT Do:
+  - Complex multi-step business logic flaws (e.g., price manipulation in checkout).
+  - Deep authenticated role-based access privilege escalation.
+  - In-depth architectural threat modeling (OWASP A04).
+* Recommended Best Practice:
+  - Automated continuous scanning with WebShield + Annual manual penetration testing.
+* Responsible Disclosure & Compliance:
+  - Strictly non-destructive probes prevent operational disruption.
+  - Explicit authorization confirmations logged in database audit trail.
+
+[Speaker Script / Talking Points]:
+"Transparency is paramount in cybersecurity. WebShield is an automated 
+first-line defense and compliance auditor. It excels at catching misconfigurations, 
+transport weaknesses, and public information leaks. However, no automated 
+black-box scanner can replace manual penetration testing for complex business 
+logic or deep internal privilege escalation. We position WebShield as an essential, 
+continuous auditing companion that prepares teams for formal external audits."
+
+--------------------------------------------------------------------------------
+SLIDE 16: CONCLUSION & FUTURE ROADMAP
+--------------------------------------------------------------------------------
+[Slide Title]:    Summary & Future Engineering Roadmap
+[Visual Layout]:  Key accomplishments summary on left; 3-stage roadmap on right.
+
+[Slide Content - Bullet Points]:
+* Summary of Accomplishments:
+  - Built an automated, non-destructive web security assessment platform.
+  - Implemented 7 specialized audit modules with OWASP Top 10 alignment.
+  - Multi-layered SSRF Guardian ensuring safe and ethical scanning.
+  - Resilient microservice architecture (React 18, Node.js, PostgreSQL, Redis, Docker).
+  - Historical lifecycle tracking and instant PDF audit reports.
+* Future Roadmap:
+  - Q1: CI/CD Pipeline Integration (GitHub Actions & GitLab CI scan plugins).
+  - Q2: Webhook Alerting (Slack, Discord, and PagerDuty notifications on score drop).
+  - Q3: Automated Scheduled Scanning (Cron-based weekly health checks).
+  - Q4: Authenticated Scanning via Session Cookie & Bearer Token injection.
+
+[Speaker Script / Talking Points]:
+"In conclusion, WebShield delivers an automated, scalable, and intuitive security 
+assessment platform that empowers small teams to secure their web applications. 
+By combining non-destructive scanning, strict SSRF defenses, OWASP mapping, 
+and historical lifecycle tracking, WebShield bridges the cybersecurity divide. 
+Our upcoming roadmap includes native CI/CD plugins, automated weekly cron schedules, 
+and Slack webhook alerts. Thank you for your time and attention. I am now open 
+for any questions from the panel."
+
+================================================================================
+3. MASTER TECHNOLOGY STACK REFERENCE MATRIX
+================================================================================
+
+Layer                 Technology / Package        Version     Primary Purpose
+--------------------------------------------------------------------------------
+Frontend Core         React                       18.3.1      UI Component Architecture
+Frontend Language     TypeScript                  5.4.5       Type safety & Shared Interfaces
+Frontend Build        Vite                        5.2.10      Dev server, HMR, bundling
+Frontend Routing      React Router DOM            6.23.0      Client-side SPA navigation
+Frontend Styling      Vanilla CSS Tokens          Custom      Glassmorphism Dark UI System
+Frontend Icons        Lucide React                0.372.0     Cybersecurity Iconography
+Frontend HTTP         Axios                       1.6.8       REST API client & Interceptors
+Frontend Auth         Firebase SDK                12.19.0     Google OAuth & Email Auth
+Backend Runtime       Node.js LTS                 20.x        Asynchronous Event Engine
+Backend Framework     Express.js                  4.19.2      REST API Routing & Middleware
+Backend Language      TypeScript                  5.4.5       Server-side Strict Typing
+Backend Dev Server    ts-node-dev                 2.0.0       Live TypeScript auto-reload
+Schema Validation     Zod                         3.23.8      Runtime API Payload Validation
+Security Headers      Helmet                      7.1.0       API Server Header Hardening
+CORS Middleware       cors                        2.8.5       Cross-Origin Resource Sharing
+Password Hashing      bcryptjs                    2.4.3       Salted One-way Pass Hash
+Token Security        jsonwebtoken (JWT)          9.0.2       Stateless API Authentication
+Database Engine       PostgreSQL                  16-Alpine   Relational ACID Storage
+PostgreSQL Driver     pg                          8.11.5      Database Connection Pooling
+Caching & Queues      Redis                       7-Alpine    In-memory Cache & Messaging
+Redis Driver          ioredis                     5.4.1       High-performance Redis Client
+Queue Management      BullMQ                      5.7.8       Asynchronous Distributed Queue
+Rate Limiting         express-rate-limit          7.2.0       Endpoint Abuse Prevention
+Rate Limit Store      rate-limit-redis            4.2.0       Distributed Rate Limiting Store
+HTML/DOM Parser       Cheerio                     1.0.0-rc12  Server-side Scraping & Meta Audit
+Report Engine         PDFKit                      0.15.0      Vector PDF Audit Document Creator
+Orchestration         Docker & Docker Compose     3.8         Multi-container Environment
+Demo Training Target  Express Microservice        Port 8080   Vulnerable vs Secure Sandbox
+
+================================================================================
+4. COMPREHENSIVE DATA STORAGE ARCHITECTURE & ENTITY REFERENCE
+================================================================================
+
+WebShield employs a dual-tiered data persistence strategy:
+Tier 1: PostgreSQL 16 for ACID relational data, audit trails, and historical scans.
+Tier 2: Redis 7 for transient job queues, live progress pub/sub, and rate limits.
+Tier 3: Local Dev File Persistence ('data/webshield_dev_db.json') as a zero-config 
+        safety fallback when PostgreSQL is not running locally.
+
+--------------------------------------------------------------------------------
+4.1 POSTGRESQL 16 RELATIONAL DATABASE SCHEMA
+--------------------------------------------------------------------------------
+
+TABLE: users
+  Stores registered user accounts, administrative privileges, and credential hashes.
+  ------------------------------------------------------------------------------
+  Column Name      Data Type                  Constraints & Notes
+  ------------------------------------------------------------------------------
+  id               UUID                       PRIMARY KEY, DEFAULT gen_random_uuid()
+  name             VARCHAR(255)               NOT NULL
+  email            VARCHAR(255)               UNIQUE, NOT NULL
+  password_hash    VARCHAR(255)               NOT NULL (Bcrypt salted hash)
+  role             VARCHAR(50)                DEFAULT 'USER' ('USER'|'ADMIN')
+  created_at       TIMESTAMP WITH TIME ZONE   DEFAULT CURRENT_TIMESTAMP
+  updated_at       TIMESTAMP WITH TIME ZONE   DEFAULT CURRENT_TIMESTAMP
+
+TABLE: scans
+  Stores scan metadata, status, target host, coverage percentage, and scores.
+  ------------------------------------------------------------------------------
+  Column Name      Data Type                  Constraints & Notes
+  ------------------------------------------------------------------------------
+  id               UUID                       PRIMARY KEY, DEFAULT gen_random_uuid()
+  user_id          UUID                       REFERENCES users(id) ON DELETE CASCADE
+  target_url       VARCHAR(2048)              NOT NULL (Target URI)
+  status           VARCHAR(50)                NOT NULL ('PENDING'|'RUNNING'|'COMPLETED'|'FAILED')
+  scan_type        VARCHAR(50)                DEFAULT 'STANDARD' ('QUICK'|'STANDARD'|'DEEP')
+  security_score   INT                        DEFAULT 100 (0 to 100 score)
+  coverage_score   INT                        DEFAULT 100 (Percentage of checks run)
+  started_at       TIMESTAMP WITH TIME ZONE   NULLABLE (Populated when worker starts)
+  completed_at     TIMESTAMP WITH TIME ZONE   NULLABLE (Populated upon completion)
+  created_at       TIMESTAMP WITH TIME ZONE   DEFAULT CURRENT_TIMESTAMP
+  ------------------------------------------------------------------------------
+  Index: idx_scans_user_id ON scans(user_id)
+
+TABLE: findings
+  Stores identified vulnerabilities, evidence, severity, CWE, and lifecycle dates.
+  ------------------------------------------------------------------------------
+  Column Name      Data Type                  Constraints & Notes
+  ------------------------------------------------------------------------------
+  id               UUID                       PRIMARY KEY, DEFAULT gen_random_uuid()
+  scan_id          UUID                       REFERENCES scans(id) ON DELETE CASCADE
+  rule_id          VARCHAR(100)               NOT NULL (e.g. 'SEC-HDR-CSP-MISSING')
+  title            VARCHAR(255)               NOT NULL
+  description      TEXT                       NOT NULL
+  severity         VARCHAR(50)                NOT NULL ('CRITICAL'|'HIGH'|'MEDIUM'|'LOW'|'INFO')
+  confidence       VARCHAR(50)                NOT NULL ('HIGH'|'MEDIUM'|'LOW')
+  status           VARCHAR(50)                DEFAULT 'CONFIRMED'
+  owasp_category   VARCHAR(10)                NOT NULL (e.g. 'A01' through 'A10')
+  owasp_version    VARCHAR(20)                DEFAULT '2025'
+  cwe              VARCHAR(50)                NULLABLE (e.g. 'CWE-1021')
+  affected_url     VARCHAR(2048)              NOT NULL
+  evidence         TEXT                       NOT NULL (Captured header or DOM snippet)
+  impact           TEXT                       NOT NULL (Business/technical threat)
+  remediation      TEXT                       NOT NULL (Code/config remediation guide)
+  references       TEXT                       NULLABLE (OWASP/MDN link)
+  first_seen_at    TIMESTAMP WITH TIME ZONE   DEFAULT CURRENT_TIMESTAMP
+  last_seen_at     TIMESTAMP WITH TIME ZONE   DEFAULT CURRENT_TIMESTAMP
+  resolved_at      TIMESTAMP WITH TIME ZONE   NULLABLE (Populated when verified resolved)
+  created_at       TIMESTAMP WITH TIME ZONE   DEFAULT CURRENT_TIMESTAMP
+  ------------------------------------------------------------------------------
+  Index: idx_findings_scan_id ON findings(scan_id)
+  Index: idx_findings_rule_id ON findings(rule_id)
+
+TABLE: technologies
+  Stores detected web server, framework, CMS, and third-party script signatures.
+  ------------------------------------------------------------------------------
+  Column Name      Data Type                  Constraints & Notes
+  ------------------------------------------------------------------------------
+  id               UUID                       PRIMARY KEY, DEFAULT gen_random_uuid()
+  scan_id          UUID                       REFERENCES scans(id) ON DELETE CASCADE
+  name             VARCHAR(100)               NOT NULL (e.g. 'Express', 'React', 'Nginx')
+  version          VARCHAR(50)                NULLABLE
+  category         VARCHAR(100)               e.g. 'Web Framework', 'Server'
+  confidence       VARCHAR(50)                DEFAULT 'HIGH'
+
+TABLE: owasp_results
+  Stores compliance evaluation across each OWASP Top 10 category.
+  ------------------------------------------------------------------------------
+  Column Name      Data Type                  Constraints & Notes
+  ------------------------------------------------------------------------------
+  id               UUID                       PRIMARY KEY, DEFAULT gen_random_uuid()
+  scan_id          UUID                       REFERENCES scans(id) ON DELETE CASCADE
+  category         VARCHAR(10)                NOT NULL ('A01' through 'A10')
+  status           VARCHAR(50)                NOT NULL ('PASS'|'FINDING'|'NOT_TESTED')
+  score            INT                        DEFAULT 100
+  findings_count   INT                        DEFAULT 0
+
+TABLE: reports
+  Stores generated PDF report file references for instant retrieval.
+  ------------------------------------------------------------------------------
+  Column Name      Data Type                  Constraints & Notes
+  ------------------------------------------------------------------------------
+  id               UUID                       PRIMARY KEY, DEFAULT gen_random_uuid()
+  scan_id          UUID                       REFERENCES scans(id) ON DELETE CASCADE
+  file_path        VARCHAR(1024)              NOT NULL (Local disk path)
+  created_at       TIMESTAMP WITH TIME ZONE   DEFAULT CURRENT_TIMESTAMP
+
+TABLE: audit_logs
+  Records all security-sensitive actions for administrative oversight and compliance.
+  ------------------------------------------------------------------------------
+  Column Name      Data Type                  Constraints & Notes
+  ------------------------------------------------------------------------------
+  id               UUID                       PRIMARY KEY, DEFAULT gen_random_uuid()
+  user_id          UUID                       REFERENCES users(id) ON DELETE SET NULL
+  action           VARCHAR(255)               NOT NULL ('SCAN_COMPLETED', 'AUTH_LOGIN')
+  metadata         JSONB                      Structured action attributes
+  created_at       TIMESTAMP WITH TIME ZONE   DEFAULT CURRENT_TIMESTAMP
+
+--------------------------------------------------------------------------------
+4.2 REDIS 7 IN-MEMORY KEY SCHEMAS & TTL POLICIES
+--------------------------------------------------------------------------------
+
+Key Pattern                 Data Type   TTL         Usage
+--------------------------------------------------------------------------------
+scan:progress:<scanId>      String      3600 sec    Stores JSON with { step, percent, 
+                                                    timestamp } for fast frontend polling.
+scan:cancel:<scanId>        String      1800 sec    Flag set to 'true' if user clicks cancel. 
+                                                    Worker checks this between modules.
+bull:webshield-scan-queue:* Hash/Set    Managed     BullMQ internal job tracking, queues, 
+                                                    active state, and worker locks.
+rl:auth:<clientIp>          String      900 sec     Rate limiter tracking failed auth attempts.
+rl:scan:<clientIp>          String      60 sec      Rate limiter preventing scan flooding.
+
+================================================================================
+5. STEP-BY-STEP END-TO-END WORKFLOW BLUEPRINT
+================================================================================
+
+PHASE 1: CLIENT AUTHENTICATION & SESSION CREATION
+1. User navigates to http://localhost:3000.
+2. Selects either Email/Password login or Google OAuth.
+3. If Firebase is active: Firebase SDK validates credential and mints ID token.
+4. Client posts to '/api/auth/firebase' or '/api/auth/login'.
+5. Backend verifies signature, looks up user in 'users' table, and issues a 
+   signed JWT token (24-hour expiration).
+6. Frontend Axios interceptor saves JWT in localStorage and appends 
+   'Authorization: Bearer <token>' to subsequent HTTP headers.
+
+PHASE 2: SCAN INITIATION & SSRF GUARDIAN AUDIT
+1. User navigates to 'New Scan' page.
+2. Inputs target URL (e.g., http://localhost:8080) and selects Scan Type (STANDARD).
+3. User must check the mandatory authorization declaration checkbox:
+   "[x] I confirm that I am authorized to scan this target."
+4. User clicks "START SECURITY SCAN". Frontend dispatches POST to '/api/scans'.
+5. Backend invokes 'ssrfGuardian.ts':
+   - Validates URL syntax and protocol (strictly 'http:' or 'https:').
+   - Performs DNS resolution to obtain target IP addresses.
+   - Cross-checks IP against private IPv4/IPv6 CIDR blocklists (127.0.0.0/8, 
+     10.0.0.0/8, 172.16.0.0/12, 192.168.0.0/16, 169.254.0.0/16, ::1).
+   - If invalid, request is rejected with 400 Bad Request immediately.
+
+PHASE 3: JOB ENQUEUEING & ASYNCHRONOUS DISPATCH
+1. If SSRF validation passes, a new record is inserted into PostgreSQL 'scans' 
+   table with status 'PENDING'.
+2. Backend pushes a job payload to BullMQ queue 'webshield-scan-queue'.
+3. Backend returns HTTP 201 Created with scan ID.
+4. Frontend immediately redirects user to '/scans/:id/progress'.
+
+PHASE 4: WORKER EXECUTION & 8 SCANNER ENGINE STEPS
+A background worker claims the job and executes the scan steps sequentially:
+
+Step 4.1: Target Validation & SSRF Check (10%)
+- Re-verifies resolved IP to prevent DNS rebinding attacks.
+- Writes progress to Redis: { step: "Target validation & SSRF check", percent: 10 }.
+
+Step 4.2: HTTP Connection & Header/DOM Acquisition (25%)
+- Dispatches HTTP GET request with a safe, polite User-Agent.
+- Captures raw status code, HTTP response headers, and initial HTML body.
+- Writes progress to Redis: 25%.
+
+Step 4.3: Security Headers Scanner (40%)
+- Analyzes Content-Security-Policy (CSP), HSTS, X-Frame-Options, 
+  X-Content-Type-Options, Referrer-Policy, Permissions-Policy.
+- Flags dangerous server information disclosure headers ('Server', 'X-Powered-By').
+- Records evidence and remediation code for missing headers.
+- Writes progress to Redis: 40%.
+
+Step 4.4: TLS / SSL Certificate Inspection (50%)
+- Initiates TLS socket connection.
+- Verifies certificate validity, issuer authority, expiration date, and cipher suite.
+- Checks whether HTTP properly redirects to HTTPS.
+- Writes progress to Redis: 50%.
+
+Step 4.5: Cookie Security Attributes Analysis (60%)
+- Parses Set-Cookie response headers.
+- Verifies that cookies possess:
+  * 'HttpOnly' flag: Prevents client-side JavaScript theft via XSS.
+  * 'Secure' flag: Enforces transmission over encrypted HTTPS channels only.
+  * 'SameSite' attribute: Set to 'Strict' or 'Lax' to prevent CSRF exploits.
+- Writes progress to Redis: 60%.
+
+Step 4.6: Technology Stack Fingerprinting (70%)
+- Uses Cheerio to parse HTML content.
+- Inspects meta generator tags, script source paths, CSS framework class names, 
+  and HTTP response banners.
+- Identifies technology components (React, WordPress, Apache, Express, Nginx).
+- Writes progress to Redis: 70%.
+
+Step 4.7: Information Disclosure, Injection & Route Probes (80%)
+- Probes common sensitive paths safely: '.env.example', 'robots.txt', '.git/config'.
+- Dispatches benign, non-destructive reflected query parameter probes.
+- Inspects responses for verbose database error disclosures or HTML unescaped echoes.
+- Safe probe of unauthenticated administrative routes ('/admin', '/config.json').
+- Writes progress to Redis: 80%.
+
+Step 4.8: OWASP Top 10 Mapping & Mathematical Risk Scoring (90%)
+- Maps all accumulated findings into OWASP categories A01 through A10.
+- Executes mathematical RiskCalculator deduction formula:
+  Score = 100 - SUM( baseDeduction * confidenceMultiplier )
+- Assigns executive risk rating: 'Excellent', 'Good', 'Moderate', 'Poor', 'Critical'.
+- Writes progress to Redis: 90%.
+
+PHASE 5: DATABASE PERSISTENCE & HISTORICAL DIFFING
+1. Query previous completed scans for the same target and user:
+   - For recurring findings: Preserves original 'first_seen_at', updates 'last_seen_at'.
+   - For newly introduced findings: Sets 'first_seen_at' and 'last_seen_at' to NOW.
+2. Batch insert findings into PostgreSQL 'findings' table.
+3. Batch insert detected technologies into 'technologies' table.
+4. Batch insert OWASP evaluation results into 'owasp_results' table.
+5. Update 'scans' table: status = 'COMPLETED', security_score, coverage_score, 
+   completed_at = NOW.
+6. Insert audit log record ('SCAN_COMPLETED') with scan metadata.
+7. Write final progress to Redis: { step: "Scan completed successfully", percent: 100 }.
+
+PHASE 6: RESULTS VISUALIZATION & PDF REPORTING
+1. Frontend progress tracker receives 100% and transitions to 'Scan Results' page.
+2. Displays interactive Security Score Gauge, OWASP Top 10 category cards, 
+   and expandable findings cards with code remediation tabs.
+3. User clicks "Download PDF Report":
+   - Backend activates 'ReportGenerator.ts' via PDFKit.
+   - Generates executive security audit PDF document on-the-fly.
+   - Streams file directly to browser for download.
+4. User clicks "Compare Scans":
+   - Selects two historical scans to inspect score differentials, resolved issues, 
+     and newly introduced vulnerabilities.
+
+================================================================================
+6. PANEL Q&A / DEFENSE PREPARATION GUIDE
+================================================================================
+
+Q1: Why did you build a custom scanner instead of integrating an open-source 
+    scanner like OWASP ZAP?
+A1: "Tools like OWASP ZAP are powerful but heavyweight, difficult to automate in 
+    lightweight containers, and generate a massive number of noisy alerts that 
+    confuse non-security personnel. WebShield was purpose-built to provide a 
+    streamlined, non-destructive audit focused on high-confidence configurations, 
+    transport security, and OWASP compliance, accompanied by exact code fixes 
+    tailored for developers and small organizations."
+
+Q2: How do you prevent attackers from using WebShield to launch attacks against 
+    third parties (SSRF)?
+A2: "We implement a strict, defense-in-depth SSRF Guardian. The scanner resolves the 
+    target hostname via DNS and cross-references the IP address against private, 
+    loopback, multicast, and cloud metadata CIDR ranges (such as 169.254.169.254). 
+    Furthermore, we re-verify resolved IPs prior to socket creation to mitigate 
+    DNS rebinding attacks, and require explicit legal authorization declaration 
+    before any job is accepted."
+
+Q3: Why did you choose Redis and BullMQ for job processing?
+A3: "Security scanning involves network I/O, TLS handshakes, and multiple HTTP 
+    probes, which inherently take between 5 to 30 seconds. Performing this work 
+    inside an Express HTTP request handler would block Node's event loop and 
+    lead to gateway timeouts. BullMQ on Redis provides robust distributed job 
+    queueing with controlled concurrency, automatic retries, and decoupled 
+    progress streaming via Redis key-value caching."
+
+Q4: How does WebShield know if a vulnerability has been resolved?
+A4: "WebShield incorporates stateful vulnerability lifecycle tracking. Each finding 
+    possesses a unique rule_id and affected_url. When a new scan completes, 
+    the system checks the previous completed scan for that target. If a rule 
+    triggered previously is now absent, the finding is marked resolved, and the 
+    user is rewarded with a visual score increase in our Compare Scans view."
+
+Q5: What happens if PostgreSQL or Redis goes down during development?
+A5: "WebShield was engineered with high operational resilience. The database service 
+    includes an automatic fallback engine in 'db.ts' that mirrors data into a 
+    structured local JSON store ('data/webshield_dev_db.json') if PostgreSQL is 
+    unreachable. Similarly, if Redis is absent, the backend falls back to an 
+    in-memory Node.js EventEmitter queue, ensuring that developers can test and 
+    demonstrate the application seamlessly in any environment."
+
+================================================================================
+                         END OF PRESENTATION SCRIPT
+================================================================================
