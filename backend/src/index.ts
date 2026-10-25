@@ -4,7 +4,7 @@ import helmet from 'helmet';
 import dotenv from 'dotenv';
 import apiRouter from './routes/api';
 import { initDb } from './database/initDb';
-import { testDbConnection } from './database/db';
+import { testDbConnection, isMongoAvailable, getDb } from './database/db';
 import { apiRateLimiter } from './middleware/rateLimit';
 
 dotenv.config();
@@ -26,7 +26,49 @@ app.use('/api', apiRouter);
 
 // Healthcheck Route
 app.get('/health', (req: Request, res: Response) => {
-  res.json({ status: 'UP', service: 'WebSentinel Backend API & Scanner Engine' });
+  res.json({
+    status: 'UP',
+    service: 'WebSentinel Backend API & Scanner Engine',
+    database: {
+      engine: 'MongoDB',
+      connected: isMongoAvailable,
+      mode: isMongoAvailable ? 'MongoDB Live' : 'In-Memory Fallback',
+    },
+  });
+});
+
+// Dedicated Database Verification Route
+app.get('/health/db', async (req: Request, res: Response) => {
+  try {
+    if (!isMongoAvailable) {
+      return res.json({
+        connected: false,
+        mode: 'In-Memory Fallback',
+        message: 'MongoDB is currently unreachable. Operating on dev local fallback.',
+      });
+    }
+    const db = getDb();
+    const pingRes = await db.command({ ping: 1 });
+    const userCount = await db.collection('users').countDocuments();
+    const scanCount = await db.collection('scans').countDocuments();
+    const findingCount = await db.collection('findings').countDocuments();
+    return res.json({
+      connected: true,
+      mode: 'MongoDB Live',
+      ping: pingRes.ok === 1 ? 'SUCCESS' : 'FAILED',
+      database: db.databaseName,
+      collections: {
+        users: userCount,
+        scans: scanCount,
+        findings: findingCount,
+      },
+    });
+  } catch (err: any) {
+    return res.status(500).json({
+      connected: false,
+      error: err.message,
+    });
+  }
 });
 
 // Centralized Production Error Handler

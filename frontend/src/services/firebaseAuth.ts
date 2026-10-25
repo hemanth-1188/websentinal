@@ -74,6 +74,13 @@ export async function loginWithFirebaseGoogle(): Promise<AuthResponse> {
       userCred.user.email || undefined
     );
   } catch (e: any) {
+    if (e.code === 'auth/unauthorized-domain') {
+      const currentDomain = window.location.hostname;
+      return {
+        success: false,
+        error: `Domain "${currentDomain}" is not authorized in Firebase. Add "${currentDomain}" to Firebase Console -> Authentication -> Settings -> Authorized Domains.`,
+      };
+    }
     return { success: false, error: `Firebase Google Auth: ${e.message}` };
   }
 }
