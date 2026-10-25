@@ -24,6 +24,25 @@ app.use('/api', apiRateLimiter);
 // API Routes
 app.use('/api', apiRouter);
 
+// Root API Info Route
+app.get('/', (req: Request, res: Response) => {
+  res.json({
+    service: 'WebSentinel Security Assessment API',
+    status: 'ONLINE',
+    version: '1.0.0',
+    endpoints: {
+      health: '/health',
+      database: '/health/db',
+      api: '/api',
+    },
+    database: {
+      engine: 'MongoDB',
+      connected: isMongoAvailable,
+      mode: isMongoAvailable ? 'MongoDB Live' : 'In-Memory Fallback',
+    },
+  });
+});
+
 // Healthcheck Route
 app.get('/health', (req: Request, res: Response) => {
   res.json({
