@@ -46,6 +46,10 @@ export class EvidenceRedactor {
       '$1[REDACTED_DB_PASS]$3'
     );
     sanitized = sanitized.replace(
+      /(mongodb(?:\+srv)?:\/\/[^:]+:)([^@]+)(@)/gi,
+      '$1[REDACTED_DB_PASS]$3'
+    );
+    sanitized = sanitized.replace(
       /(mysql:\/\/[^:]+:)([^@]+)(@)/gi,
       '$1[REDACTED_DB_PASS]$3'
     );

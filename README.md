@@ -40,7 +40,7 @@ flowchart TB
     end
 
     subgraph Storage ["Data Layer"]
-        Postgres[("PostgreSQL Database")]
+        MongoDB[("MongoDB Database")]
         RedisCache[("Redis (Pub/Sub & Cache)")]
     end
 
@@ -56,10 +56,10 @@ flowchart TB
     ScanWorker --> ScannerEngine
     ScannerEngine -->|HTTP/TLS Probes| VulnerableApp
     ScannerEngine -->|HTTP/TLS Probes| ExternalTarget["Authorized Target Website"]
-    ScannerEngine -->|Store Findings & Results| Postgres
+    ScannerEngine -->|Store Findings & Results| MongoDB
     ScanWorker -->|Publish Progress| RedisCache
     RedisCache -->|Poll Progress API| UI
-    Postgres --> Router
+    MongoDB --> Router
 ```
 
 ---
@@ -80,7 +80,7 @@ Small organizations frequently deploy web applications without conducting regula
 
 - **Frontend:** React 18, TypeScript, Vite, Vanilla CSS Design System, Lucide Icons
 - **Backend:** Node.js, Express.js, TypeScript, Zod Schema Validation, Helmet Security
-- **Database:** PostgreSQL 16 (Relational schema, foreign keys, UUIDs, indexes)
+- **Database:** MongoDB 7.0 (Document collections, UUID indexing, aggregation pipelines)
 - **Job Queue & Caching:** Redis 7, BullMQ, ioredis
 - **Containerization:** Docker, Docker Compose
 - **Report Engine:** PDFKit (PDF Security Report Generation)

@@ -41,7 +41,7 @@ flowchart TB
     end
 
     subgraph Storage ["Data Layer"]
-        Postgres[("PostgreSQL Database")]
+        MongoDB[("MongoDB Database")]
         RedisCache[("Redis (Pub/Sub & Cache)")]
     end
 
@@ -57,10 +57,10 @@ flowchart TB
     ScanWorker --> ScannerEngine
     ScannerEngine -->|HTTP/TLS Probes| VulnerableApp
     ScannerEngine -->|HTTP/TLS Probes| ExternalTarget["Authorized Target Website"]
-    ScannerEngine -->|Store Findings & Results| Postgres
+    ScannerEngine -->|Store Findings & Results| MongoDB
     ScanWorker -->|Publish Progress| RedisCache
     RedisCache -->|Poll Progress API| UI
-    Postgres --> Router
+    MongoDB --> Router
 ```
 
 ---
@@ -75,7 +75,7 @@ webshield/
 │   │   ├── routes/              # Express REST API routes
 │   │   ├── middleware/          # Auth JWT, Rate Limit, Validation, Error Handler
 │   │   ├── services/            # Database, PDF report generator, Redis queue services
-│   │   ├── database/            # PostgreSQL client, migrations, seeds
+│   │   ├── database/            # MongoDB driver, indexes, initialization & seeds
 │   │   ├── scanner/
 │   │   │   ├── core/            # TargetValidator, RequestManager, RateLimiter, ScanContext
 │   │   │   ├── modules/         # Headers, TLS, Cookie, Tech, Disclosure, Injection, AccessControl
@@ -105,7 +105,7 @@ webshield/
 │   ├── package.json
 │   └── Dockerfile
 ├── docs/                        # Architecture, API, Security Model, Methodology docs
-├── docker-compose.yml           # Postgres, Redis, Backend, Frontend, Demo-Target
+├── docker-compose.yml           # MongoDB, Redis, Backend, Frontend, Demo-Target
 ├── .env.example
 ├── .gitignore
 └── README.md
@@ -146,87 +146,102 @@ To ensure **WebShield** remains safe and defensive:
 
 ---
 
-## 4. PostgreSQL Database Schema
+## 4. MongoDB Database Collections & Schema
 
-```sql
--- Users Table
-CREATE TABLE users (
-    id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
-    name VARCHAR(255) NOT NULL,
-    email VARCHAR(255) UNIQUE NOT NULL,
-    password_hash VARCHAR(255) NOT NULL,
-    role VARCHAR(50) DEFAULT 'USER', -- 'USER', 'SECURITY_ANALYST', 'ADMIN'
-    created_at TIMESTAMP WITH TIME ZONE DEFAULT CURRENT_TIMESTAMP,
-    updated_at TIMESTAMP WITH TIME ZONE DEFAULT CURRENT_TIMESTAMP
-);
+WebShield uses MongoDB 7.0 as its primary document database. Each collection utilizes UUID string identifiers for cross-collection references and consistency with API contracts.
 
--- Scans Table
-CREATE TABLE scans (
-    id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
-    user_id UUID REFERENCES users(id) ON DELETE CASCADE,
-    target_url VARCHAR(2048) NOT NULL,
-    status VARCHAR(50) NOT NULL, -- 'PENDING', 'RUNNING', 'COMPLETED', 'FAILED', 'CANCELLED'
-    scan_type VARCHAR(50) DEFAULT 'STANDARD', -- 'QUICK', 'STANDARD', 'DEEP'
-    security_score INT DEFAULT 100,
-    started_at TIMESTAMP WITH TIME ZONE,
-    completed_at TIMESTAMP WITH TIME ZONE,
-    created_at TIMESTAMP WITH TIME ZONE DEFAULT CURRENT_TIMESTAMP
-);
+```json
+// 1. users Collection
+{
+  "_id": ObjectId("..."),
+  "id": "d9b939e1-e283-4217-bf45-d88fa7bca001",
+  "name": "System Administrator",
+  "email": "admin@webshield.io", // Unique Index
+  "password_hash": "$2a$10$...",
+  "role": "ADMIN", // "USER" | "ADMIN"
+  "created_at": "2026-10-25T12:00:00.000Z",
+  "updated_at": "2026-10-25T12:00:00.000Z"
+}
 
--- Findings Table
-CREATE TABLE findings (
-    id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
-    scan_id UUID REFERENCES scans(id) ON DELETE CASCADE,
-    title VARCHAR(255) NOT NULL,
-    description TEXT NOT NULL,
-    severity VARCHAR(50) NOT NULL, -- 'CRITICAL', 'HIGH', 'MEDIUM', 'LOW', 'INFORMATIONAL'
-    confidence VARCHAR(50) NOT NULL, -- 'HIGH', 'MEDIUM', 'LOW', 'UNKNOWN'
-    status VARCHAR(50) DEFAULT 'CONFIRMED',
-    owasp_category VARCHAR(10) NOT NULL, -- e.g. 'A05'
-    cwe VARCHAR(50),
-    affected_url VARCHAR(2048) NOT NULL,
-    evidence TEXT NOT NULL,
-    impact TEXT NOT NULL,
-    remediation TEXT NOT NULL,
-    created_at TIMESTAMP WITH TIME ZONE DEFAULT CURRENT_TIMESTAMP
-);
+// 2. scans Collection
+{
+  "_id": ObjectId("..."),
+  "id": "3fa85f64-5717-4562-b3fc-2c963f66afa6",
+  "user_id": "d9b939e1-e283-4217-bf45-d88fa7bca001", // Index
+  "target_url": "https://example.com",
+  "status": "COMPLETED", // "PENDING" | "RUNNING" | "COMPLETED" | "FAILED" | "CANCELLED"
+  "scan_type": "STANDARD", // "QUICK" | "STANDARD" | "DEEP"
+  "security_score": 85,
+  "coverage_score": 100,
+  "started_at": "2026-10-25T12:00:05.000Z",
+  "completed_at": "2026-10-25T12:00:45.000Z",
+  "created_at": "2026-10-25T12:00:00.000Z" // Index
+}
 
--- Technologies Table
-CREATE TABLE technologies (
-    id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
-    scan_id UUID REFERENCES scans(id) ON DELETE CASCADE,
-    name VARCHAR(100) NOT NULL,
-    version VARCHAR(50),
-    category VARCHAR(100),
-    confidence VARCHAR(50) DEFAULT 'HIGH'
-);
+// 3. findings Collection
+{
+  "_id": ObjectId("..."),
+  "id": "7c9e6679-7425-40de-944b-e07fc1f90ae7",
+  "scan_id": "3fa85f64-5717-4562-b3fc-2c963f66afa6", // Index
+  "rule_id": "RULE-SEC-HDR-CSP", // Index
+  "title": "Missing Content-Security-Policy (CSP)",
+  "description": "The Content-Security-Policy header restricts sources of executable scripts...",
+  "severity": "HIGH", // "CRITICAL" | "HIGH" | "MEDIUM" | "LOW" | "INFORMATIONAL" (Index)
+  "confidence": "HIGH", // "HIGH" | "MEDIUM" | "LOW"
+  "status": "CONFIRMED", // "CONFIRMED" | "RESOLVED"
+  "owasp_category": "A05",
+  "owasp_version": "2025",
+  "cwe": "CWE-1021",
+  "affected_url": "https://example.com/",
+  "evidence": "Response headers did not include 'content-security-policy'",
+  "impact": "Increases susceptibility to Cross-Site Scripting (XSS) and data injection.",
+  "remediation": "Configure a restrictive Content-Security-Policy HTTP response header.",
+  "first_seen_at": "2026-10-25T12:00:00.000Z",
+  "last_seen_at": "2026-10-25T12:00:00.000Z",
+  "resolved_at": null,
+  "created_at": "2026-10-25T12:00:00.000Z"
+}
 
--- OWASP Results Table
-CREATE TABLE owasp_results (
-    id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
-    scan_id UUID REFERENCES scans(id) ON DELETE CASCADE,
-    category VARCHAR(10) NOT NULL, -- 'A01' .. 'A10'
-    status VARCHAR(50) NOT NULL, -- 'PASS', 'FAIL', 'WARNING', 'NOT_TESTED', 'MANUAL_REVIEW_REQUIRED'
-    score INT DEFAULT 100,
-    findings_count INT DEFAULT 0
-);
+// 4. technologies Collection
+{
+  "_id": ObjectId("..."),
+  "id": "b1a2c3d4-...",
+  "scan_id": "3fa85f64-5717-4562-b3fc-2c963f66afa6", // Index
+  "name": "Express",
+  "version": "4.19.2",
+  "category": "Web Framework",
+  "confidence": "HIGH"
+}
 
--- Reports Table
-CREATE TABLE reports (
-    id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
-    scan_id UUID REFERENCES scans(id) ON DELETE CASCADE,
-    file_path VARCHAR(1024) NOT NULL,
-    created_at TIMESTAMP WITH TIME ZONE DEFAULT CURRENT_TIMESTAMP
-);
+// 5. owasp_results Collection
+{
+  "_id": ObjectId("..."),
+  "id": "e5f6g7h8-...",
+  "scan_id": "3fa85f64-5717-4562-b3fc-2c963f66afa6", // Index
+  "category": "A05",
+  "status": "FAIL", // "PASS" | "FAIL" | "WARNING"
+  "score": 70,
+  "findings_count": 2
+}
 
--- Audit Logs Table
-CREATE TABLE audit_logs (
-    id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
-    user_id UUID REFERENCES users(id) ON DELETE SET NULL,
-    action VARCHAR(255) NOT NULL,
-    metadata JSONB,
-    created_at TIMESTAMP WITH TIME ZONE DEFAULT CURRENT_TIMESTAMP
-);
+// 6. reports Collection
+{
+  "_id": ObjectId("..."),
+  "id": "9a8b7c6d-...",
+  "scan_id": "3fa85f64-5717-4562-b3fc-2c963f66afa6", // Index
+  "file_path": "/app/temp_reports/WebShield_Report_...pdf",
+  "created_at": "2026-10-25T12:01:00.000Z"
+}
+
+// 7. audit_logs Collection
+{
+  "_id": ObjectId("..."),
+  "id": "11223344-...",
+  "user_id": "d9b939e1-e283-4217-bf45-d88fa7bca001", // Index
+  "action": "CREATE_SCAN",
+  "metadata": { "scanId": "3fa85f64-5717-4562-b3fc-2c963f66afa6", "targetUrl": "https://example.com" },
+  "created_at": "2026-10-25T12:00:00.000Z" // Index
+}
 ```
 
 ---

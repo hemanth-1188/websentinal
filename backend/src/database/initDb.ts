@@ -1,146 +1,84 @@
-import { pool, testDbConnection, query } from './db';
+import { testDbConnection, query, isMongoAvailable, getDb } from './db';
 import bcrypt from 'bcryptjs';
 
 export async function initDb() {
-  const isPg = await testDbConnection();
+  const isConnected = await testDbConnection();
 
-  if (isPg) {
-    const client = await pool.connect();
+  if (isConnected && isMongoAvailable) {
     try {
-      console.log('[DB] Initializing PostgreSQL Database Schema...');
+      const db = getDb();
+      console.log('[DB] Initializing MongoDB Collections & Indexes...');
 
-      await client.query(`
-        CREATE EXTENSION IF NOT EXISTS "pgcrypto";
+      const usersCol = db.collection('users');
+      const scansCol = db.collection('scans');
+      const findingsCol = db.collection('findings');
+      const techCol = db.collection('technologies');
+      const owaspCol = db.collection('owasp_results');
+      const reportsCol = db.collection('reports');
+      const auditCol = db.collection('audit_logs');
 
-        CREATE TABLE IF NOT EXISTS users (
-            id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
-            name VARCHAR(255) NOT NULL,
-            email VARCHAR(255) UNIQUE NOT NULL,
-            password_hash VARCHAR(255) NOT NULL,
-            role VARCHAR(50) DEFAULT 'USER',
-            created_at TIMESTAMP WITH TIME ZONE DEFAULT CURRENT_TIMESTAMP,
-            updated_at TIMESTAMP WITH TIME ZONE DEFAULT CURRENT_TIMESTAMP
-        );
+      // Create Indexes
+      await usersCol.createIndex({ email: 1 }, { unique: true });
+      await scansCol.createIndex({ user_id: 1 });
+      await scansCol.createIndex({ created_at: -1 });
+      await findingsCol.createIndex({ scan_id: 1 });
+      await findingsCol.createIndex({ rule_id: 1 });
+      await findingsCol.createIndex({ severity: 1 });
+      await techCol.createIndex({ scan_id: 1 });
+      await owaspCol.createIndex({ scan_id: 1 });
+      await reportsCol.createIndex({ scan_id: 1 });
+      await auditCol.createIndex({ user_id: 1 });
+      await auditCol.createIndex({ created_at: -1 });
 
-        CREATE TABLE IF NOT EXISTS scans (
-            id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
-            user_id UUID REFERENCES users(id) ON DELETE CASCADE,
-            target_url VARCHAR(2048) NOT NULL,
-            status VARCHAR(50) NOT NULL,
-            scan_type VARCHAR(50) DEFAULT 'STANDARD',
-            security_score INT DEFAULT 100,
-            coverage_score INT DEFAULT 100,
-            started_at TIMESTAMP WITH TIME ZONE,
-            completed_at TIMESTAMP WITH TIME ZONE,
-            created_at TIMESTAMP WITH TIME ZONE DEFAULT CURRENT_TIMESTAMP
-        );
-
-        CREATE TABLE IF NOT EXISTS findings (
-            id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
-            scan_id UUID REFERENCES scans(id) ON DELETE CASCADE,
-            rule_id VARCHAR(100),
-            title VARCHAR(255) NOT NULL,
-            description TEXT NOT NULL,
-            severity VARCHAR(50) NOT NULL,
-            confidence VARCHAR(50) NOT NULL,
-            status VARCHAR(50) DEFAULT 'CONFIRMED',
-            owasp_category VARCHAR(10) NOT NULL,
-            owasp_version VARCHAR(20) DEFAULT '2025',
-            cwe VARCHAR(50),
-            affected_url VARCHAR(2048) NOT NULL,
-            evidence TEXT NOT NULL,
-            impact TEXT NOT NULL,
-            remediation TEXT NOT NULL,
-            references TEXT,
-            first_seen_at TIMESTAMP WITH TIME ZONE DEFAULT CURRENT_TIMESTAMP,
-            last_seen_at TIMESTAMP WITH TIME ZONE DEFAULT CURRENT_TIMESTAMP,
-            resolved_at TIMESTAMP WITH TIME ZONE,
-            created_at TIMESTAMP WITH TIME ZONE DEFAULT CURRENT_TIMESTAMP
-        );
-
-        -- Safe Alter Migrations for Existing Tables
-        ALTER TABLE findings ADD COLUMN IF NOT EXISTS rule_id VARCHAR(100);
-        ALTER TABLE findings ADD COLUMN IF NOT EXISTS owasp_version VARCHAR(20) DEFAULT '2025';
-        ALTER TABLE findings ADD COLUMN IF NOT EXISTS references TEXT;
-        ALTER TABLE findings ADD COLUMN IF NOT EXISTS first_seen_at TIMESTAMP WITH TIME ZONE DEFAULT CURRENT_TIMESTAMP;
-        ALTER TABLE findings ADD COLUMN IF NOT EXISTS last_seen_at TIMESTAMP WITH TIME ZONE DEFAULT CURRENT_TIMESTAMP;
-        ALTER TABLE findings ADD COLUMN IF NOT EXISTS resolved_at TIMESTAMP WITH TIME ZONE;
-        ALTER TABLE scans ADD COLUMN IF NOT EXISTS coverage_score INT DEFAULT 100;
-
-        CREATE TABLE IF NOT EXISTS technologies (
-            id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
-            scan_id UUID REFERENCES scans(id) ON DELETE CASCADE,
-            name VARCHAR(100) NOT NULL,
-            version VARCHAR(50),
-            category VARCHAR(100),
-            confidence VARCHAR(50) DEFAULT 'HIGH'
-        );
-
-        CREATE TABLE IF NOT EXISTS owasp_results (
-            id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
-            scan_id UUID REFERENCES scans(id) ON DELETE CASCADE,
-            category VARCHAR(10) NOT NULL,
-            status VARCHAR(50) NOT NULL,
-            score INT DEFAULT 100,
-            findings_count INT DEFAULT 0
-        );
-
-        CREATE TABLE IF NOT EXISTS reports (
-            id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
-            scan_id UUID REFERENCES scans(id) ON DELETE CASCADE,
-            file_path VARCHAR(1024) NOT NULL,
-            created_at TIMESTAMP WITH TIME ZONE DEFAULT CURRENT_TIMESTAMP
-        );
-
-        CREATE TABLE IF NOT EXISTS audit_logs (
-            id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
-            user_id UUID REFERENCES users(id) ON DELETE SET NULL,
-            action VARCHAR(255) NOT NULL,
-            metadata JSONB,
-            created_at TIMESTAMP WITH TIME ZONE DEFAULT CURRENT_TIMESTAMP
-        );
-
-        -- Indexes for fast lookup & comparison
-        CREATE INDEX IF NOT EXISTS idx_findings_scan_id ON findings(scan_id);
-        CREATE INDEX IF NOT EXISTS idx_findings_rule_id ON findings(rule_id);
-        CREATE INDEX IF NOT EXISTS idx_scans_user_id ON scans(user_id);
-      `);
-
-      const adminCheck = await client.query(`SELECT id FROM users WHERE email = 'admin@webshield.io'`);
-      if (adminCheck.rows.length === 0) {
+      // Seed Users if empty
+      const adminCheck = await usersCol.findOne({ email: 'admin@webshield.io' });
+      if (!adminCheck) {
         const adminPass = await bcrypt.hash('Admin@123456', 10);
         const userPass = await bcrypt.hash('User@123456', 10);
 
-        await client.query(
-          `INSERT INTO users (name, email, password_hash, role) VALUES 
-          ($1, $2, $3, $4),
-          ($5, $6, $7, $8)`,
-          [
-            'System Administrator', 'admin@webshield.io', adminPass, 'ADMIN',
-            'Security User', 'user@webshield.io', userPass, 'USER'
-          ]
-        );
+        await usersCol.insertMany([
+          {
+            id: 'd9b939e1-e283-4217-bf45-d88fa7bca001',
+            name: 'System Administrator',
+            email: 'admin@webshield.io',
+            password_hash: adminPass,
+            role: 'ADMIN',
+            created_at: new Date().toISOString(),
+            updated_at: new Date().toISOString(),
+          },
+          {
+            id: 'd9b939e1-e283-4217-bf45-d88fa7bca002',
+            name: 'Security User',
+            email: 'user@webshield.io',
+            password_hash: userPass,
+            role: 'USER',
+            created_at: new Date().toISOString(),
+            updated_at: new Date().toISOString(),
+          },
+        ]);
+        console.log('[DB] Seed users created in MongoDB: admin@webshield.io / user@webshield.io');
       }
-      console.log('[DB] PostgreSQL Schema Initialized');
-    } finally {
-      client.release();
+      console.log('[DB] MongoDB Collections & Indexes Initialized Successfully');
+      return;
+    } catch (err: any) {
+      console.error('[DB] Error initializing MongoDB collections/indexes:', err.message);
     }
-  } else {
-    // Seed users in memory
-    const adminCheck = await query(`SELECT id FROM users WHERE email = 'admin@webshield.io'`);
-    if (adminCheck.rows.length === 0) {
-      const adminPass = await bcrypt.hash('Admin@123456', 10);
-      const userPass = await bcrypt.hash('User@123456', 10);
+  }
 
-      await query(
-        `INSERT INTO users (name, email, password_hash, role) VALUES ($1, $2, $3, $4)`,
-        ['System Administrator', 'admin@webshield.io', adminPass, 'ADMIN']
-      );
-      await query(
-        `INSERT INTO users (name, email, password_hash, role) VALUES ($1, $2, $3, $4)`,
-        ['Security User', 'user@webshield.io', userPass, 'USER']
-      );
-      console.log('[DB] Seed users created in memory database: admin@webshield.io / Admin@123456');
-    }
+  // Fallback: Seed users in persisted local database
+  const adminCheck = await query(`SELECT id FROM users WHERE email = 'admin@webshield.io'`);
+  if (adminCheck.rows.length === 0) {
+    const adminPass = await bcrypt.hash('Admin@123456', 10);
+    const userPass = await bcrypt.hash('User@123456', 10);
+
+    await query(
+      `INSERT INTO users (name, email, password_hash, role) VALUES ($1, $2, $3, $4)`,
+      ['System Administrator', 'admin@webshield.io', adminPass, 'ADMIN']
+    );
+    await query(
+      `INSERT INTO users (name, email, password_hash, role) VALUES ($1, $2, $3, $4)`,
+      ['Security User', 'user@webshield.io', userPass, 'USER']
+    );
+    console.log('[DB] Seed users created in fallback database: admin@webshield.io / Admin@123456');
   }
 }

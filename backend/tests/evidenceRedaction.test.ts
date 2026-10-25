@@ -18,11 +18,17 @@ describe('Evidence Redaction Service Unit Tests', () => {
   });
 
   test('Redacts database connection strings containing credentials', () => {
-    const raw = 'Config leaked: postgresql://admin:SuperSecretPass123!@db.internal:5432/production';
-    const redacted = EvidenceRedactor.redact(raw);
+    const rawPg = 'Config leaked: postgresql://admin:SuperSecretPass123!@db.internal:5432/production';
+    const redactedPg = EvidenceRedactor.redact(rawPg);
 
-    expect(redacted).not.toContain('SuperSecretPass123!');
-    expect(redacted).toContain('[REDACTED_DB_PASS]');
+    expect(redactedPg).not.toContain('SuperSecretPass123!');
+    expect(redactedPg).toContain('[REDACTED_DB_PASS]');
+
+    const rawMongo = 'Config leaked: mongodb://db_admin:SecretMongoPass999!@cluster0.mongodb.net:27017/webshield_db?authSource=admin';
+    const redactedMongo = EvidenceRedactor.redact(rawMongo);
+
+    expect(redactedMongo).not.toContain('SecretMongoPass999!');
+    expect(redactedMongo).toContain('[REDACTED_DB_PASS]');
   });
 
   test('Redacts AWS Access Key IDs', () => {

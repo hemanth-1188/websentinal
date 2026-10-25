@@ -197,6 +197,132 @@
       "role": "USER",
       "created_at": "2026-10-14T03:19:06.617Z",
       "updated_at": "2026-10-14T03:19:06.617Z"
+    },
+    {
+      "id": "ebf72833-abc4-4715-9cf1-1b34e95b7c80",
+      "name": "System Administrator",
+      "email": "admin@webshield.io",
+      "password_hash": "$2a$10$j2eh4xFpoVoWpsq42SQjvuE2v/h2k/O6tCfSuoycSgIWwj0Ikliui",
+      "role": "ADMIN",
+      "created_at": "2026-10-14T04:49:50.857Z",
+      "updated_at": "2026-10-14T04:49:50.858Z"
+    },
+    {
+      "id": "d535f2be-cd29-4580-a0f2-1797a3c5cf00",
+      "name": "Security User",
+      "email": "user@webshield.io",
+      "password_hash": "$2a$10$SUBfDfG0K2j/bk1h7OoVTeuXjdq7tey/RYaoDonDAoeu1NPE5ooCe",
+      "role": "USER",
+      "created_at": "2026-10-14T04:49:50.859Z",
+      "updated_at": "2026-10-14T04:49:50.859Z"
+    },
+    {
+      "id": "0e7e4a8a-20de-4fb8-b2f0-ffb1f9715e53",
+      "name": "System Administrator",
+      "email": "admin@webshield.io",
+      "password_hash": "$2a$10$yzrPLySGCv/RWF0s5uZEXe1ZE51qc0UjVyR3FtLkUuz0FVG3HRtKi",
+      "role": "ADMIN",
+      "created_at": "2026-10-14T04:54:09.346Z",
+      "updated_at": "2026-10-14T04:54:09.347Z"
+    },
+    {
+      "id": "30723ea8-98ab-492a-9b81-86a424b329ef",
+      "name": "Security User",
+      "email": "user@webshield.io",
+      "password_hash": "$2a$10$H9NwD4v6s/T0aelP1RjemewNgYI5N7oLM3SdFQXuDYK5GAlddRv6e",
+      "role": "USER",
+      "created_at": "2026-10-14T04:54:09.349Z",
+      "updated_at": "2026-10-14T04:54:09.349Z"
+    },
+    {
+      "id": "29b05951-753f-4d69-9cb7-22a1c1fc71d8",
+      "name": "System Administrator",
+      "email": "admin@webshield.io",
+      "password_hash": "$2a$10$xfA6P1ZJgt741iqcKQ0R1.KPxgU6gC.G0soGghhbIrfT9QRV/6Fqy",
+      "role": "ADMIN",
+      "created_at": "2026-10-14T04:54:34.020Z",
+      "updated_at": "2026-10-14T04:54:34.021Z"
+    },
+    {
+      "id": "dd9af4a1-2754-4f1a-988f-b7fffb7e2ef8",
+      "name": "Security User",
+      "email": "user@webshield.io",
+      "password_hash": "$2a$10$vF2UVJpSOSQbl51ZWw701.nx/.TN.7V.8.HwEkVyse2e1tlvJYWya",
+      "role": "USER",
+      "created_at": "2026-10-14T04:54:34.023Z",
+      "updated_at": "2026-10-14T04:54:34.023Z"
+    },
+    {
+      "id": "61ad9e66-661b-428f-a6de-4defb4b115de",
+      "name": "System Administrator",
+      "email": "admin@webshield.io",
+      "password_hash": "$2a$10$WSXUTKFXIkwdKmuuJO6CNeSTp8BEDrqj8dBqzQptgJuOIX3cfHvnC",
+      "role": "ADMIN",
+      "created_at": "2026-10-14T04:54:51.221Z",
+      "updated_at": "2026-10-14T04:54:51.222Z"
+    },
+    {
+      "id": "3e000ae0-e77e-45f6-b56a-031b34fea18b",
+      "name": "Security User",
+      "email": "user@webshield.io",
+      "password_hash": "$2a$10$Zy5NKY4no1QUNjIUsvJy8upcGUi4ClgZBrTJ.j.BrXN3k4IgdHmHC",
+      "role": "USER",
+      "created_at": "2026-10-14T04:54:51.223Z",
+      "updated_at": "2026-10-14T04:54:51.223Z"
+    },
+    {
+      "id": "cdef6e05-4c1c-48a5-a80c-002e83694dd6",
+      "name": "System Administrator",
+      "email": "admin@webshield.io",
+      "password_hash": "$2a$10$gCMRT4HQXKmE8/8VdUn19O/ZhFqjeuXPLun4chj6QA3LADlX/qICm",
+      "role": "ADMIN",
+      "created_at": "2026-10-14T04:55:46.011Z",
+      "updated_at": "2026-10-14T04:55:46.012Z"
+    },
+    {
+      "id": "29bc7ff0-127e-4b2e-9f26-357fe5aaef68",
+      "name": "Security User",
+      "email": "user@webshield.io",
+      "password_hash": "$2a$10$8hg./1k3trNSSSaXTZlIXuCgmvf5b4S0aQuFGUjz5cc5SNOP5L35K",
+      "role": "USER",
+      "created_at": "2026-10-14T04:55:46.014Z",
+      "updated_at": "2026-10-14T04:55:46.014Z"
+    },
+    {
+      "id": "846b6cd7-cd05-43cb-8b65-8a94c35f466b",
+      "name": "System Administrator",
+      "email": "admin@webshield.io",
+      "password_hash": "$2a$10$9YDmLdGY8ZvTiuTde21Ug.USQ/U6dNDiBhv88qQDkYUAzDURpBAha",
+      "role": "ADMIN",
+      "created_at": "2026-10-25T11:35:07.690Z",
+      "updated_at": "2026-10-25T11:35:07.694Z"
+    },
+    {
+      "id": "428f0bb1-3a39-4206-928c-44a30dfaec5b",
+      "name": "Security User",
+      "email": "user@webshield.io",
+      "password_hash": "$2a$10$eNQ/kMGiCbYgvus9AvOQW.gzGr3bK9F7tw.27Y04dxTB7cjwBD0za",
+      "role": "USER",
+      "created_at": "2026-10-25T11:35:07.697Z",
+      "updated_at": "2026-10-25T11:35:07.697Z"
+    },
+    {
+      "id": "c7242835-9b93-4f9b-8069-dbc44beef21d",
+      "name": "System Administrator",
+      "email": "admin@webshield.io",
+      "password_hash": "$2a$10$F1J6q0dzO5D5wmWpjzOjxeoM0uno4epueHN9fZx63rVZeOlsq4lIO",
+      "role": "ADMIN",
+      "created_at": "2026-10-25T11:35:37.169Z",
+      "updated_at": "2026-10-25T11:35:37.170Z"
+    },
+    {
+      "id": "25af3435-4583-48e6-a6bc-13847336eef8",
+      "name": "Security User",
+      "email": "user@webshield.io",
+      "password_hash": "$2a$10$mV6SAfq2QOd6HfQZw1k1/.6na4tOohLgcrsdpzrhEKnllgWYGneC6",
+      "role": "USER",
+      "created_at": "2026-10-25T11:35:37.172Z",
+      "updated_at": "2026-10-25T11:35:37.172Z"
     }
   ],
   "scans": [
@@ -276,6 +402,18 @@
       "started_at": "2026-10-14T04:13:09.008Z",
       "completed_at": "2026-10-14T04:13:23.337Z",
       "created_at": "2026-10-14T04:13:09.003Z"
+    },
+    {
+      "id": "f68b2d20-252a-44e3-a98b-ecb8498bc302",
+      "user_id": "cd72f0aa-2daf-4aef-8bea-876d160cc907",
+      "target_url": "https://web.whatsapp.com/",
+      "status": "COMPLETED",
+      "scan_type": "STANDARD",
+      "security_score": 73,
+      "coverage_score": 100,
+      "started_at": "2026-10-25T11:41:49.925Z",
+      "completed_at": "2026-10-25T11:41:55.245Z",
+      "created_at": "2026-10-25T11:41:49.919Z"
     }
   ],
   "findings": [
@@ -967,6 +1105,90 @@
       "impact": "https://www.angelone.in/login/?redirectUrl=portfolio/equity",
       "remediation": "Identified technologies: Cloudflare (CDN / Reverse Proxy)",
       "rule_id": "RULE-CONFIRMED"
+    },
+    {
+      "id": "ae530a15-ce63-40b6-8236-fd2412d313a2",
+      "created_at": "2026-10-25T11:41:55.170Z",
+      "first_seen_at": "2026-10-25T11:41:55.170Z",
+      "last_seen_at": "2026-10-25T11:41:55.170Z",
+      "resolved_at": null,
+      "owasp_version": "2025",
+      "scan_id": "f68b2d20-252a-44e3-a98b-ecb8498bc302",
+      "title": "SEC-HDR-CSP-WEAK",
+      "description": "Weak Content-Security-Policy Directives Detected",
+      "severity": "The Content-Security-Policy contains permissive keywords (unsafe-inline, unsafe-eval, or wildcards) that weaken script execution isolation.",
+      "confidence": "MEDIUM",
+      "status": "HIGH",
+      "owasp_category": "CONFIRMED",
+      "cwe": "A02",
+      "affected_url": "2025",
+      "evidence": "CWE-1021",
+      "impact": "https://web.whatsapp.com/",
+      "remediation": "Observed Content-Security-Policy: \"default-src 'self' blob:;script-src blob: 'self' 'nonce-L1BpmnA9' 'report-sample' https://static.whatsapp.net 'unsafe-eval' https://*.fbcdn.net https://*.youtube.com https://maps.googleapis.com https://maps.gstatic.com https://lens.google.com/upload;style-src data: blob: 'self' 'unsafe-inline' https\"",
+      "rule_id": "RULE-CONFIRMED"
+    },
+    {
+      "id": "7cfb1b74-d44b-46e6-859b-6d440e15ad7b",
+      "created_at": "2026-10-25T11:41:55.175Z",
+      "first_seen_at": "2026-10-25T11:41:55.175Z",
+      "last_seen_at": "2026-10-25T11:41:55.175Z",
+      "resolved_at": null,
+      "owasp_version": "2025",
+      "scan_id": "f68b2d20-252a-44e3-a98b-ecb8498bc302",
+      "title": "SEC-HDR-RP-MISSING",
+      "description": "Missing Referrer-Policy Header",
+      "severity": "The Referrer-Policy HTTP header governs how much referrer metadata is transmitted with outgoing navigation and subresource requests.",
+      "confidence": "LOW",
+      "status": "HIGH",
+      "owasp_category": "CONFIRMED",
+      "cwe": "A02",
+      "affected_url": "2025",
+      "evidence": "CWE-200",
+      "impact": "https://web.whatsapp.com/",
+      "remediation": "Referrer-Policy header was omitted from HTTP response headers.",
+      "rule_id": "RULE-CONFIRMED"
+    },
+    {
+      "id": "8d178078-10a2-4f3e-92cd-4410f20f83b3",
+      "created_at": "2026-10-25T11:41:55.177Z",
+      "first_seen_at": "2026-10-25T11:41:55.177Z",
+      "last_seen_at": "2026-10-25T11:41:55.177Z",
+      "resolved_at": null,
+      "owasp_version": "2025",
+      "scan_id": "f68b2d20-252a-44e3-a98b-ecb8498bc302",
+      "title": "SEC-TLS-NO-REDIRECT",
+      "description": "Missing Automatic HTTP-to-HTTPS Redirection",
+      "severity": "Port 80 (HTTP) does not automatically redirect visitors to the secure HTTPS interface.",
+      "confidence": "MEDIUM",
+      "status": "HIGH",
+      "owasp_category": "CONFIRMED",
+      "cwe": "A04",
+      "affected_url": "2025",
+      "evidence": "CWE-319",
+      "impact": "http://web.whatsapp.com/",
+      "remediation": "HTTP port 80 response code: 403. Location header: \"NONE\"",
+      "rule_id": "RULE-CONFIRMED"
+    },
+    {
+      "id": "e40ee1cd-6859-4b89-a4c2-6682aac80f37",
+      "created_at": "2026-10-25T11:41:55.180Z",
+      "first_seen_at": "2026-10-25T11:41:55.180Z",
+      "last_seen_at": "2026-10-25T11:41:55.180Z",
+      "resolved_at": null,
+      "owasp_version": "2025",
+      "scan_id": "f68b2d20-252a-44e3-a98b-ecb8498bc302",
+      "title": "SEC-TLS-CERT-EXPIRING",
+      "description": "TLS Certificate Nearing Expiration",
+      "severity": "The SSL/TLS certificate for web.whatsapp.com expires in 8 days.",
+      "confidence": "MEDIUM",
+      "status": "HIGH",
+      "owasp_category": "CONFIRMED",
+      "cwe": "A04",
+      "affected_url": "2025",
+      "evidence": "CWE-295",
+      "impact": "https://web.whatsapp.com/",
+      "remediation": "Certificate Valid To: Nov  1 23:59:59 2026 GMT. Issuer: DigiCert Inc. Days Remaining: 8",
+      "rule_id": "RULE-CONFIRMED"
     }
   ],
   "technologies": [
@@ -1595,6 +1817,86 @@
       "status": "PASS",
       "score": 100,
       "findings_count": 0
+    },
+    {
+      "id": "49861928-9357-441c-8246-b04939995812",
+      "scan_id": "f68b2d20-252a-44e3-a98b-ecb8498bc302",
+      "category": "A01",
+      "status": "PASS",
+      "score": 100,
+      "findings_count": 0
+    },
+    {
+      "id": "385eb49f-2d46-4254-9d2e-20c665f8e814",
+      "scan_id": "f68b2d20-252a-44e3-a98b-ecb8498bc302",
+      "category": "A02",
+      "status": "FINDING",
+      "score": 70,
+      "findings_count": 2
+    },
+    {
+      "id": "072de61a-3ff3-49ca-9698-1d44bb2b246a",
+      "scan_id": "f68b2d20-252a-44e3-a98b-ecb8498bc302",
+      "category": "A03",
+      "status": "PASS",
+      "score": 100,
+      "findings_count": 0
+    },
+    {
+      "id": "161a92d3-8432-4c75-af77-e155f4f459aa",
+      "scan_id": "f68b2d20-252a-44e3-a98b-ecb8498bc302",
+      "category": "A04",
+      "status": "FINDING",
+      "score": 70,
+      "findings_count": 2
+    },
+    {
+      "id": "9fc1f5d5-beec-4594-b4b5-d68b0b1eb69d",
+      "scan_id": "f68b2d20-252a-44e3-a98b-ecb8498bc302",
+      "category": "A05",
+      "status": "PASS",
+      "score": 100,
+      "findings_count": 0
+    },
+    {
+      "id": "07637699-09ef-4d65-86b8-4761aea49f42",
+      "scan_id": "f68b2d20-252a-44e3-a98b-ecb8498bc302",
+      "category": "A06",
+      "status": "NOT_TESTED",
+      "score": 100,
+      "findings_count": 0
+    },
+    {
+      "id": "df4f9980-9584-4166-814b-26b2c0c96ef8",
+      "scan_id": "f68b2d20-252a-44e3-a98b-ecb8498bc302",
+      "category": "A07",
+      "status": "PASS",
+      "score": 100,
+      "findings_count": 0
+    },
+    {
+      "id": "03f26148-76c0-432e-90b3-4c298a783fa9",
+      "scan_id": "f68b2d20-252a-44e3-a98b-ecb8498bc302",
+      "category": "A08",
+      "status": "PASS",
+      "score": 100,
+      "findings_count": 0
+    },
+    {
+      "id": "4e530076-f20f-4ff0-b834-f0c3bbde3906",
+      "scan_id": "f68b2d20-252a-44e3-a98b-ecb8498bc302",
+      "category": "A09",
+      "status": "NOT_TESTED",
+      "score": 100,
+      "findings_count": 0
+    },
+    {
+      "id": "c5fd8cb2-58c3-498c-a6ea-14337a86d365",
+      "scan_id": "f68b2d20-252a-44e3-a98b-ecb8498bc302",
+      "category": "A10",
+      "status": "PASS",
+      "score": 100,
+      "findings_count": 0
     }
   ],
   "reports": [
@@ -1839,6 +2141,28 @@
         "coverage": 100
       },
       "created_at": "2026-10-14T04:13:23.340Z"
+    },
+    {
+      "id": "d7d5e2dd-a1cd-4d9c-8bfa-7f01e1b0a813",
+      "user_id": "cd72f0aa-2daf-4aef-8bea-876d160cc907",
+      "action": "FIREBASE_LOGIN",
+      "metadata": {
+        "email": "hk1100411004@gmail.com",
+        "ip": "::1"
+      },
+      "created_at": "2026-10-25T11:41:36.691Z"
+    },
+    {
+      "id": "0178d8e8-932b-4f3f-bdb4-052373166115",
+      "user_id": "cd72f0aa-2daf-4aef-8bea-876d160cc907",
+      "action": "SCAN_COMPLETED",
+      "metadata": {
+        "scanId": "f68b2d20-252a-44e3-a98b-ecb8498bc302",
+        "targetUrl": "https://web.whatsapp.com/",
+        "score": 73,
+        "coverage": 100
+      },
+      "created_at": "2026-10-25T11:41:55.252Z"
     }
   ]
 }

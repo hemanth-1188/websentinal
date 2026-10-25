@@ -21,7 +21,7 @@ FILE FORMAT:       Plain Text (.txt) - Ready for Slide Generation & Speaker Note
      - Slide 6: Multi-Layered SSRF Guardian & Defensive Security Model
      - Slide 7: The Modular Security Scanner Engine
      - Slide 8: OWASP Top 10 Mapping & Mathematical Risk Scoring
-     - Slide 9: Data Layer & Database Architecture (PostgreSQL Schema)
+     - Slide 9: Data Layer & Database Architecture (MongoDB Document Model)
      - Slide 10: In-Memory Caching & Distributed Job Queue (Redis + BullMQ)
      - Slide 11: End-to-End System Workflow (Step-by-Step Lifecycle)
      - Slide 12: Finding Lifecycle Tracking & Historical Diffing
@@ -56,7 +56,7 @@ KEY TALKING POINTS FOR THE SPEAKER:
 3. "Complete lifecycle approach": Scans are not one-off reports; WebShield tracks 
    vulnerabilities across consecutive runs (First Seen, Last Seen, Resolved).
 4. "Modern, production-ready stack": Microservice architecture orchestrated via 
-   Docker Compose, powered by React 18, Node.js/TypeScript, PostgreSQL 16, 
+   Docker Compose, powered by React 18, Node.js/TypeScript, MongoDB 7.0, 
    Redis 7, and BullMQ.
 
 ================================================================================
@@ -77,7 +77,7 @@ SLIDE 1: TITLE & INTRODUCTION
 * Non-Destructive Active & Passive Security Probes
 * Instant OWASP Top 10 Alignment & Evidence-Based Reporting
 * Built-in Verification Pipeline with Before/After Remediation Tracking
-* Production-Grade Stack: React 18, TypeScript, Node.js, PostgreSQL, Redis, Docker
+* Production-Grade Stack: React 18, TypeScript, Node.js, MongoDB, Redis, Docker
 
 [Speaker Script / Talking Points]:
 "Good morning/afternoon, esteemed members of the panel. Today, I am proud to present 
@@ -189,7 +189,7 @@ SLIDE 4: SYSTEM ARCHITECTURE OVERVIEW
                          v                           v
   +------------------------------+   +------------------------------------+
   |  TARGET WEB APPLICATIONS     |   |          DATA STORAGE LAYER        |
-  |  Authorized Web Endpoints &  |   |  PostgreSQL 16 (Relational DB)     |
+  |  Authorized Web Endpoints &  |   |  MongoDB 7.0 (Document DB)         |
   |  Local Training Target :8080 |   |  Redis 7 (Cache, Progress, Queue)  |
   +------------------------------+   +------------------------------------+
 
@@ -201,7 +201,7 @@ When a scan is ordered, the request is not processed synchronously—which would
 block the server. Instead, it passes through an SSRF Guardian, gets validated, 
 and is enqueued into a Redis-backed BullMQ queue. Dedicated background worker 
 processes execute the scan modules, stream real-time progress back through Redis, 
-and persist structured records directly into PostgreSQL."
+and persist structured records directly into MongoDB."
 
 --------------------------------------------------------------------------------
 SLIDE 5: COMPLETE TECHNOLOGY STACK
@@ -231,8 +231,8 @@ SLIDE 5: COMPLETE TECHNOLOGY STACK
   - Document Engine: PDFKit (Vector PDF security audit reports)
 
 * DATA STORAGE & MESSAGING:
-  - Primary Database: PostgreSQL 16 (Relational, ACID, UUIDs via pgcrypto)
-  - Client Library: 'pg' (Connection pooling: 10 connections, auto-reconnect)
+  - Primary Database: MongoDB 7.0 (High-Performance Document Storage, Aggregation Pipelines)
+  - Client Library: 'mongodb' (Official Native Node.js Driver v7.x)
   - In-Memory & Caching: Redis 7 Alpine (Key-value store, TTL management)
   - Job Queue System: BullMQ + ioredis (Distributed queue, concurrency: 5)
   - Dev Fallback: Local JSON persistence store ('data/webshield_dev_db.json')
@@ -248,9 +248,9 @@ TypeScript is utilized across both the frontend and backend, enabling unified
 data models and compile-time validation. For the presentation layer, React 18 
 delivers high responsiveness without bulky UI component libraries. 
 On the backend, Node.js paired with Express provides lightweight, high-throughput 
-API execution. For the data tier, PostgreSQL guarantees relational integrity, 
-while Redis and BullMQ handle asynchronous task distribution with built-in 
-concurrency controls."
+API execution. For the data tier, MongoDB delivers flexible document collections and 
+lightning-fast aggregation pipelines, while Redis and BullMQ handle asynchronous task distribution 
+with built-in concurrency controls."
 
 --------------------------------------------------------------------------------
 SLIDE 6: DEFENSIVE SECURITY & THE SSRF GUARDIAN
@@ -375,39 +375,40 @@ OWASP Top 10 framework."
 --------------------------------------------------------------------------------
 SLIDE 9: DATA STORAGE & DATABASE ARCHITECTURE
 --------------------------------------------------------------------------------
-[Slide Title]:    Data Layer: PostgreSQL 16 Relational Schema
-[Visual Layout]:  Entity Relationship Diagram (ERD) with primary & foreign key indicators.
+[Slide Title]:    Data Layer: MongoDB 7.0 Document Database Architecture
+[Visual Layout]:  Document Collection Diagram with indexed keys and aggregation pipelines.
 
-[Slide Content - Relational Entities]:
-* 'users' TABLE:
-  - id (UUID, PK), name, email (UNIQUE), password_hash (bcrypt), role ('USER'|'ADMIN')
-* 'scans' TABLE:
-  - id (UUID, PK), user_id (FK -> users.id CASCADE), target_url, status, 
+[Slide Content - Document Collections]:
+* 'users' COLLECTION:
+  - id (UUID), name, email (UNIQUE Index), password_hash (bcrypt), role ('USER'|'ADMIN')
+* 'scans' COLLECTION:
+  - id (UUID, Index), user_id (UUID Index), target_url, status, 
     scan_type, security_score, coverage_score, started_at, completed_at
-* 'findings' TABLE:
-  - id (UUID, PK), scan_id (FK -> scans.id CASCADE), rule_id, title, severity, 
-    confidence, owasp_category, cwe, affected_url, evidence (TEXT), impact, 
+* 'findings' COLLECTION:
+  - id (UUID, Index), scan_id (UUID Index), rule_id (Index), title, severity (Index), 
+    confidence, owasp_category, cwe, affected_url, evidence (String), impact, 
     remediation, first_seen_at, last_seen_at, resolved_at
-* 'technologies' TABLE:
-  - id (UUID, PK), scan_id (FK -> scans.id CASCADE), name, version, category
-* 'owasp_results' TABLE:
-  - id (UUID, PK), scan_id (FK -> scans.id CASCADE), category, status, score
-* 'reports' TABLE:
-  - id (UUID, PK), scan_id (FK -> scans.id CASCADE), file_path, created_at
-* 'audit_logs' TABLE:
-  - id (UUID, PK), user_id (FK -> users.id SET NULL), action, metadata (JSONB)
+* 'technologies' COLLECTION:
+  - id (UUID), scan_id (UUID Index), name, version, category, confidence
+* 'owasp_results' COLLECTION:
+  - id (UUID), scan_id (UUID Index), category, status, score, findings_count
+* 'reports' COLLECTION:
+  - id (UUID), scan_id (UUID Index), file_path, created_at
+* 'audit_logs' COLLECTION:
+  - id (UUID), user_id (UUID Index), action, metadata (Object), created_at (Index)
 * Database Optimizations:
-  - Indexed foreign keys: idx_findings_scan_id, idx_findings_rule_id, idx_scans_user_id
+  - Indexed keys: unique email, scan_id, user_id, rule_id, severity
+  - Rich aggregation pipelines for real-time dashboard analytics
   - Automatic JSON persistence fallback for rapid local environments
 
 [Speaker Script / Talking Points]:
-"WebShield's primary data layer is built on PostgreSQL 16, ensuring ACID guarantees 
-and strict relational integrity. Scans belong to users, while findings, technology 
-fingerprints, and OWASP scores belong to individual scans via cascading foreign 
-keys. Notice the 'findings' schema: it includes 'rule_id', 'first_seen_at', 
-and 'last_seen_at'. This enables WebShield to track vulnerabilities across scans 
+"WebShield's primary data layer is built on MongoDB 7.0, leveraging fast document 
+storage and flexible schema evolution. Scans link to users via UUID identifiers, 
+while findings, technology fingerprints, and OWASP scores belong to individual scans 
+through indexed references. Notice the 'findings' document: it includes 'rule_id', 
+'first_seen_at', and 'last_seen_at'. This enables WebShield to track vulnerabilities across scans 
 over time. For administrative compliance, all sensitive actions are recorded in an 
-audit log table using JSONB metadata."
+audit log collection."
 
 --------------------------------------------------------------------------------
 SLIDE 10: IN-MEMORY CACHING & DISTRIBUTED JOB QUEUE
@@ -441,7 +442,7 @@ When a scan is created, the API immediately returns a 201 Created response
 with a scan ID. In the background, BullMQ workers process scans with controlled 
 concurrency. Progress is updated after each scanning module into Redis with a 
 1-hour TTL. The frontend polls this lightweight key every 1.5 seconds, providing 
-users with a real-time progress bar without hammering PostgreSQL."
+users with a real-time progress bar without hammering MongoDB."
 
 --------------------------------------------------------------------------------
 SLIDE 11: END-TO-END WORKFLOW
@@ -456,7 +457,7 @@ SLIDE 11: END-TO-END WORKFLOW
 * Phase 2: SSRF Guardian Validation
   - Scheme validation -> DNS resolution -> IP range blacklist check.
 * Phase 3: Enqueue & Progress Initialization
-  - Initial scan record inserted in PostgreSQL ('PENDING').
+  - Initial scan record inserted in MongoDB ('PENDING').
   - Job enqueued in BullMQ; progress set to 10% in Redis.
 * Phase 4: Scanner Execution (Worker Phase)
   - Fetch HTTP response -> Header audit (40%) -> TLS socket inspect (50%) ->
@@ -464,7 +465,7 @@ SLIDE 11: END-TO-END WORKFLOW
 * Phase 5: Aggregation, OWASP Mapping & Scoring
   - OWASP A01-A10 categorization -> Security score deduction formula (90%).
 * Phase 6: Persistence & Real-Time Notification
-  - Scan marked 'COMPLETED' in PostgreSQL (100%).
+  - Scan marked 'COMPLETED' in MongoDB (100%).
   - Findings, technologies, and OWASP results batch-inserted.
   - Audit log recorded; PDF report ready for on-demand generation.
 
@@ -472,10 +473,10 @@ SLIDE 11: END-TO-END WORKFLOW
 "Here is the complete end-to-end operational lifecycle. It begins when an 
 authenticated user submits a target URL. The backend immediately executes our 
 SSRF Guardian checks. If valid, the scan is assigned a UUID, registered in 
-PostgreSQL, and enqueued in BullMQ. The worker executes our 7 scan modules 
+MongoDB, and enqueued in BullMQ. The worker executes our 7 scan modules 
 sequentially, updating Redis progress milestones along the way. Upon completion, 
 the OWASP engine maps the findings, the risk calculator determines the overall 
-score, and all results are committed to PostgreSQL, ready for immediate dashboard 
+score, and all results are committed to MongoDB, ready for immediate dashboard 
 review and PDF export."
 
 --------------------------------------------------------------------------------
@@ -611,7 +612,7 @@ SLIDE 16: CONCLUSION & FUTURE ROADMAP
   - Built an automated, non-destructive web security assessment platform.
   - Implemented 7 specialized audit modules with OWASP Top 10 alignment.
   - Multi-layered SSRF Guardian ensuring safe and ethical scanning.
-  - Resilient microservice architecture (React 18, Node.js, PostgreSQL, Redis, Docker).
+  - Resilient microservice architecture (React 18, Node.js, MongoDB, Redis, Docker).
   - Historical lifecycle tracking and instant PDF audit reports.
 * Future Roadmap:
   - Q1: CI/CD Pipeline Integration (GitHub Actions & GitLab CI scan plugins).
@@ -651,8 +652,8 @@ Security Headers      Helmet                      7.1.0       API Server Header 
 CORS Middleware       cors                        2.8.5       Cross-Origin Resource Sharing
 Password Hashing      bcryptjs                    2.4.3       Salted One-way Pass Hash
 Token Security        jsonwebtoken (JWT)          9.0.2       Stateless API Authentication
-Database Engine       PostgreSQL                  16-Alpine   Relational ACID Storage
-PostgreSQL Driver     pg                          8.11.5      Database Connection Pooling
+Database Engine       MongoDB                     7.0         High-Performance Document Storage
+MongoDB Driver        mongodb                     7.7.0       Official Native MongoDB Client
 Caching & Queues      Redis                       7-Alpine    In-memory Cache & Messaging
 Redis Driver          ioredis                     5.4.1       High-performance Redis Client
 Queue Management      BullMQ                      5.7.8       Asynchronous Distributed Queue
@@ -668,13 +669,13 @@ Demo Training Target  Express Microservice        Port 8080   Vulnerable vs Secu
 ================================================================================
 
 WebShield employs a dual-tiered data persistence strategy:
-Tier 1: PostgreSQL 16 for ACID relational data, audit trails, and historical scans.
+Tier 1: MongoDB 7.0 for scalable document storage, audit trails, and historical scans.
 Tier 2: Redis 7 for transient job queues, live progress pub/sub, and rate limits.
 Tier 3: Local Dev File Persistence ('data/webshield_dev_db.json') as a zero-config 
-        safety fallback when PostgreSQL is not running locally.
+        safety fallback when MongoDB is not running locally.
 
 --------------------------------------------------------------------------------
-4.1 POSTGRESQL 16 RELATIONAL DATABASE SCHEMA
+4.1 MONGODB 7.0 DOCUMENT DATABASE SCHEMA
 --------------------------------------------------------------------------------
 
 TABLE: users
@@ -825,8 +826,8 @@ PHASE 2: SCAN INITIATION & SSRF GUARDIAN AUDIT
    - If invalid, request is rejected with 400 Bad Request immediately.
 
 PHASE 3: JOB ENQUEUEING & ASYNCHRONOUS DISPATCH
-1. If SSRF validation passes, a new record is inserted into PostgreSQL 'scans' 
-   table with status 'PENDING'.
+1. If SSRF validation passes, a new record is inserted into MongoDB 'scans' 
+   collection with status 'PENDING'.
 2. Backend pushes a job payload to BullMQ queue 'webshield-scan-queue'.
 3. Backend returns HTTP 201 Created with scan ID.
 4. Frontend immediately redirects user to '/scans/:id/progress'.
@@ -889,10 +890,10 @@ PHASE 5: DATABASE PERSISTENCE & HISTORICAL DIFFING
 1. Query previous completed scans for the same target and user:
    - For recurring findings: Preserves original 'first_seen_at', updates 'last_seen_at'.
    - For newly introduced findings: Sets 'first_seen_at' and 'last_seen_at' to NOW.
-2. Batch insert findings into PostgreSQL 'findings' table.
-3. Batch insert detected technologies into 'technologies' table.
-4. Batch insert OWASP evaluation results into 'owasp_results' table.
-5. Update 'scans' table: status = 'COMPLETED', security_score, coverage_score, 
+2. Batch insert findings into MongoDB 'findings' collection.
+3. Batch insert detected technologies into 'technologies' collection.
+4. Batch insert OWASP evaluation results into 'owasp_results' collection.
+5. Update 'scans' collection: status = 'COMPLETED', security_score, coverage_score, 
    completed_at = NOW.
 6. Insert audit log record ('SCAN_COMPLETED') with scan metadata.
 7. Write final progress to Redis: { step: "Scan completed successfully", percent: 100 }.
@@ -946,10 +947,10 @@ A4: "WebShield incorporates stateful vulnerability lifecycle tracking. Each find
     triggered previously is now absent, the finding is marked resolved, and the 
     user is rewarded with a visual score increase in our Compare Scans view."
 
-Q5: What happens if PostgreSQL or Redis goes down during development?
+Q5: What happens if MongoDB or Redis goes down during development?
 A5: "WebShield was engineered with high operational resilience. The database service 
     includes an automatic fallback engine in 'db.ts' that mirrors data into a 
-    structured local JSON store ('data/webshield_dev_db.json') if PostgreSQL is 
+    structured local JSON store ('data/webshield_dev_db.json') if MongoDB is 
     unreachable. Similarly, if Redis is absent, the backend falls back to an 
     in-memory Node.js EventEmitter queue, ensuring that developers can test and 
     demonstrate the application seamlessly in any environment."

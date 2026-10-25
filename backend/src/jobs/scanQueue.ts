@@ -13,13 +13,21 @@ let scanQueue: Queue | null = null;
 
 try {
   scanQueue = new Queue(QUEUE_NAME, { connection: redisClient });
-  new Worker(
+  scanQueue.on('error', () => {
+    isBullQueueActive = false;
+  });
+
+  const worker = new Worker(
     QUEUE_NAME,
     async (job: Job) => {
       await processScanJob(job.data);
     },
     { connection: redisClient, concurrency: 5 }
   );
+  worker.on('error', () => {
+    isBullQueueActive = false;
+  });
+
   isBullQueueActive = true;
 } catch (e) {
   isBullQueueActive = false;
