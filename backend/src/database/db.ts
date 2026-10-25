@@ -12,12 +12,13 @@ const mongoUri = process.env.MONGODB_URI ||
     : 'mongodb://localhost:27017/webshield_db');
 
 export const client = new MongoClient(mongoUri, {
-  serverSelectionTimeoutMS: 2000,
-  connectTimeoutMS: 2000,
+  serverSelectionTimeoutMS: 10000,
+  connectTimeoutMS: 10000,
 });
 
 export let db: Db | null = null;
 export let isMongoAvailable = false;
+export let lastMongoError: string | null = null;
 
 const dbFilePath = path.join(process.cwd(), 'data', 'webshield_dev_db.json');
 
@@ -71,11 +72,13 @@ export async function testDbConnection(): Promise<boolean> {
     db = client.db(dbName);
     await db.command({ ping: 1 });
     isMongoAvailable = true;
+    lastMongoError = null;
     console.log(`[DB] Connected to MongoDB Database (${dbName})`);
     return true;
   } catch (err: any) {
     isMongoAvailable = false;
-    console.log('[DB] MongoDB unavailable. Using Persisted In-Memory Database Fallback for local execution.');
+    lastMongoError = err.message || String(err);
+    console.log('[DB] MongoDB unavailable. Error:', lastMongoError);
     return false;
   }
 }

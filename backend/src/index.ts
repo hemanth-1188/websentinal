@@ -4,7 +4,7 @@ import helmet from 'helmet';
 import dotenv from 'dotenv';
 import apiRouter from './routes/api';
 import { initDb } from './database/initDb';
-import { testDbConnection, isMongoAvailable, getDb } from './database/db';
+import { testDbConnection, isMongoAvailable, getDb, lastMongoError } from './database/db';
 import { apiRateLimiter } from './middleware/rateLimit';
 
 dotenv.config();
@@ -60,10 +60,19 @@ app.get('/health', (req: Request, res: Response) => {
 app.get('/health/db', async (req: Request, res: Response) => {
   try {
     if (!isMongoAvailable) {
+      const hasUri = !!process.env.MONGODB_URI;
       return res.json({
         connected: false,
         mode: 'In-Memory Fallback',
-        message: 'MongoDB is currently unreachable. Operating on dev local fallback.',
+        message: 'MongoDB is currently unreachable. Operating on fallback persistence.',
+        diagnostics: {
+          hasMongodbUriEnv: hasUri,
+          uriProtocol: hasUri ? (process.env.MONGODB_URI!.startsWith('mongodb+srv') ? 'mongodb+srv' : 'mongodb') : 'NOT_SET',
+          lastError: lastMongoError || 'Connection timed out or host unreachable',
+          troubleshooting: !hasUri 
+            ? 'Set MONGODB_URI in Render dashboard -> Environment tab.' 
+            : 'In MongoDB Atlas -> Network Access: ensure 0.0.0.0/0 (allow from anywhere) is added. Verify password in MONGODB_URI.',
+        },
       });
     }
     const db = getDb();
